@@ -1,0 +1,12 @@
+.git
+cenrion/.env
+cenrion/.env.*
+!cenrion/.env.example
+cenrion/vendor
+cenrion/node_modules
+cenrion/storage/logs
+cenrion/storage/framework/cache
+cenrion/storage/framework/sessions
+cenrion/storage/framework/views
+cenrion/bootstrap/cache/*.php
+*.md

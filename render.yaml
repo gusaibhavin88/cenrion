@@ -3,9 +3,8 @@ services:
     name: cenrion
     runtime: docker
     plan: free
-    rootDir: cenrion
-    dockerfilePath: ./cenrion/Dockerfile.render
-    dockerContext: ./cenrion
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /up
     envVars:
       - key: APP_NAME
