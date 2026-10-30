@@ -1,35 +1,16 @@
 @extends('layouts.app')
 
 @section('title', 'Capabilities')
-@section('meta_description', 'Cenrion\'s full technology capabilities: AI & Generative AI, Software Engineering, Data & Analytics, Cloud & DevOps, Quality Engineering, Automation & Systems.')
+@section('meta_description', 'Cenrion\'s full technology capabilities: AI & Generative AI, Software Engineering, Data & Analytics, Cloud & DevOps, Quality Engineering, Tech Consulting.')
 
 @section('content')
 
-{{-- =====================================================================
-     HERO SECTION
-     ===================================================================== --}}
-<section class="relative overflow-hidden" style="background-color:#0B1D2E; padding-top:8rem; padding-bottom:5rem;">
-    {{-- Background grid pattern --}}
-    <div class="absolute inset-0 opacity-5" style="background-image:radial-gradient(circle, #00AEEF 1px, transparent 1px); background-size:40px 40px;"></div>
-    {{-- Subtle cyan glow --}}
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-10" style="background:radial-gradient(ellipse, #00AEEF 0%, transparent 70%);"></div>
-
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        {{-- Eyebrow --}}
-        <div class="inline-flex items-center gap-2 mb-6" data-animate data-delay="0">
-            <div class="h-px w-8" style="background-color:#00AEEF;"></div>
-            <span class="text-sm font-semibold tracking-widest uppercase" style="color:#00AEEF;">What We Build</span>
-            <div class="h-px w-8" style="background-color:#00AEEF;"></div>
-        </div>
-
-        <h1 class="js-split text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Engineering Capabilities
-        </h1>
-        <p class="text-xl max-w-2xl mx-auto" style="color:#94A3B8;" data-animate data-delay="180">
-            Depth in every discipline. Breadth across the modern technology stack.
-        </p>
-    </div>
-</section>
+<x-page-hero
+    eyebrow="What We Build"
+    title="Six capabilities,<br><span style='color:#00AEEF;'>one engineering standard.</span>"
+    subtitle="AI and automation, software engineering, data, cloud, quality engineering and tech consulting — each release engineered to scale."
+    :breadcrumbs="['Capabilities']"
+/>
 
 {{-- =====================================================================
      CAPABILITIES GRID
@@ -211,26 +192,26 @@
             </div>
 
             {{-- --------------------------------------------------------
-                 PILLAR 6 — Automation & Systems
+                 PILLAR 6 — Tech Consulting
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl mb-6" style="background-color:#EBF8FF;">
                     <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00AEEF">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
                     </svg>
                 </div>
 
-                <h2 class="text-2xl font-bold mb-3" style="color:#0B1D2E;">Automation &amp; Systems</h2>
-                <p class="mb-8" style="color:#5A7184;">We eliminate repetitive manual effort and create intelligent workflows that integrate disparate systems — freeing teams to focus on higher-value work.</p>
+                <h2 class="text-2xl font-bold mb-3" style="color:#0B1D2E;">Tech Consulting</h2>
+                <p class="mb-8" style="color:#5A7184;">Architecture modernisation and AI adoption strategy — guidance that keeps delivery accountable as speed increases.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([
-                        'Robotic Process Automation (RPA)',
-                        'Custom workflow automation',
-                        'Third-party API integrations',
-                        'Enterprise process design',
-                        'System orchestration',
-                        'Operational monitoring',
+                        'Architecture modernisation',
+                        'AI adoption strategy',
+                        'Technology due diligence',
+                        'Engineering roadmaps',
+                        'Platform assessments',
+                        'Delivery advisory',
                     ] as $item)
                     <div class="flex items-start gap-3">
                         <div class="flex-shrink-0 mt-0.5">

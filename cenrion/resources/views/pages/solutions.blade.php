@@ -5,26 +5,61 @@
 
 @section('content')
 
-{{-- =====================================================================
-     HERO SECTION
-     ===================================================================== --}}
-<section class="relative overflow-hidden" style="background-color:#0B1D2E; padding-top:8rem; padding-bottom:5rem;">
-    <div class="absolute inset-0 opacity-5" style="background-image:radial-gradient(circle, #00AEEF 1px, transparent 1px); background-size:40px 40px;"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-10" style="background:radial-gradient(ellipse, #00AEEF 0%, transparent 70%);"></div>
+<x-page-hero
+    eyebrow="How We Engage"
+    title="Two core services,<br><span style='color:#00AEEF;'>built to scale.</span>"
+    subtitle="Hand us a complete outcome, or add our people to your team. Managed IT Services and Staff Augmentation both follow the same Glass Box model."
+    :breadcrumbs="['Solutions']"
+/>
 
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <div class="inline-flex items-center gap-2 mb-6" data-animate data-delay="0">
-            <div class="h-px w-8" style="background-color:#00AEEF;"></div>
-            <span class="text-sm font-semibold tracking-widest uppercase" style="color:#00AEEF;">Business Solutions</span>
-            <div class="h-px w-8" style="background-color:#00AEEF;"></div>
+{{-- =====================================================================
+     CORE SERVICES FROM PDF
+     ===================================================================== --}}
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <div class="p-10 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate>
+                <span class="section-tag block mb-3">Service 01</span>
+                <h2 class="text-2xl font-bold mb-3" style="color:#0B1D2E;">Managed IT Services</h2>
+                <p style="color:#5A7184;">
+                    We own delivery end to end under agreed service levels, covering architecture,
+                    engineering, cloud operations and support — one accountable partner for the outcome.
+                </p>
+            </div>
+            <div class="p-10 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="80">
+                <span class="section-tag block mb-3">Service 02</span>
+                <h2 class="text-2xl font-bold mb-3" style="color:#0B1D2E;">Staff Augmentation</h2>
+                <p style="color:#5A7184;">
+                    Vetted engineers and technology specialists who join your team, follow your process
+                    and report into your leads — Glass Box discipline embedded in your delivery.
+                </p>
+            </div>
         </div>
 
-        <h1 class="js-split text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Real Problems.<br>Engineered Solutions.
-        </h1>
-        <p class="text-xl max-w-2xl mx-auto" style="color:#94A3B8;" data-animate data-delay="180">
-            We don't sell technology for its own sake. We identify the business problems that matter most and engineer solutions designed to move the needle — measurably.
-        </p>
+        <div class="rounded-2xl p-8 border" style="border-color:#E2EAF4;" data-animate>
+            <span class="section-tag block mb-3">Our Home Ground</span>
+            <h3 class="text-2xl font-bold mb-3" style="color:#0B1D2E;">Product Engineering, end to end</h3>
+            <p class="mb-6" style="color:#5A7184;max-width:640px;">
+                From the first architecture decision to a platform in production, we build products designed to scale and proven at every step.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                @foreach(['Product discovery','System architecture','Web and mobile apps','APIs and microservices','Cloud native','Data platforms','AI integration','Performance at scale'] as $chip)
+                <span class="tech-badge">{{ $chip }}</span>
+                @endforeach
+            </div>
+            <div class="grid md:grid-cols-3 gap-5 mt-8">
+                @foreach([
+                    ['Architecture and scale', 'Cloud-native, microservice and event-driven systems designed to grow with you'],
+                    ['Build and ship', 'React, Next.js, Node.js, Python and Go, shipped through automated CI/CD pipelines'],
+                    ['Quality built in', 'Automated testing with Selenium, Appium and Robot Framework on every build'],
+                ] as $item)
+                <div>
+                    <h4 class="font-bold mb-1" style="color:#0B1D2E;">{{ $item[0] }}</h4>
+                    <p class="text-sm" style="color:#5A7184;">{{ $item[1] }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 </section>
 
@@ -190,7 +225,23 @@
             <p class="text-lg max-w-2xl mx-auto" style="color:#94A3B8;">We adapt to how your organisation works — from defined project delivery to embedded engineering capacity.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+
+            {{-- Model 0 — Managed IT --}}
+            <div class="rounded-2xl p-8 border transition-all duration-300 hover:border-cyan-400" style="background-color:#112237; border-color:#1A3352;">
+                <h3 class="text-lg font-bold text-white mb-3">Managed IT Services</h3>
+                <p class="text-sm mb-6" style="color:#94A3B8;">End-to-end ownership under agreed service levels — architecture, engineering, cloud operations and support.</p>
+                <ul class="space-y-2">
+                    @foreach(['One accountable partner', 'SLA-backed delivery', 'Glass Box gates'] as $point)
+                    <li class="flex items-center gap-2 text-sm" style="color:#94A3B8;">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#00AEEF">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                        {{ $point }}
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
 
             {{-- Model 1 --}}
             <div class="rounded-2xl p-8 border transition-all duration-300 hover:border-cyan-400" style="background-color:#112237; border-color:#1A3352;">
@@ -200,7 +251,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-bold text-white mb-3">Project-Based Delivery</h3>
-                <p class="text-sm mb-6" style="color:#94A3B8;">Fixed scope, explicit timeline, and defined deliverables. Ideal for organisations with a clear problem statement and a desire for predictable outcomes.</p>
+                <p class="text-sm mb-6" style="color:#94A3B8;">Fixed scope, explicit timeline, and defined outcomes.</p>
                 <ul class="space-y-2">
                     @foreach(['Defined outcomes', 'Fixed timeline', 'Milestone-based billing'] as $point)
                     <li class="flex items-center gap-2 text-sm" style="color:#94A3B8;">

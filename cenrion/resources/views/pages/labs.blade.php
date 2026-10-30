@@ -5,31 +5,38 @@
 
 @section('content')
 
+<x-page-hero
+    eyebrow="Cenrion Labs"
+    title="Proof before<br><span style='color:#00AEEF;'>promises.</span>"
+    subtitle="Our playground for AI experiments, products and startup ideas — working demonstrations you can explore today."
+    :breadcrumbs="['Cenrion Labs']"
+/>
+
 {{-- =====================================================================
-     HERO SECTION — dot grid background
+     LABS THESIS
      ===================================================================== --}}
-<section class="relative overflow-hidden" style="background-color:#0B1D2E; padding-top:8rem; padding-bottom:5rem;">
-    {{-- Dot grid overlay --}}
-    <div class="absolute inset-0" style="background-image:radial-gradient(circle, rgba(0,174,239,0.18) 1px, transparent 1px); background-size:32px 32px;"></div>
-    {{-- Radial glow --}}
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style="background:radial-gradient(ellipse at center, rgba(0,174,239,0.12) 0%, transparent 65%);"></div>
-
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        {{-- Eyebrow badge --}}
-        <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full border mb-8" style="background-color:rgba(0,174,239,0.1); border-color:rgba(0,174,239,0.3);" data-animate data-delay="0">
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#00AEEF">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 1-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-            </svg>
-            <span class="text-sm font-semibold" style="color:#00AEEF;">Cenrion Labs</span>
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-10" data-animate>
+            <span class="section-tag block mb-3">Our Innovation Division</span>
+            <h2 class="text-3xl font-extrabold mb-3" style="color:#0B1D2E;">Where we build what comes next</h2>
+            <p class="mx-auto" style="max-width:560px;color:#5A7184;">
+                Cenrion Labs is where we build growth accelerators, our own products, branded solutions and startup concepts.
+            </p>
         </div>
-
-        <h1 class="js-split text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Proof of Engineering<br>
-            <span class="draw-line" style="color:#00AEEF;">Capability</span>
-        </h1>
-        <p class="text-xl max-w-2xl mx-auto" style="color:#94A3B8;" data-animate data-delay="180">
-            Working technology demonstrations, not slides. Each Labs project is a functional build that shows exactly how we engineer solutions — before any engagement begins.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            @foreach([
+                ['Growth accelerators', 'Ready-to-deploy AI and automation kits that help businesses grow faster'],
+                ['Products', 'Software products we design, build and run ourselves'],
+                ['Branded solutions', 'White-label platforms partners can launch under their own brand'],
+                ['Startup concepts', 'Early ideas we prototype, test with real users and spin out'],
+            ] as $i => $item)
+            <div class="p-6 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="{{ $i * 70 }}">
+                <h3 class="font-bold mb-2" style="color:#0B1D2E;">{{ $item[0] }}</h3>
+                <p class="text-sm" style="color:#5A7184;">{{ $item[1] }}</p>
+            </div>
+            @endforeach
+        </div>
     </div>
 </section>
 

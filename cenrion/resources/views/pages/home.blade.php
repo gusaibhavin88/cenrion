@@ -1,37 +1,121 @@
 @extends('layouts.app')
 
-@section('title', 'Cenrion — Technology & AI Solutions')
+@section('title', 'Glass Box Engineering')
 
-@section('meta_description', 'Cenrion builds intelligent software, AI-powered solutions, and scalable technology systems that help businesses operate, innovate, and grow.')
+@section('meta_description', 'Cenrion delivers glass box engineering — AI speed with engineering accountability across managed IT services, staff augmentation, and product engineering.')
 
 @push('styles')
 <style>
-    /* ── Hero ── */
-    .hero-orb {
+    .home-hero {
+        min-height: auto;
+    }
+
+    /* Glass box — the hero object. A see-through engineering volume,
+       not a particle field or a gradient blob. */
+    .glassbox {
+        position: relative;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+    .hero-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "intro"
+            "visual"
+            "actions";
+        align-items: center;
+    }
+    .hero-intro { grid-area: intro; }
+    .hero-actions { grid-area: actions; }
+    .glassbox { grid-area: visual; }
+
+    .glassbox-stage {
+        position: relative;
+        height: 300px;
+        cursor: grab;
+    }
+    .glassbox-stage:active { cursor: grabbing; }
+    .glassbox-stage canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .glassbox-kicker {
         position: absolute;
-        border-radius: 9999px;
-        filter: blur(80px);
+        top: 8px;
+        left: 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #0B1D2E;
         pointer-events: none;
     }
-    @keyframes drift-a {
-        0%, 100% { transform: translate3d(0, 0, 0); }
-        50% { transform: translate3d(-40px, 28px, 0); }
+    .glassbox-kicker i {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #00AEEF;
+        box-shadow: 0 0 0 0 rgba(0,174,239,0.55);
+        animation: glassbox-ping 2.4s ease-out infinite;
     }
-    @keyframes drift-b {
-        0%, 100% { transform: translate3d(0, 0, 0); }
-        50% { transform: translate3d(32px, -26px, 0); }
+    @keyframes glassbox-ping {
+        0% { box-shadow: 0 0 0 0 rgba(0,174,239,0.45); }
+        70% { box-shadow: 0 0 0 8px rgba(0,174,239,0); }
+        100% { box-shadow: 0 0 0 0 rgba(0,174,239,0); }
     }
-    @keyframes drift-c {
-        0%, 100% { transform: translate3d(-50%, -50%, 0) scale(1); }
-        50% { transform: translate3d(-42%, -60%, 0) scale(1.08); }
+    .glassbox-legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 2px;
     }
-    .hero-orb-a { animation: drift-a 16s ease-in-out infinite; }
-    .hero-orb-b { animation: drift-b 20s ease-in-out infinite; }
-    .hero-orb-c { animation: drift-c 13s ease-in-out infinite; }
-
-    .hero-ticker { margin-top: 6.5rem; }
-    .hero-ticker-track { animation-duration: 26s; gap: 0; }
-    .hero-ticker-set {
+    .glassbox-legend li {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(11,29,46,0.08);
+        background: rgba(255,255,255,0.55);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: rgba(11,29,46,0.55);
+        transition: border-color 0.35s ease, color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+    }
+    .glassbox-legend li span {
+        font-variant-numeric: tabular-nums;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        color: #00AEEF;
+    }
+    .glassbox-legend li.is-lit {
+        color: #0B1D2E;
+        border-color: rgba(0,174,239,0.45);
+        background: rgba(0,174,239,0.10);
+        box-shadow: 0 8px 22px rgba(0,174,239,0.12);
+    }
+    @media (min-width: 1024px) {
+        .hero-layout {
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+            grid-template-areas:
+                "intro visual"
+                "actions visual";
+            column-gap: 1.5rem;
+            row-gap: 0;
+        }
+        .glassbox { margin: 0 0 0 auto; }
+        .glassbox-stage { height: 520px; }
+        .glassbox-kicker { top: 36px; left: 18px; }
+    }
+    .services-ticker-set {
         display: inline-flex;
         align-items: center;
         gap: 1.1rem;
@@ -43,16 +127,18 @@
         color: rgba(224, 247, 255, 0.72);
         white-space: nowrap;
     }
-    .hero-ticker-set span { color: #00AEEF; }
+    .services-ticker-set span { color: #00AEEF; }
 
-    @keyframes chip-float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-8px); }
+    .hero-chip-light {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 16px;
+        background: rgba(11,29,46,0.04);
+        border: 1px solid rgba(11,29,46,0.08);
+        border-radius: 999px;
+        font-size: 13px; font-weight: 500;
+        color: #0B1D2E;
+        white-space: nowrap;
     }
-    .hero-chip { animation: chip-float 4.6s ease-in-out infinite; }
-    .hero-chip:nth-child(2) { animation-delay: 0.35s; }
-    .hero-chip:nth-child(3) { animation-delay: 0.7s; }
-    .hero-chip:nth-child(4) { animation-delay: 1.05s; }
 
     .insight-card::after,
     .labs-mini-card::after {
@@ -71,7 +157,7 @@
     .labs-mini-card:hover::after { left: 140%; transition: left 0.7s ease; }
 
     @media (prefers-reduced-motion: reduce) {
-        .hero-orb-a, .hero-orb-b, .hero-orb-c, .hero-chip, .marquee-track { animation: none; }
+        .marquee-track, .glassbox-kicker i { animation: none; }
         .insight-card::after, .labs-mini-card::after { display: none; }
     }
 
@@ -111,6 +197,11 @@
     .marquee-wrapper::after {
         right: 0;
         background: linear-gradient(to left, #0B1D2E, transparent);
+    }
+    .process-on-navy h3 { color: #FFFFFF !important; }
+    .process-on-navy p { color: #94A3B8 !important; }
+    .process-on-navy .process-connector {
+        background: linear-gradient(to right, rgba(0,174,239,0.55), rgba(0,174,239,0.12));
     }
 
     /* ── Tech badge dark variant ── */
@@ -226,94 +317,196 @@
 @section('content')
 
 {{-- ══════════════════════════════════════════════════════════
-     SECTION 1: HERO
+     SECTION 1: HERO (light fold)
 ══════════════════════════════════════════════════════════ --}}
-<section class="relative min-h-screen flex flex-col justify-center hero-grid overflow-hidden"
-         style="background-color: #0B1D2E;">
+<section class="home-hero relative overflow-hidden">
+    <div class="home-hero-glow" aria-hidden="true"></div>
+    <div class="home-hero-pattern" aria-hidden="true"></div>
 
-    {{-- Ambient gradient orbs --}}
-    <div class="hero-orb hero-orb-a"
-         style="width:600px;height:600px;top:-150px;right:-100px;
-                background:radial-gradient(circle,rgba(0,174,239,0.10),transparent 70%);"></div>
-    <div class="hero-orb hero-orb-b"
-         style="width:500px;height:500px;bottom:-100px;left:-80px;
-                background:radial-gradient(circle,rgba(77,216,245,0.08),transparent 70%);"></div>
-    <div class="hero-orb hero-orb-c"
-         style="width:300px;height:300px;top:40%;left:50%;
-                background:radial-gradient(circle,rgba(0,174,239,0.06),transparent 70%);"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-10 pb-10 lg:pt-8 lg:pb-12">
+        <div class="hero-layout">
+            <div class="hero-intro text-center lg:text-left">
+                <div data-animate data-delay="0">
+                    <span class="section-tag inline-flex items-center gap-2 mb-5">
+                        <span class="inline-block w-5 h-px" style="background:#00AEEF;"></span>
+                        AI Speed · Engineering Accountability
+                        <span class="inline-block w-5 h-px" style="background:#00AEEF;"></span>
+                    </span>
+                </div>
 
-    <div class="hero-ticker marquee-wrapper relative z-10" aria-hidden="true">
-        <div class="marquee-track hero-ticker-track">
+                <h1 class="js-split font-extrabold tracking-tight mb-1 lg:mb-0 leading-[1.05]"
+                    style="font-size:clamp(2.6rem,5.4vw,4.5rem); color:#0B1D2E;">
+                    Glass box<br>
+                    <span class="draw-line" style="color:#00AEEF;">engineering.</span>
+                </h1>
+            </div>
+
+            <div class="glassbox" data-animate="fade-in" data-delay="80">
+                <div class="glassbox-stage" id="glassbox">
+                    <p class="glassbox-kicker"><i></i> Open system</p>
+                    <canvas id="glassbox-canvas" aria-hidden="true"></canvas>
+                </div>
+                <ul class="glassbox-legend" aria-label="What the glass box makes visible">
+                    <li data-layer="0"><span>01</span> Architecture</li>
+                    <li data-layer="1"><span>02</span> Visibility</li>
+                    <li data-layer="2"><span>03</span> Quality</li>
+                </ul>
+            </div>
+
+            <div class="hero-actions text-center lg:text-left mt-6 lg:mt-5">
+                <p class="mx-auto lg:mx-0 mb-8 leading-relaxed"
+                   style="max-width:520px;font-size:1.1rem;color:#5A7184;"
+                   data-animate data-delay="160">
+                    AI made writing code faster than ever. Cenrion closes the gap with architecture,
+                    visibility and quality checks that prove software is ready to scale.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
+                     data-animate data-delay="240">
+                    <a href="{{ route('contact') }}" class="btn-primary">
+                        Start a Product Review
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="{{ route('capabilities') }}" class="btn-secondary">
+                        Explore Capabilities
+                    </a>
+                </div>
+
+                <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3" data-animate data-delay="300">
+                    <span class="hero-chip-light">Managed IT Services</span>
+                    <span class="hero-chip-light">Staff Augmentation</span>
+                    <span class="hero-chip-light">Product Engineering</span>
+                    <span class="hero-chip-light">Quality Engineering</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 lg:mt-2 flex flex-col items-center gap-2 animate-bounce-slow"
+             style="color:rgba(11,29,46,0.35);">
+            <span class="text-xs font-medium tracking-widest uppercase" style="font-size:10px;letter-spacing:0.15em;">Scroll</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+{{-- Thin navy services band — separation under light hero --}}
+<section class="services-band py-4 overflow-hidden" aria-label="Services">
+    <div class="marquee-wrapper">
+        <div class="marquee-track" style="animation-duration:28s;">
             @for ($copy = 0; $copy < 2; $copy++)
-                <span class="hero-ticker-set">
-                    Engineering <span>·</span>
-                    Artificial Intelligence <span>·</span>
-                    Cloud Platforms <span>·</span>
-                    Product Design <span>·</span>
-                    Data Systems <span>·</span>
-                    Automation <span>·</span>
+                <span class="services-ticker-set">
+                    Managed IT Services <span>·</span>
+                    Staff Augmentation <span>·</span>
+                    Product Engineering <span>·</span>
+                    AI &amp; Automation <span>·</span>
+                    Cloud &amp; DevOps <span>·</span>
+                    Quality Engineering <span>·</span>
                 </span>
             @endfor
         </div>
     </div>
+</section>
 
-    {{-- Content --}}
-    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 pt-16 pb-28 text-center">
 
-        {{-- Eyebrow --}}
-        <div data-animate data-delay="0">
-            <span class="section-tag inline-flex items-center gap-2 mb-6">
-                <span class="inline-block w-5 h-px" style="background:#00AEEF;"></span>
-                Technology &amp; AI Solutions
-                <span class="inline-block w-5 h-px" style="background:#00AEEF;"></span>
-            </span>
+{{-- ══════════════════════════════════════════════════════════
+     WHY NOW
+══════════════════════════════════════════════════════════ --}}
+<section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-14">
+            <span class="section-tag block mb-3" data-animate>Why Now</span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;" data-animate data-delay="80">
+                It is about time.
+            </h2>
+            <p class="mx-auto text-lg" style="max-width:560px;color:#5A7184;" data-animate data-delay="160">
+                AI has made writing code faster than at any point in the history of software.
+                What has not kept pace is the engineering discipline that makes that code trustworthy, visible and ready to scale.
+            </p>
         </div>
-
-        {{-- H1 --}}
-        <h1 class="js-split font-extrabold tracking-tight mb-6 leading-none"
-            style="font-size:clamp(2.8rem,7vw,5rem); color:white;">
-            Technology that moves<br>
-            <span class="gradient-text draw-line">business forward.</span>
-        </h1>
-
-        {{-- Subheading --}}
-        <p class="mx-auto mb-10 leading-relaxed"
-           style="max-width:600px;font-size:1.1rem;color:#94A3B8;"
-           data-animate style="transition-delay:200ms">
-            We build intelligent software, AI-powered solutions, and scalable technology
-            systems that help businesses operate, innovate, and grow.
-        </p>
-
-        {{-- CTA Buttons --}}
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4"
-             data-animate style="transition-delay:300ms">
-            <a href="{{ route('capabilities') }}" class="btn-primary">
-                Explore Our Capabilities
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
-                </svg>
-            </a>
-            <a href="{{ route('contact') }}" class="btn-outline-white">
-                Talk to Us
-            </a>
-        </div>
-
-        <div class="mt-12 flex flex-wrap items-center justify-center gap-3">
-            <span class="tech-badge-dark hero-chip">AI &amp; Automation</span>
-            <span class="tech-badge-dark hero-chip">Cloud Platforms</span>
-            <span class="tech-badge-dark hero-chip">Product Engineering</span>
-            <span class="tech-badge-dark hero-chip">Data Systems</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            @foreach([
+                ['01', 'Speed went up', 'Code is generated, reviewed and shipped in a fraction of the time it once took.'],
+                ['02', 'Visibility went down', 'Clients see the output, rarely the architecture, the tests or the risks behind it.'],
+                ['03', 'Engineering got rushed', 'Shortcuts replaced design, and quality became optional the moment timelines tightened.'],
+                ['04', 'Scalability became an afterthought', 'Systems are built for the demo, then strain under real users and real load.'],
+            ] as $i => $item)
+            <div class="p-7 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="{{ $i * 80 }}">
+                <span class="section-tag block mb-3">{{ $item[0] }}</span>
+                <h3 class="text-xl font-bold mb-2" style="color:#0B1D2E;">{{ $item[1] }}</h3>
+                <p class="text-sm leading-relaxed" style="color:#5A7184;">{{ $item[2] }}</p>
+            </div>
+            @endforeach
         </div>
     </div>
+</section>
 
-    {{-- Scroll indicator --}}
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow"
-         style="color:rgba(0,174,239,0.5);">
-        <span class="text-xs font-medium tracking-widest uppercase" style="font-size:10px;letter-spacing:0.15em;">Scroll to explore</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
-        </svg>
+
+{{-- ══════════════════════════════════════════════════════════
+     BLACK BOX → GLASS BOX
+══════════════════════════════════════════════════════════ --}}
+<section class="py-24" style="background:#F5F8FC;">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-14">
+            <span class="section-tag block mb-3" data-animate>The Black Box Problem</span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;" data-animate data-delay="80">
+                The gap between speed and scale
+            </h2>
+            <p class="mx-auto text-lg" style="max-width:580px;color:#5A7184;" data-animate data-delay="160">
+                AI tools now write a large share of new code, so features arrive faster than ever.
+                Architecture, visibility and the checks that prove code works have not kept pace.
+                Cenrion closes that gap on every project.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
+            <div class="p-7 rounded-2xl bg-white border" style="border-color:#E2EAF4;" data-animate>
+                <h3 class="font-bold mb-4" style="color:#0B1D2E;">What AI accelerated</h3>
+                <ul class="space-y-2 text-sm" style="color:#5A7184;">
+                    @foreach(['Code generation','Prototypes and proofs of concept','Feature delivery','Release frequency'] as $line)
+                    <li class="flex gap-2"><span style="color:#00AEEF;">›</span>{{ $line }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="p-7 rounded-2xl text-center flex flex-col justify-center" style="background:#0B1D2E;" data-animate data-delay="80">
+                <span class="section-tag block mb-3">Cenrion</span>
+                <h3 class="text-2xl font-extrabold text-white mb-3">Bridges the gap</h3>
+                <p class="text-sm" style="color:#94A3B8;">16+ years of global delivery leadership, applied to software that is built to scale.</p>
+            </div>
+            <div class="p-7 rounded-2xl bg-white border" style="border-color:#E2EAF4;" data-animate data-delay="160">
+                <h3 class="font-bold mb-4" style="color:#0B1D2E;">What got left behind</h3>
+                <ul class="space-y-2 text-sm" style="color:#5A7184;">
+                    @foreach(['Visibility into how it was built','Architecture that scales','Quality checks and sign-off','Performance under real load'] as $line)
+                    <li class="flex gap-2"><span style="color:#00AEEF;">›</span>{{ $line }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-8 rounded-2xl border" style="border-color:#E2EAF4;background:#fff;" data-animate>
+                <span class="section-tag block mb-3">Black box</span>
+                <h3 class="text-xl font-bold mb-3" style="color:#0B1D2E;">Hope it works</h3>
+                <p class="text-sm leading-relaxed" style="color:#5A7184;">
+                    You receive finished software but cannot see how it was built or tested. Problems show up after launch.
+                </p>
+            </div>
+            <div class="p-8 rounded-2xl border" style="border-color:rgba(0,174,239,0.35);background:#fff;" data-animate data-delay="80">
+                <span class="section-tag block mb-3">Glass box</span>
+                <h3 class="text-xl font-bold mb-3" style="color:#0B1D2E;">See every step and check</h3>
+                <p class="text-sm leading-relaxed" style="color:#5A7184;">
+                    You see the plan, the tests and the results. Every step is checked and signed off. Problems are caught before launch.
+                </p>
+            </div>
+        </div>
+
+        <p class="mt-10 text-center text-lg font-semibold" style="color:#0B1D2E;" data-animate>
+            Every Cenrion release is engineered to scale — architecture decisions, code reviews, automated tests and performance benchmarks travel with it.
+        </p>
     </div>
 </section>
 
@@ -328,12 +521,13 @@
         <div class="text-center mb-16">
             <span class="section-tag block mb-3" data-animate>What We Build</span>
             <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
-                style="color:#0B1D2E;" data-animate style="transition-delay:80ms">
-                Core Capabilities
+                style="color:#0B1D2E;" data-animate data-delay="80">
+                Six capabilities, one standard
             </h2>
             <p class="mx-auto text-lg" style="max-width:520px;color:#5A7184;"
-               data-animate style="transition-delay:160ms">
-                End-to-end technology disciplines, executed with depth and precision.
+               data-animate data-delay="160">
+                Architecture, reviews, tests and benchmarks travel with every release —
+                so you can see exactly how it was built.
             </p>
         </div>
 
@@ -510,125 +704,7 @@
 
 
 {{-- ══════════════════════════════════════════════════════════
-     SECTION 3: DELIVERY PROCESS
-══════════════════════════════════════════════════════════ --}}
-<section class="py-24" style="background:#F5F8FC;">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-
-        {{-- Section header --}}
-        <div class="text-center mb-16">
-            <span class="section-tag block mb-3" data-animate>How We Work</span>
-            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
-                style="color:#0B1D2E;" data-animate style="transition-delay:80ms">
-                From Idea to Impact
-            </h2>
-            <p class="mx-auto text-lg" style="max-width:480px;color:#5A7184;"
-               data-animate style="transition-delay:160ms">
-                A proven delivery approach that removes friction and drives outcomes — fast.
-            </p>
-        </div>
-
-        {{-- Process steps --}}
-        <div class="flex flex-col lg:flex-row items-start lg:items-start gap-0">
-
-            {{-- Step 1: Discover --}}
-            <div class="flex flex-col items-center text-center flex-1 relative" data-animate data-delay="0">
-                {{-- Mobile: left border line --}}
-                <div class="lg:hidden absolute left-7 top-16 bottom-0 w-px"
-                     style="background:linear-gradient(to bottom,rgba(0,174,239,0.4),rgba(0,174,239,0.05));"></div>
-
-                {{-- Number + Icon --}}
-                <div class="relative mb-5">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
-                         style="background:linear-gradient(135deg,#00AEEF,#007DB8);">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="white" stroke-width="1.8" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
-                        </svg>
-                    </div>
-                    <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center"
-                          style="background:#0B1D2E;color:#00AEEF;font-size:10px;">1</span>
-                </div>
-                <h3 class="text-lg font-bold mb-2" style="color:#0B1D2E;">Discover</h3>
-                <p class="text-sm leading-relaxed px-4" style="color:#5A7184;">Define outcomes &amp; architecture</p>
-            </div>
-
-            {{-- Connector (desktop only) --}}
-            <div class="process-connector hidden lg:block" data-draw data-delay="180"></div>
-
-            {{-- Step 2: Design --}}
-            <div class="flex flex-col items-center text-center flex-1 relative mt-8 lg:mt-0" data-animate data-delay="120">
-                <div class="lg:hidden absolute left-7 top-16 bottom-0 w-px"
-                     style="background:linear-gradient(to bottom,rgba(0,174,239,0.4),rgba(0,174,239,0.05));"></div>
-                <div class="relative mb-5">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
-                         style="background:linear-gradient(135deg,#00AEEF,#007DB8);">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="white" stroke-width="1.8" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
-                        </svg>
-                    </div>
-                    <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center"
-                          style="background:#0B1D2E;color:#00AEEF;font-size:10px;">2</span>
-                </div>
-                <h3 class="text-lg font-bold mb-2" style="color:#0B1D2E;">Design</h3>
-                <p class="text-sm leading-relaxed px-4" style="color:#5A7184;">User experience &amp; systems</p>
-            </div>
-
-            {{-- Connector --}}
-            <div class="process-connector hidden lg:block" data-draw data-delay="300"></div>
-
-            {{-- Step 3: Build --}}
-            <div class="flex flex-col items-center text-center flex-1 relative mt-8 lg:mt-0" data-animate data-delay="240">
-                <div class="lg:hidden absolute left-7 top-16 bottom-0 w-px"
-                     style="background:linear-gradient(to bottom,rgba(0,174,239,0.4),rgba(0,174,239,0.05));"></div>
-                <div class="relative mb-5">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
-                         style="background:linear-gradient(135deg,#00AEEF,#007DB8);">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="white" stroke-width="1.8" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m5.896-2.65c.733-.733 1.195-1.729 1.195-2.834a4.014 4.014 0 00-4.014-4.014c-1.105 0-2.101.462-2.834 1.195m5.653 5.653l-5.653-5.653"/>
-                        </svg>
-                    </div>
-                    <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center"
-                          style="background:#0B1D2E;color:#00AEEF;font-size:10px;">3</span>
-                </div>
-                <h3 class="text-lg font-bold mb-2" style="color:#0B1D2E;">Build</h3>
-                <p class="text-sm leading-relaxed px-4" style="color:#5A7184;">Agile engineering &amp; testing</p>
-            </div>
-
-            {{-- Connector --}}
-            <div class="process-connector hidden lg:block" data-draw data-delay="420"></div>
-
-            {{-- Step 4: Scale --}}
-            <div class="flex flex-col items-center text-center flex-1 relative mt-8 lg:mt-0" data-animate data-delay="360">
-                <div class="relative mb-5">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
-                         style="background:linear-gradient(135deg,#00AEEF,#007DB8);">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="white" stroke-width="1.8" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
-                        </svg>
-                    </div>
-                    <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center"
-                          style="background:#0B1D2E;color:#00AEEF;font-size:10px;">4</span>
-                </div>
-                <h3 class="text-lg font-bold mb-2" style="color:#0B1D2E;">Scale</h3>
-                <p class="text-sm leading-relaxed px-4" style="color:#5A7184;">Cloud deployment &amp; growth</p>
-            </div>
-
-        </div>{{-- /process steps --}}
-
-    </div>
-</section>
-
-
-{{-- ══════════════════════════════════════════════════════════
-     SECTION 4: TECHNOLOGY ECOSYSTEM BAR
+     SECTION 3: TECHNOLOGY ECOSYSTEM BAR
 ══════════════════════════════════════════════════════════ --}}
 <section class="py-20 overflow-hidden" style="background:#0B1D2E;">
     <div class="max-w-6xl mx-auto px-6 lg:px-8 mb-12 text-center">
@@ -690,6 +766,83 @@
         </div>
     </div>
 
+</section>
+
+
+{{-- ══════════════════════════════════════════════════════════
+     SECTION 4: DELIVERY PROCESS (navy contrast fold)
+══════════════════════════════════════════════════════════ --}}
+<section class="fold-navy process-on-navy py-24">
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-14">
+            <span class="section-tag block mb-3" data-animate>How We Work</span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white"
+                data-animate data-delay="80">
+                The Glass Box model
+            </h2>
+            <p class="mx-auto text-lg" style="max-width:560px;color:#94A3B8;"
+               data-animate data-delay="160">
+                Most vendors leave architecture and scaling to the end. We engineer for scale from day one
+                and place a gate between every phase. Each gate leaves behind a document the client keeps.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+            @foreach([
+                ['01', 'Discover', 'Outcomes and success criteria · Architecture and risk map', 'G1'],
+                ['02', 'Design', 'UX and system design · Architecture built to scale', 'G2'],
+                ['03', 'Build', 'Agile engineering sprints · Clean, reviewed code', 'G3'],
+                ['04', 'Release', 'CI/CD and cloud deployment · Release readiness sign-off', 'G4'],
+                ['05', 'Scale', 'Performance and load tuning · Monitoring and growth', 'Scale'],
+            ] as $i => $step)
+            <div class="rounded-2xl p-5 text-center" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);" data-animate data-delay="{{ $i * 70 }}">
+                <span class="section-tag block mb-2">{{ $step[0] }}</span>
+                <h3 class="text-lg font-bold text-white mb-2">{{ $step[1] }}</h3>
+                <p class="text-xs leading-relaxed mb-3" style="color:#94A3B8;">{{ $step[2] }}</p>
+                <span class="inline-flex px-2.5 py-1 rounded-full text-[11px] font-bold" style="background:rgba(0,174,239,0.15);color:#4DD8F5;">{{ $step[3] }}</span>
+            </div>
+            @endforeach
+        </div>
+
+        <p class="text-center text-sm mb-12" style="color:#94A3B8;" data-animate>
+            <span style="color:#00AEEF;font-weight:700;">QA layer</span> —
+            Automated testing and code review run through every phase, from the first sprint to scale.
+        </p>
+
+        <div class="rounded-2xl overflow-hidden border" style="border-color:rgba(255,255,255,0.08);" data-animate>
+            <div class="px-6 py-5" style="background:rgba(255,255,255,0.04);">
+                <h3 class="text-xl font-bold text-white">What you receive at every gate</h3>
+                <p class="text-sm mt-1" style="color:#94A3B8;">A gate is a checkpoint with a clear pass or fail. If a gate fails, it is fixed before the work moves on.</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr style="color:#4DD8F5;border-bottom:1px solid rgba(255,255,255,0.08);">
+                            <th class="px-6 py-3 font-semibold">Gate</th>
+                            <th class="px-6 py-3 font-semibold">Checkpoint</th>
+                            <th class="px-6 py-3 font-semibold">What you receive</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color:#94A3B8;">
+                        @foreach([
+                            ['G1', 'Architecture approved', 'Solution architecture and scalability plan'],
+                            ['G2', 'Design signed off', 'System design, API contracts and test strategy'],
+                            ['G3', 'Build verified', 'Code review, automated test and security reports'],
+                            ['G4', 'Release ready', 'Deployment runbook and performance benchmarks'],
+                            ['Scale', 'Growth and operations', 'Monitoring, capacity planning and root-cause reports'],
+                        ] as $row)
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                            <td class="px-6 py-3 font-semibold" style="color:#fff;">{{ $row[0] }}</td>
+                            <td class="px-6 py-3">{{ $row[1] }}</td>
+                            <td class="px-6 py-3">{{ $row[2] }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -921,6 +1074,83 @@
 
 
 {{-- ══════════════════════════════════════════════════════════
+     AI IN THE LOOP
+══════════════════════════════════════════════════════════ --}}
+<section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-14">
+            <span class="section-tag block mb-3" data-animate>How We Use AI</span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;" data-animate data-delay="80">
+                AI in the loop, engineers in charge
+            </h2>
+            <p class="mx-auto text-lg" style="max-width:560px;color:#5A7184;" data-animate data-delay="160">
+                We use AI where it saves time. Senior engineers own the architecture and review every AI output before it ships.
+                You get the speed of AI with engineers accountable for the result.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            @foreach([
+                ['AI accelerates', ['Code scaffolding and refactoring','Integrations and boilerplate','Documentation drafts']],
+                ['Engineers decide', ['Architecture owned by senior engineers','Human review of every change','Designed for scale, not just the demo']],
+                ['Clients see', ['Architecture and design decisions','Code review and test results','Performance and scale reports']],
+            ] as $i => $col)
+            <div class="p-7 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="{{ $i * 80 }}">
+                <h3 class="text-lg font-bold mb-4" style="color:#0B1D2E;">{{ $col[0] }}</h3>
+                <ul class="space-y-2 text-sm" style="color:#5A7184;">
+                    @foreach($col[1] as $line)
+                    <li class="flex gap-2"><span style="color:#00AEEF;">›</span>{{ $line }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+{{-- ══════════════════════════════════════════════════════════
+     PRODUCT ENGINEERING REVIEW
+══════════════════════════════════════════════════════════ --}}
+<section class="py-24" style="background:#F5F8FC;">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-animate>
+                <span class="section-tag block mb-3">Where to Start</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;">
+                    Start with a Product Engineering review
+                </h2>
+                <p class="text-lg mb-8" style="color:#5A7184;">
+                    A fixed-scope review of your product’s architecture, code base and delivery pipeline, completed in two weeks.
+                    You keep the findings and the roadmap, whether or not we work together.
+                </p>
+                <a href="{{ route('contact') }}" class="btn-primary">
+                    Book a review
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="space-y-4">
+                @foreach([
+                    ['01', 'Map', 'Architecture, code base and release pipeline as they run today'],
+                    ['02', 'Measure', 'Scalability limits, technical debt and quality gaps'],
+                    ['03', 'Recommend', 'A prioritised engineering roadmap to scale with confidence'],
+                ] as $i => $step)
+                <div class="p-6 rounded-2xl bg-white border flex gap-5" style="border-color:#E2EAF4;" data-animate data-delay="{{ $i * 80 }}">
+                    <span class="section-tag shrink-0">{{ $step[0] }}</span>
+                    <div>
+                        <h3 class="font-bold mb-1" style="color:#0B1D2E;">{{ $step[1] }}</h3>
+                        <p class="text-sm" style="color:#5A7184;">{{ $step[2] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{-- ══════════════════════════════════════════════════════════
      SECTION 7: CTA BANNER
 ══════════════════════════════════════════════════════════ --}}
 <section class="cta-banner py-28">
@@ -942,19 +1172,18 @@
         </div>
 
         <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-5 text-white leading-tight"
-            data-animate style="transition-delay:80ms">
+            data-animate data-delay="80">
             Ready to build something<br>
             <span class="gradient-text">meaningful?</span>
         </h2>
         <p class="text-lg mb-10 mx-auto" style="color:#94A3B8;max-width:520px;"
-           data-animate style="transition-delay:160ms">
-            Whether you're modernizing legacy systems, launching an AI product, or scaling
-            your platform — let's figure it out together.
+           data-animate data-delay="160">
+            No fluff. No long-winded proposals. Just engineering that ships fast and scales hard.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4"
-             data-animate style="transition-delay:240ms">
-            <a href="{{ route('contact') }}" class="btn-primary">
+             data-animate data-delay="240">
+            <a href="{{ route('contact') }}" class="btn-white">
                 Talk to Us
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
@@ -965,12 +1194,407 @@
             </a>
         </div>
 
-        {{-- Trust line --}}
-        <p class="mt-12 text-xs tracking-widest uppercase" style="color:rgba(148,163,184,0.4);">
-            No fluff. No long-winded proposals. Just engineering.
+        <p class="mt-12 text-xs tracking-widest uppercase" style="color:rgba(148,163,184,0.45);">
+            hello@cenrion.com · www.cenrion.com
         </p>
 
     </div>
 </section>
 
 @endsection
+
+@push('scripts')
+<script>
+(function () {
+    const stage = document.getElementById('glassbox');
+    const canvas = document.getElementById('glassbox-canvas');
+    if (!stage || !canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const legend = document.querySelectorAll('.glassbox-legend [data-layer]');
+
+    const CORNERS = [
+        [-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
+        [-1, -1,  1], [1, -1,  1], [1, 1,  1], [-1, 1,  1]
+    ];
+    const FACES = [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
+        [0, 1, 5, 4],
+        [3, 2, 6, 7],
+        [0, 3, 7, 4],
+        [1, 2, 6, 5]
+    ];
+    const EDGES = [
+        [0, 1], [1, 2], [2, 3], [3, 0],
+        [4, 5], [5, 6], [6, 7], [7, 4],
+        [0, 4], [1, 5], [2, 6], [3, 7]
+    ];
+    const PLATES = [
+        { y: -0.56, label: 0 },
+        { y:  0.00, label: 1 },
+        { y:  0.56, label: 2 }
+    ];
+
+    let yaw = -0.62;
+    let pitch = 0.36;
+    let spin = 0;
+    let userYaw = 0;
+    let userPitch = 0;
+    let hoverYaw = 0;
+    let hoverPitch = 0;
+    let dragging = false;
+    let lastX = 0;
+    let lastY = 0;
+    let visible = true;
+    let raf = 0;
+    const started = performance.now();
+
+    function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const w = stage.clientWidth;
+        const h = stage.clientHeight;
+        canvas.width = Math.max(1, Math.floor(w * dpr));
+        canvas.height = Math.max(1, Math.floor(h * dpr));
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function rotY(v, a) {
+        const c = Math.cos(a);
+        const s = Math.sin(a);
+        return [v[0] * c + v[2] * s, v[1], -v[0] * s + v[2] * c];
+    }
+
+    function rotX(v, a) {
+        const c = Math.cos(a);
+        const s = Math.sin(a);
+        return [v[0], v[1] * c - v[2] * s, v[1] * s + v[2] * c];
+    }
+
+    function world(v) {
+        return rotX(rotY(v, yaw), pitch);
+    }
+
+    function project(v, cx, cy, scale) {
+        const fov = 4.4;
+        const p = fov / (fov + v[2]);
+        return { x: cx + v[0] * scale * p, y: cy - v[1] * scale * p, z: v[2], p: p };
+    }
+
+    function normal(a, b, c) {
+        const ux = b[0] - a[0], uy = b[1] - a[1], uz = b[2] - a[2];
+        const vx = c[0] - a[0], vy = c[1] - a[1], vz = c[2] - a[2];
+        let x = uy * vz - uz * vy;
+        let y = uz * vx - ux * vz;
+        let z = ux * vy - uy * vx;
+        const len = Math.hypot(x, y, z) || 1;
+        return [x / len, y / len, z / len];
+    }
+
+    function path(points) {
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 1; i < points.length; i++) ctx.lineTo(points[i].x, points[i].y);
+        ctx.closePath();
+    }
+
+    function frame() {
+        const w = stage.clientWidth;
+        const h = stage.clientHeight;
+        if (w < 2 || h < 2) return;
+
+        const now = performance.now();
+        const t = (now - started) / 1000;
+        const intro = reduce ? 1 : Math.min(1, t / 1.25);
+        const ease = 1 - Math.pow(1 - intro, 3);
+
+        if (!reduce && !dragging) spin += 0.0042;
+
+        const aimYaw = -0.62 + spin + userYaw + hoverYaw;
+        const aimPitch = 0.36 + userPitch + hoverPitch;
+        yaw += (aimYaw - yaw) * (reduce ? 1 : 0.1);
+        pitch += (aimPitch - pitch) * (reduce ? 1 : 0.1);
+
+        ctx.clearRect(0, 0, w, h);
+
+        const cx = w * 0.5;
+        const cy = h * 0.5;
+        const scale = Math.min(w, h) * 0.27 * (0.86 + ease * 0.14);
+
+        const glow = ctx.createRadialGradient(cx, cy - 10, scale * 0.15, cx, cy, scale * 1.85);
+        glow.addColorStop(0, 'rgba(0,174,239,' + (0.18 * ease) + ')');
+        glow.addColorStop(0.48, 'rgba(0,174,239,' + (0.05 * ease) + ')');
+        glow.addColorStop(1, 'rgba(0,174,239,0)');
+        ctx.fillStyle = glow;
+        ctx.fillRect(0, 0, w, h);
+
+        const floorY = -1.28;
+        ctx.lineWidth = 1;
+        for (let i = -3; i <= 3; i++) {
+            const a = world([i * 0.55, floorY, -1.7]);
+            const b = world([i * 0.55, floorY, 1.7]);
+            const c = world([-1.7, floorY, i * 0.55]);
+            const d = world([1.7, floorY, i * 0.55]);
+            const pa = project(a, cx, cy, scale);
+            const pb = project(b, cx, cy, scale);
+            const pc = project(c, cx, cy, scale);
+            const pd = project(d, cx, cy, scale);
+            const fade = 0.05 + (1 - Math.abs(i) / 3) * 0.05;
+            ctx.strokeStyle = 'rgba(11,29,46,' + (fade * ease) + ')';
+            ctx.beginPath();
+            ctx.moveTo(pa.x, pa.y);
+            ctx.lineTo(pb.x, pb.y);
+            ctx.moveTo(pc.x, pc.y);
+            ctx.lineTo(pd.x, pd.y);
+            ctx.stroke();
+        }
+
+        const shadow = project(world([0, floorY + 0.02, 0]), cx, cy, scale);
+        ctx.save();
+        ctx.translate(shadow.x, shadow.y);
+        ctx.scale(1, 0.32);
+        ctx.beginPath();
+        ctx.arc(0, 0, scale * 0.92, 0, Math.PI * 2);
+        const shade = ctx.createRadialGradient(0, 0, scale * 0.1, 0, 0, scale * 0.92);
+        shade.addColorStop(0, 'rgba(11,29,46,' + (0.13 * ease) + ')');
+        shade.addColorStop(1, 'rgba(11,29,46,0)');
+        ctx.fillStyle = shade;
+        ctx.fill();
+        ctx.restore();
+
+        const cube = CORNERS.map(function (v) { return world(v); });
+        const projected = cube.map(function (v) { return project(v, cx, cy, scale); });
+
+        const light = [0.35, 0.8, -0.85];
+        const lightLen = Math.hypot(light[0], light[1], light[2]);
+        light[0] /= lightLen; light[1] /= lightLen; light[2] /= lightLen;
+
+        const faces = FACES.map(function (ids) {
+            const pts3 = ids.map(function (id) { return cube[id]; });
+            const n = normal(pts3[0], pts3[1], pts3[2]);
+            const lit = n[0] * light[0] + n[1] * light[1] + n[2] * light[2];
+            const depth = (pts3[0][2] + pts3[1][2] + pts3[2][2] + pts3[3][2]) / 4;
+            return { ids: ids, lit: lit, depth: depth };
+        }).sort(function (a, b) { return b.depth - a.depth; });
+
+        function paintFace(face, veil) {
+            const pts = face.ids.map(function (id) { return projected[id]; });
+            path(pts);
+            const facing = Math.max(0, face.lit);
+            const wash = ((face.lit > 0 ? 0.12 : 0.04) + facing * 0.18) * veil;
+            const g = ctx.createLinearGradient(pts[0].x, pts[0].y, pts[2].x, pts[2].y);
+            g.addColorStop(0, 'rgba(255,255,255,' + (wash * ease) + ')');
+            g.addColorStop(0.55, 'rgba(224,247,255,' + ((wash * 0.7) * ease) + ')');
+            g.addColorStop(1, 'rgba(0,174,239,' + ((0.045 + facing * 0.11) * veil * ease) + ')');
+            ctx.fillStyle = g;
+            ctx.fill();
+        }
+
+        faces.filter(function (face) { return face.depth > 0.02; }).forEach(function (face) {
+            paintFace(face, 1);
+        });
+
+        const scan = Math.sin(t * 0.72) * 0.62;
+        let active = 0;
+        let best = 99;
+        PLATES.forEach(function (plate, index) {
+            const dist = Math.abs(plate.y - scan);
+            if (dist < best) { best = dist; active = index; }
+        });
+        legend.forEach(function (item, index) {
+            item.classList.toggle('is-lit', index === active);
+        });
+
+        const plateSize = 0.8;
+        PLATES.forEach(function (plate, index) {
+            const y = plate.y + Math.sin(t * 0.9 + index) * (reduce ? 0 : 0.015);
+            const quad = [
+                [-plateSize, y, -plateSize],
+                [ plateSize, y, -plateSize],
+                [ plateSize, y,  plateSize],
+                [-plateSize, y,  plateSize]
+            ].map(function (v) { return project(world(v), cx, cy, scale); });
+            path(quad);
+            ctx.fillStyle = index === active
+                ? 'rgba(0,174,239,' + (0.16 * ease) + ')'
+                : 'rgba(11,29,46,' + (0.035 * ease) + ')';
+            ctx.fill();
+            ctx.lineWidth = index === active ? 1.4 : 1;
+            ctx.strokeStyle = index === active
+                ? 'rgba(0,174,239,' + (0.85 * ease) + ')'
+                : 'rgba(11,29,46,' + (0.28 * ease) + ')';
+            ctx.stroke();
+
+            const midX = [
+                [0, y, -plateSize * 0.55],
+                [0, y,  plateSize * 0.55]
+            ].map(function (v) { return project(world(v), cx, cy, scale); });
+            const midZ = [
+                [-plateSize * 0.55, y, 0],
+                [ plateSize * 0.55, y, 0]
+            ].map(function (v) { return project(world(v), cx, cy, scale); });
+            ctx.beginPath();
+            ctx.moveTo(midX[0].x, midX[0].y);
+            ctx.lineTo(midX[1].x, midX[1].y);
+            ctx.moveTo(midZ[0].x, midZ[0].y);
+            ctx.lineTo(midZ[1].x, midZ[1].y);
+            ctx.strokeStyle = 'rgba(0,174,239,' + ((index === active ? 0.45 : 0.16) * ease) + ')';
+            ctx.stroke();
+        });
+
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(11,29,46,' + (0.22 * ease) + ')';
+        [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(function (xz) {
+            const a = project(world([xz[0] * plateSize, PLATES[0].y, xz[1] * plateSize]), cx, cy, scale);
+            const b = project(world([xz[0] * plateSize, PLATES[2].y, xz[1] * plateSize]), cx, cy, scale);
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+        });
+
+        const coreSpin = reduce ? 0.4 : -t * 0.55;
+        const core = CORNERS.map(function (v) {
+            return world(rotY([v[0] * 0.3, v[1] * 0.3, v[2] * 0.3], coreSpin));
+        });
+        const coreP = core.map(function (v) { return project(v, cx, cy, scale); });
+        ctx.lineWidth = 1.25;
+        ctx.strokeStyle = 'rgba(0,125,184,' + (0.8 * ease) + ')';
+        EDGES.forEach(function (edge) {
+            ctx.beginPath();
+            ctx.moveTo(coreP[edge[0]].x, coreP[edge[0]].y);
+            ctx.lineTo(coreP[edge[1]].x, coreP[edge[1]].y);
+            ctx.stroke();
+        });
+
+        const scanQuad = [
+            [-0.98, scan, -0.98],
+            [ 0.98, scan, -0.98],
+            [ 0.98, scan,  0.98],
+            [-0.98, scan,  0.98]
+        ].map(function (v) { return project(world(v), cx, cy, scale); });
+        path(scanQuad);
+        ctx.fillStyle = 'rgba(77,216,245,' + (0.13 * ease) + ')';
+        ctx.fill();
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = 'rgba(0,174,239,' + (0.9 * ease) + ')';
+        ctx.stroke();
+
+        faces.filter(function (face) { return face.depth <= 0.02; }).forEach(function (face) {
+            paintFace(face, 0.42);
+        });
+
+        EDGES.forEach(function (edge) {
+            const a = projected[edge[0]];
+            const b = projected[edge[1]];
+            const depth = (a.z + b.z) / 2;
+            const near = Math.max(0, Math.min(1, (1.15 - depth) / 2.3));
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = 'rgba(0,174,239,' + ((0.08 + near * 0.16) * ease) + ')';
+            ctx.stroke();
+            ctx.lineWidth = 1.35;
+            ctx.strokeStyle = 'rgba(11,29,46,' + ((0.35 + near * 0.5) * ease) + ')';
+            ctx.stroke();
+        });
+
+        if (!reduce) {
+            EDGES.forEach(function (edge, index) {
+                const u = (t * 0.16 + index / EDGES.length) % 1;
+                for (let step = 4; step >= 0; step--) {
+                    const along = (u - step * 0.028 + 1) % 1;
+                    const v = [
+                        CORNERS[edge[0]][0] + (CORNERS[edge[1]][0] - CORNERS[edge[0]][0]) * along,
+                        CORNERS[edge[0]][1] + (CORNERS[edge[1]][1] - CORNERS[edge[0]][1]) * along,
+                        CORNERS[edge[0]][2] + (CORNERS[edge[1]][2] - CORNERS[edge[0]][2]) * along
+                    ];
+                    const p = project(world(v), cx, cy, scale);
+                    const alpha = (1 - step / 4) * 0.95 * ease;
+                    const radius = (step === 0 ? 2.4 : 1.3) * p.p;
+                    const dot = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius * 3.2);
+                    dot.addColorStop(0, 'rgba(0,174,239,' + alpha + ')');
+                    dot.addColorStop(1, 'rgba(0,174,239,0)');
+                    ctx.fillStyle = dot;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, radius * 3.2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            });
+        }
+
+        let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+        projected.forEach(function (p) {
+            minX = Math.min(minX, p.x);
+            minY = Math.min(minY, p.y);
+            maxX = Math.max(maxX, p.x);
+            maxY = Math.max(maxY, p.y);
+        });
+        const pad = 22;
+        minX -= pad; minY -= pad; maxX += pad; maxY += pad;
+        ctx.lineWidth = 1.25;
+        ctx.strokeStyle = 'rgba(11,29,46,' + (0.35 * ease) + ')';
+        [[minX, minY, 1, 1], [maxX, minY, -1, 1], [minX, maxY, 1, -1], [maxX, maxY, -1, -1]].forEach(function (b) {
+            ctx.beginPath();
+            ctx.moveTo(b[0] + b[2] * 16, b[1]);
+            ctx.lineTo(b[0], b[1]);
+            ctx.lineTo(b[0], b[1] + b[3] * 16);
+            ctx.stroke();
+        });
+
+        if (!reduce && visible) raf = requestAnimationFrame(frame);
+    }
+
+    stage.addEventListener('pointerdown', function (event) {
+        dragging = true;
+        lastX = event.clientX;
+        lastY = event.clientY;
+        stage.setPointerCapture(event.pointerId);
+    });
+    stage.addEventListener('pointermove', function (event) {
+        const rect = stage.getBoundingClientRect();
+        if (dragging) {
+            userYaw += (event.clientX - lastX) * 0.008;
+            userPitch += (event.clientY - lastY) * 0.005;
+            userPitch = Math.max(-0.55, Math.min(0.55, userPitch));
+            lastX = event.clientX;
+            lastY = event.clientY;
+            if (reduce) frame();
+            return;
+        }
+        hoverYaw = ((event.clientX - rect.left) / rect.width - 0.5) * 0.5;
+        hoverPitch = ((event.clientY - rect.top) / rect.height - 0.5) * 0.3;
+    });
+    function release() {
+        dragging = false;
+    }
+    stage.addEventListener('pointerup', release);
+    stage.addEventListener('pointercancel', release);
+    stage.addEventListener('pointerleave', function () {
+        if (!dragging) {
+            hoverYaw = 0;
+            hoverPitch = 0;
+        }
+    });
+
+    const watch = new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        if (visible && !reduce) {
+            cancelAnimationFrame(raf);
+            raf = requestAnimationFrame(frame);
+        }
+    }, { threshold: 0.05 });
+    watch.observe(stage);
+
+    window.addEventListener('resize', function () {
+        resize();
+        if (reduce || !visible) frame();
+    });
+
+    resize();
+    frame();
+})();
+</script>
+@endpush

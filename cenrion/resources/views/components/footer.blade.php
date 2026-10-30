@@ -6,30 +6,16 @@
 
             {{-- ── Column 1: Brand & Mission ── --}}
             <div class="sm:col-span-2 lg:col-span-1">
-                {{-- Logo --}}
-                <a href="{{ route('home') }}" class="flex items-center gap-3 mb-5 group" aria-label="Cenrion home">
-                    <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <polygon points="16,11 20,16 16,21 12,16" fill="#00AEEF"/>
-                        <polygon points="16,0 19,5 16,10 13,5" fill="#4DD8F5"/>
-                        <polygon points="16,22 19,27 16,32 13,27" fill="#4DD8F5"/>
-                        <polygon points="0,16 5,13 10,16 5,19" fill="#4DD8F5"/>
-                        <polygon points="22,16 27,13 32,16 27,19" fill="#4DD8F5"/>
-                        <polygon points="23,3 27,5 25,9 21,7" fill="#00AEEF" opacity="0.7"/>
-                        <polygon points="9,23 13,25 11,29 7,27" fill="#00AEEF" opacity="0.7"/>
-                        <polygon points="9,3 13,7 11,11 7,5" fill="#00AEEF" opacity="0.7"/>
-                        <polygon points="23,23 27,27 25,29 21,25" fill="#00AEEF" opacity="0.7"/>
-                    </svg>
-                    <span style="font-size: 20px; font-weight: 800; letter-spacing: -0.03em; color: #FFFFFF;">cenrion</span>
-                </a>
+                <div class="mb-5">
+                    @include('components.logo', ['variant' => 'white', 'size' => 34])
+                </div>
 
-                {{-- Tagline --}}
                 <p style="color: #4DD8F5; font-size: 14px; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.01em;">
-                    Technology2 that moves business forward.
+                    Glass box engineering.
                 </p>
 
-                {{-- Mission --}}
                 <p style="color: #94A3B8; font-size: 14px; line-height: 1.7; margin-bottom: 20px;">
-                    We partner with forward-thinking organisations to design, build, and scale intelligent software systems — from AI and data platforms to cloud-native applications.
+                    AI speed with engineering accountability — managed IT services, staff augmentation, and product engineering built to scale.
                 </p>
 
                 {{-- Tech stack badges --}}
@@ -113,17 +99,17 @@
                     Contact
                 </h3>
 
-                {{-- Email --}}
-                <div class="mb-5">
-                    <p style="color: #5A7184; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">
-                        Email
-                    </p>
+                <div class="mb-4">
+                    <p style="color: #5A7184; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Email</p>
                     <a href="mailto:hello@cenrion.com"
-                       style="color: #94A3B8; font-size: 14px; text-decoration: none; transition: color 0.2s ease;"
-                       onmouseover="this.style.color='#00AEEF'"
-                       onmouseout="this.style.color='#94A3B8'">
-                        hello@cenrion.com
-                    </a>
+                       style="color: #94A3B8; font-size: 14px; text-decoration: none;"
+                       onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">hello@cenrion.com</a>
+                </div>
+                <div class="mb-5">
+                    <p style="color: #5A7184; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Phone</p>
+                    <a href="tel:+919998904079"
+                       style="color: #94A3B8; font-size: 14px; text-decoration: none;"
+                       onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">+91 99989 04079</a>
                 </div>
 
                 {{-- Social links --}}
@@ -168,9 +154,8 @@
                     </div>
                 </div>
 
-                {{-- CTA Button --}}
                 <a href="{{ route('contact') }}"
-                   class="btn-primary"
+                   class="btn-accent"
                    style="padding: 10px 20px; font-size: 14px; width: 100%; justify-content: center;">
                     Talk to Us
                     <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -191,7 +176,7 @@
 
             {{-- Copyright --}}
             <p style="color: #5A7184; font-size: 13px; font-weight: 400;">
-                &copy; {{ date('Y') }} Cenrion. All rights reserved.
+                &copy; {{ date('Y') }} Cenrion Technologies Private Limited. All rights reserved.
             </p>
 
             {{-- Legal links --}}

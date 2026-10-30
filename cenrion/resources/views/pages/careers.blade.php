@@ -4,65 +4,17 @@
 
 @section('content')
 
-{{-- ============================================================
-     HERO SECTION
-     ============================================================ --}}
-<section class="relative overflow-hidden bg-[#0B1D2E] pt-32 pb-20">
-    {{-- Background decoration --}}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-60 -right-60 w-[800px] h-[800px] rounded-full bg-[#00AEEF] opacity-[0.04] blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[#4DD8F5] opacity-[0.03] blur-3xl -translate-x-1/3 translate-y-1/3"></div>
-        {{-- Grid pattern --}}
-        <svg class="absolute inset-0 w-full h-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="careers-hero-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00AEEF" stroke-width="0.5"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#careers-hero-grid)"/>
-        </svg>
+<x-page-hero
+    eyebrow="Join the Team"
+    title="Engineers who own<br><span style='color:#00AEEF;'>the result.</span>"
+    subtitle="We're building a team that cares about craft, quality and outcomes — AI in the loop, engineers in charge."
+    :breadcrumbs="['Careers']"
+>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4" data-animate data-delay="200">
+        <a href="#open-positions" class="btn-primary">See Open Positions</a>
+        <a href="mailto:hello@cenrion.com?subject=Speculative Application" class="btn-secondary">Send Your CV</a>
     </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-            {{-- Eyebrow --}}
-            <div class="inline-flex items-center gap-2 mb-6" data-animate="fade-up" data-delay="0">
-                <div class="h-px w-8 bg-[#00AEEF]"></div>
-                <span class="text-[#00AEEF] text-sm font-semibold tracking-widest uppercase">Join the Team</span>
-            </div>
-
-            {{-- Heading --}}
-            <h1 class="js-split text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6" data-animate="fade-up" data-delay="100">
-                Build the Future of<br>
-                <span class="text-[#00AEEF]">Enterprise Technology</span>
-            </h1>
-
-            {{-- Subtext --}}
-            <p class="text-lg text-[#94A3B8] leading-relaxed max-w-2xl" data-animate="fade-up" data-delay="200">
-                We're building a team of engineers who care deeply about craft, quality, and outcomes.
-                If you want your work to matter — and you want to work with people who hold the same bar — you'll fit right in.
-            </p>
-
-            {{-- Hero CTA --}}
-            <div class="mt-10 flex flex-col sm:flex-row gap-4" data-animate="fade-up" data-delay="300">
-                <a href="#open-positions"
-                   class="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-[#00AEEF] text-white font-semibold hover:bg-[#007DB8] transition-all duration-200 shadow-lg shadow-[#00AEEF]/20 hover:-translate-y-0.5">
-                    See Open Positions
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </a>
-                <a href="mailto:hello@cenrion.com?subject=Speculative Application"
-                   class="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-[#1A3352] text-white font-semibold hover:border-[#00AEEF] hover:text-[#00AEEF] transition-all duration-200 hover:-translate-y-0.5">
-                    Send Your CV
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+</x-page-hero>
 
 {{-- ============================================================
      WHY CENRION SECTION

@@ -4,51 +4,89 @@
 
 @section('content')
 
+<x-page-hero
+    eyebrow="Who We Are"
+    title="Glass box engineering,<br><span style='color:#00AEEF;'>led by delivery.</span>"
+    subtitle="For 16+ years our founder has taken software from requirement to release. Cenrion exists to deliver AI speed with engineering accountability."
+    :breadcrumbs="['About']"
+/>
+
 {{-- ============================================================
-     HERO SECTION
+     FOUNDER NOTE
      ============================================================ --}}
-<section class="relative overflow-hidden bg-[#0B1D2E] pt-32 pb-20">
-    {{-- Background decoration --}}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-[#00AEEF] opacity-[0.04] blur-3xl"></div>
-        <div class="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full bg-[#00AEEF] opacity-[0.03] blur-3xl"></div>
-        {{-- Grid pattern --}}
-        <svg class="absolute inset-0 w-full h-full opacity-[0.025]" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="about-hero-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00AEEF" stroke-width="0.5"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#about-hero-grid)"/>
-        </svg>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {{-- Eyebrow --}}
-        <div class="inline-flex items-center gap-2 mb-6" data-animate="fade-up" data-delay="0">
-            <div class="h-px w-8 bg-[#00AEEF]"></div>
-            <span class="text-[#00AEEF] text-sm font-semibold tracking-widest uppercase">Who We Are</span>
-            <div class="h-px w-8 bg-[#00AEEF]"></div>
+<section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-14 items-start">
+            <div data-animate>
+                <span class="section-tag block mb-3">A Note from the Founder</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-5" style="color:#0B1D2E;">
+                    Why I started Cenrion
+                </h2>
+                <p class="text-lg leading-relaxed mb-4" style="color:#5A7184;">
+                    For 16+ years I have delivered software, growing from software engineer to SDET,
+                    Quality Engineering Manager and now Senior Delivery Manager. My clients span the US,
+                    Switzerland, Germany, Austria, Poland, the UK and South Africa.
+                </p>
+                <p class="text-lg leading-relaxed mb-6" style="color:#5A7184;">
+                    AI now writes code faster than most teams can review it. Clients still need software
+                    that works before it goes live and scales after it does. Cenrion exists to deliver both.
+                </p>
+                <blockquote class="text-xl font-bold leading-snug mb-3" style="color:#0B1D2E;">
+                    “Speed without verification is just risk delivered sooner.”
+                </blockquote>
+                <p class="text-sm font-semibold" style="color:#00AEEF;">M.S. Ansari · Founder, Cenrion Technologies</p>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+                <div class="p-6 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="80">
+                    <p class="text-3xl font-extrabold mb-2" style="color:#0B1D2E;">100+</p>
+                    <p class="text-sm font-semibold mb-1" style="color:#0B1D2E;">Projects delivered</p>
+                    <p class="text-sm" style="color:#5A7184;">From first requirement to final release.</p>
+                </div>
+                <div class="p-6 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="120">
+                    <p class="text-3xl font-extrabold mb-2" style="color:#0B1D2E;">16+</p>
+                    <p class="text-sm font-semibold mb-1" style="color:#0B1D2E;">Years of delivery</p>
+                    <p class="text-sm" style="color:#5A7184;">Software engineering and client delivery.</p>
+                </div>
+                <div class="p-6 rounded-2xl border sm:col-span-2" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="160">
+                    <p class="text-sm font-semibold mb-1" style="color:#0B1D2E;">Global standards</p>
+                    <p class="text-sm" style="color:#5A7184;">Clients across the US, Switzerland, Germany, Austria, Poland, the UK and South Africa.</p>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
-        {{-- Heading --}}
-        <h1 class="js-split text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6" data-animate="fade-up" data-delay="100">
-            Built by Engineers,<br class="hidden sm:block">
-            <span class="text-[#00AEEF]">For Engineers</span>
-        </h1>
-
-        {{-- Subtext --}}
-        <p class="max-w-2xl mx-auto text-lg text-[#94A3B8] leading-relaxed" data-animate="fade-up" data-delay="200">
-            Cenrion is a modern engineering partner built on the belief that technology should solve real business problems.
-            We bring together deep technical expertise and clear business thinking — so what we build actually works.
-        </p>
+{{-- ============================================================
+     FOUNDER TRACK RECORD
+     ============================================================ --}}
+<section class="py-24" style="background:#F5F8FC;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-animate>
+            <span class="section-tag block mb-3">Founder Track Record · 2012–2026</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold" style="color:#0B1D2E;">From Engineer to Global Delivery Leader</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            @foreach([
+                ['2012', 'Software Engineer'],
+                ['2014', 'SDET'],
+                ['2017', 'Specialization Lead, SDET'],
+                ['2021', 'Quality Engineering Manager'],
+                ['2023', 'Delivery Manager'],
+                ['2025', 'Senior Delivery Manager'],
+            ] as $i => $role)
+            <div class="p-5 rounded-2xl bg-white border text-center" style="border-color:#E2EAF4;" data-animate data-delay="{{ $i * 60 }}">
+                <p class="section-tag mb-2">{{ $role[0] }}</p>
+                <p class="text-sm font-semibold" style="color:#0B1D2E;">{{ $role[1] }}</p>
+            </div>
+            @endforeach
+        </div>
     </div>
 </section>
 
 {{-- ============================================================
      MISSION SECTION
      ============================================================ --}}
-<section class="bg-[#F5F8FC] py-24">
+<section class="bg-white py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 

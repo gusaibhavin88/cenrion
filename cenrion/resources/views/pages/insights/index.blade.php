@@ -4,37 +4,12 @@
 
 @section('content')
 
-{{-- ============================================================
-     HERO SECTION
-     ============================================================ --}}
-<section class="relative bg-[#F5F8FC] pt-32 pb-16 overflow-hidden">
-    {{-- Subtle decorative accent --}}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full bg-[#00AEEF] opacity-[0.05] blur-3xl"></div>
-        <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#00AEEF]/30 to-transparent"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-            {{-- Eyebrow --}}
-            <div class="inline-flex items-center gap-2 mb-5" data-animate="fade-up" data-delay="0">
-                <div class="h-px w-8 bg-[#00AEEF]"></div>
-                <span class="text-[#00AEEF] text-sm font-semibold tracking-widest uppercase">Thought Leadership</span>
-            </div>
-
-            {{-- Heading --}}
-            <h1 class="js-split text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0B1D2E] leading-tight tracking-tight mb-5" data-animate="fade-up" data-delay="100">
-                Insights &<br>
-                <span class="text-[#00AEEF]">Perspectives</span>
-            </h1>
-
-            {{-- Subtext --}}
-            <p class="text-lg text-[#5A7184] leading-relaxed" data-animate="fade-up" data-delay="200">
-                Technical depth meets business clarity. No hype, no filler — just engineering thinking applied to real problems.
-            </p>
-        </div>
-    </div>
-</section>
+<x-page-hero
+    eyebrow="Thought Leadership"
+    title="Insights &amp;<br><span style='color:#00AEEF;'>perspectives.</span>"
+    subtitle="Technical depth meets business clarity — engineering thinking applied to real problems."
+    :breadcrumbs="['Insights']"
+/>
 
 {{-- ============================================================
      ARTICLES SECTION (with Alpine.js category filter)

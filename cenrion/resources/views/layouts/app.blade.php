@@ -70,22 +70,48 @@
         body {
             font-family: 'Inter', sans-serif;
             color: #0D1B2A;
-            background:
-                radial-gradient(circle at top, rgba(0,174,239,0.16), transparent 28%),
-                linear-gradient(180deg, #061B2B 0%, #0B1D2E 32%, #0D1B2A 100%);
+            background: #FFFFFF;
             position: relative;
         }
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-            background-size: 26px 26px;
-            opacity: 0.25;
-            pointer-events: none;
-            z-index: 0;
-        }
         main { position: relative; z-index: 1; }
+
+        /* Light hero system */
+        .page-hero,
+        .home-hero {
+            background:
+                radial-gradient(ellipse 70% 55% at 92% 0%, rgba(0,174,239,0.10), transparent 60%),
+                linear-gradient(180deg, #FFFFFF 0%, #F5F8FC 72%, #F5F8FC 100%);
+        }
+        .page-hero-glow,
+        .home-hero-glow {
+            position: absolute;
+            top: -12%;
+            right: -8%;
+            width: min(52vw, 560px);
+            height: min(52vw, 560px);
+            background: radial-gradient(circle, rgba(0,174,239,0.12), transparent 68%);
+            pointer-events: none;
+            filter: blur(8px);
+        }
+        .page-hero-pattern,
+        .home-hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M12 12h28l-9 9 13 13H32L12 12zm72 0H56l9 9-13 13h12l20-22zM12 84V56l9 9 13-13v12L12 84zm72 0V56l-9 9-13-13v12L84 84z' fill='%230B1D2E'/%3E%3C/svg%3E");
+            background-size: 96px 96px;
+        }
+        .page-hero-arrow {
+            position: absolute;
+            right: -2%;
+            bottom: -18%;
+            width: min(42vw, 320px);
+            opacity: 0.045;
+            pointer-events: none;
+            transform: rotate(-8deg);
+        }
+        .page-hero-arrow svg { width: 100%; height: auto; }
         .opacity-0 { opacity: 0; }
         .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
 
@@ -196,22 +222,31 @@
             .card::after, .card-dark::after { display: none; }
         }
 
-        /* Buttons */
+        /* Buttons — navy primary for contrast on light heroes */
         .btn-primary {
-            background: #00AEEF; color: white; padding: 12px 28px; border-radius: 8px;
+            background: #0B1D2E; color: #FFFFFF; padding: 12px 28px; border-radius: 8px;
             font-weight: 600; font-size: 15px; transition: all 0.2s ease;
             display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
         }
         .btn-primary:hover {
-            background: #007DB8; transform: translateY(-1px);
-            box-shadow: 0 8px 25px rgba(0,174,239,0.35);
+            background: #112237; transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(11,29,46,0.28);
         }
         .btn-secondary {
-            background: transparent; color: #00AEEF; padding: 12px 28px; border-radius: 8px;
-            font-weight: 600; font-size: 15px; border: 1.5px solid #00AEEF;
+            background: transparent; color: #0B1D2E; padding: 12px 28px; border-radius: 8px;
+            font-weight: 600; font-size: 15px; border: 1.5px solid rgba(11,29,46,0.22);
             transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
         }
-        .btn-secondary:hover { background: rgba(0,174,239,0.08); transform: translateY(-1px); }
+        .btn-secondary:hover { border-color: #00AEEF; color: #007DB8; background: rgba(0,174,239,0.06); transform: translateY(-1px); }
+        .btn-accent {
+            background: #00AEEF; color: #FFFFFF; padding: 12px 28px; border-radius: 8px;
+            font-weight: 600; font-size: 15px; transition: all 0.2s ease;
+            display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+        }
+        .btn-accent:hover {
+            background: #007DB8; transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(0,174,239,0.28);
+        }
 
         .btn-white {
             background: white; color: #0B1D2E; padding: 12px 28px; border-radius: 8px;
@@ -306,41 +341,52 @@
             font-size: 13px; font-weight: 500; color: #0B1D2E;
         }
 
-        /* Navigation */
+        /* Light navigation */
         .nav-link {
-            position: relative; color: rgba(255,255,255,0.92); font-weight: 500; font-size: 15px;
+            position: relative; color: #0B1D2E; font-weight: 500; font-size: 15px;
             transition: all 0.25s ease; text-decoration: none;
         }
         .nav-link:hover {
-            color: #00AEEF;
-            background: rgba(0,174,239,0.12);
+            color: #007DB8;
+            background: rgba(0,174,239,0.08);
         }
         .nav-link.active {
-            color: #00AEEF;
-            background: rgba(0,174,239,0.18);
+            color: #007DB8;
+            background: rgba(0,174,239,0.12);
             font-weight: 600;
         }
-        /* Nav link color when navbar is scrolled */
-        .nav-scrolled .nav-link {
-            color: rgba(255,255,255,0.96);
-        }
-        .nav-scrolled .nav-link:hover {
-            color: #00AEEF;
-            background: rgba(0,174,239,0.15);
-        }
-
-        /* Nav scrolled state */
         .nav-scrolled {
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+            box-shadow: 0 10px 28px rgba(11,29,46,0.08);
             padding-top: 12px !important;
             padding-bottom: 12px !important;
-            border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+            border-bottom: 1px solid rgba(11,29,46,0.06) !important;
             border-radius: 18px;
             left: 24px !important;
             right: 24px !important;
             width: auto !important;
+        }
+
+        /* Navy contrast folds */
+        .fold-navy {
+            background: #0B1D2E;
+            position: relative;
+            overflow: hidden;
+        }
+        .fold-navy::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M12 12h28l-9 9 13 13H32L12 12zm72 0H56l9 9-13 13h12l20-22zM12 84V56l9 9 13-13v12L12 84zm72 0V56l-9 9-13-13v12L84 84z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+            background-size: 96px 96px;
+            opacity: 0.035;
+            pointer-events: none;
+        }
+        .services-band {
+            background: #0B1D2E;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
     </style>
 
