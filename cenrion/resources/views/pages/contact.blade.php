@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Contact')
 @section('meta_description', 'Start a conversation with Cenrion. Tell us about your project and we\'ll be in touch.')
@@ -14,45 +14,45 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
 
-            {{-- ── LEFT COLUMN ──────────────────────────────────── --}}
+            {{-- â”€â”€ LEFT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
             <div class="lg:col-span-2 lg:pt-4">
 
                 <span class="section-tag" data-animate data-delay="0">Get In Touch</span>
 
-                <h1 class="js-split mt-4 text-4xl sm:text-5xl font-extrabold leading-tight" style="color:#0B1D2E;">
-                    Ready to build something<br class="hidden sm:block"> <span style="color:#00AEEF;">meaningful?</span>
+                <h1 class="js-split mt-4 text-4xl sm:text-5xl font-extrabold leading-tight" style="color:#062538;">
+                    Ready to build something<br class="hidden sm:block"> <span style="color:#06B6D4;">meaningful?</span>
                 </h1>
 
                 <p class="mt-5 text-lg leading-relaxed" style="color:#5A7184;" data-animate data-delay="160">
-                    No fluff. No long-winded proposals. Tell us about your project — we respond within one business day.
+                    No fluff. No long-winded proposals. Tell us about your project â€” we respond within one business day.
                 </p>
 
                 {{-- Contact Details --}}
                 <div class="mt-8 space-y-3">
                     <a href="mailto:hello@cenrion.com" class="flex items-center gap-3 group w-fit">
-                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#00AEEF]/10 flex items-center justify-center group-hover:bg-[#00AEEF]/20 transition-colors duration-200">
-                            <svg class="w-4 h-4 text-[#00AEEF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#06B6D4]/10 flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-200">
+                            <svg class="w-4 h-4 text-[#06B6D4]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
                         </span>
-                        <span class="text-[#0D1B2A] font-medium group-hover:text-[#00AEEF] transition-colors duration-200">hello@cenrion.com</span>
+                        <span class="text-[#0D1B2A] font-medium group-hover:text-[#06B6D4] transition-colors duration-200">hello@cenrion.com</span>
                     </a>
 
                     <a href="tel:+919998904079" class="flex items-center gap-3 group w-fit">
-                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#00AEEF]/10 flex items-center justify-center group-hover:bg-[#00AEEF]/20 transition-colors duration-200">
-                            <svg class="w-4 h-4 text-[#00AEEF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#06B6D4]/10 flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-200">
+                            <svg class="w-4 h-4 text-[#06B6D4]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
                         </span>
-                        <span class="text-[#0D1B2A] font-medium group-hover:text-[#00AEEF] transition-colors duration-200">+91 99989 04079</span>
+                        <span class="text-[#0D1B2A] font-medium group-hover:text-[#06B6D4] transition-colors duration-200">+91 99989 04079</span>
                     </a>
 
                     <a href="https://linkedin.com/company/cenrion" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group w-fit">
-                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#00AEEF]/10 flex items-center justify-center group-hover:bg-[#00AEEF]/20 transition-colors duration-200">
-                            <svg class="w-4 h-4 text-[#00AEEF]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#06B6D4]/10 flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-200">
+                            <svg class="w-4 h-4 text-[#06B6D4]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </span>
-                        <span class="text-[#0D1B2A] font-medium group-hover:text-[#00AEEF] transition-colors duration-200">linkedin.com/company/cenrion</span>
+                        <span class="text-[#0D1B2A] font-medium group-hover:text-[#06B6D4] transition-colors duration-200">linkedin.com/company/cenrion</span>
                     </a>
 
                     <div class="flex items-center gap-3">
-                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#00AEEF]/10 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-[#00AEEF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                        <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#06B6D4]/10 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-[#06B6D4]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
                         </span>
                         <span class="text-[#5A7184] font-medium">Cenrion Technologies Private Limited</span>
                     </div>
@@ -66,8 +66,8 @@
                         'Confidential and no-obligation.',
                     ] as $point)
                     <li class="flex items-start gap-3">
-                        <span class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#00AEEF]/15 flex items-center justify-center">
-                            <svg class="w-3 h-3 text-[#00AEEF]" fill="none" stroke="currentColor" stroke-width="3"
+                        <span class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#06B6D4]/15 flex items-center justify-center">
+                            <svg class="w-3 h-3 text-[#06B6D4]" fill="none" stroke="currentColor" stroke-width="3"
                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                             </svg>
@@ -78,9 +78,9 @@
                 </ul>
 
             </div>
-            {{-- ── END LEFT COLUMN ─────────────────────────────── --}}
+            {{-- â”€â”€ END LEFT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
 
-            {{-- ── RIGHT COLUMN — FORM CARD ────────────────────── --}}
+            {{-- â”€â”€ RIGHT COLUMN â€” FORM CARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
             <div class="lg:col-span-3">
 
                 {{-- Success Banner --}}
@@ -135,7 +135,7 @@
                                     placeholder="Jane Smith"
                                     class="w-full rounded-lg border px-4 py-2.5 text-[#0D1B2A] placeholder-[#94A3B8]
                                            text-sm bg-white transition-all duration-200
-                                           focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-transparent
+                                           focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent
                                            @error('name') border-[#EF4444] bg-red-50 @else border-[#E2EAF4] @enderror"
                                 />
                                 @error('name')
@@ -162,7 +162,7 @@
                                     placeholder="jane@company.com"
                                     class="w-full rounded-lg border px-4 py-2.5 text-[#0D1B2A] placeholder-[#94A3B8]
                                            text-sm bg-white transition-all duration-200
-                                           focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-transparent
+                                           focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent
                                            @error('email') border-[#EF4444] bg-red-50 @else border-[#E2EAF4] @enderror"
                                 />
                                 @error('email')
@@ -194,7 +194,7 @@
                                     placeholder="Acme Corp"
                                     class="w-full rounded-lg border px-4 py-2.5 text-[#0D1B2A] placeholder-[#94A3B8]
                                            text-sm bg-white transition-all duration-200
-                                           focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-transparent
+                                           focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent
                                            @error('company') border-[#EF4444] bg-red-50 @else border-[#E2EAF4] @enderror"
                                 />
                                 @error('company')
@@ -221,13 +221,13 @@
                                     placeholder="+91 98765 43210"
                                     class="w-full rounded-lg border border-[#E2EAF4] px-4 py-2.5 text-[#0D1B2A]
                                            placeholder-[#94A3B8] text-sm bg-white transition-all duration-200
-                                           focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-transparent"
+                                           focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent"
                                 />
                             </div>
 
                         </div>
 
-                        {{-- Project Category — Pill Checkboxes --}}
+                        {{-- Project Category â€” Pill Checkboxes --}}
                         <div>
                             <label class="block text-sm font-semibold text-[#0D1B2A] mb-2">
                                 Project Category <span class="text-[#EF4444]">*</span>
@@ -253,8 +253,8 @@
                                     type="button"
                                     @click="toggleCategory('{{ $cat }}')"
                                     :class="isSelected('{{ $cat }}')
-                                        ? 'bg-[#00AEEF] border-[#00AEEF] text-white shadow-sm'
-                                        : 'bg-white border-[#E2EAF4] text-[#5A7184] hover:border-[#00AEEF] hover:text-[#00AEEF]'"
+                                        ? 'bg-[#06B6D4] border-[#06B6D4] text-white shadow-sm'
+                                        : 'bg-white border-[#E2EAF4] text-[#5A7184] hover:border-[#06B6D4] hover:text-[#06B6D4]'"
                                     class="inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5
                                            text-xs font-medium transition-all duration-150 cursor-pointer select-none">
                                     <span x-show="isSelected('{{ $cat }}')" class="flex-shrink-0">
@@ -296,7 +296,7 @@
                                 placeholder="Tell us about your project, goals, timeline, and any technical context that would help us understand the challenge."
                                 class="w-full rounded-lg border px-4 py-3 text-[#0D1B2A] placeholder-[#94A3B8]
                                        text-sm bg-white transition-all duration-200 resize-none leading-relaxed
-                                       focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-transparent
+                                       focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent
                                        @error('scope') border-[#EF4444] bg-red-50 @else border-[#E2EAF4] @enderror"
                             >{{ old('scope') }}</textarea>
                             @error('scope')
@@ -332,7 +332,7 @@
                 {{-- End Form Card --}}
 
             </div>
-            {{-- ── END RIGHT COLUMN ────────────────────────────── --}}
+            {{-- â”€â”€ END RIGHT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
 
         </div>
     </div>
@@ -362,7 +362,7 @@
                 ],
                 [
                     'q' => 'How quickly can Cenrion start on a project?',
-                    'a' => 'Depending on scope and resource availability, we typically begin onboarding within 2–4 weeks of agreement.',
+                    'a' => 'Depending on scope and resource availability, we typically begin onboarding within 2â€“4 weeks of agreement.',
                 ],
                 [
                     'q' => 'Do you work with early-stage startups?',
@@ -383,7 +383,7 @@
                     @click="open = !open"
                     :aria-expanded="open"
                     class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left
-                           focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AEEF] focus-visible:ring-inset">
+                           focus:outline-none focus-visible:ring-2 focus-visible:ring-[#06B6D4] focus-visible:ring-inset">
 
                     <span class="text-base font-semibold text-[#0D1B2A] leading-snug">
                         {{ $faq['q'] }}
@@ -391,7 +391,7 @@
 
                     {{-- Chevron icon --}}
                     <span
-                        :class="open ? 'rotate-180 text-[#00AEEF]' : 'text-[#94A3B8]'"
+                        :class="open ? 'rotate-180 text-[#06B6D4]' : 'text-[#94A3B8]'"
                         class="flex-shrink-0 transition-transform duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
                              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -421,3 +421,4 @@
 {{-- END FAQ SECTION --}}
 
 @endsection
+

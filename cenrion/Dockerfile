@@ -18,26 +18,17 @@ RUN composer install \
 # ──────────────────────────────────────────────
 # Stage 2 – Production image
 # ──────────────────────────────────────────────
-FROM php:8.2-fpm-alpine
+FROM php:8.2-fpm
 
-# Install system dependencies
-RUN apk add --no-cache \
-        libpng-dev \
-        libjpeg-turbo-dev \
-        libwebp-dev \
-        libzip-dev \
+# Use mlocati/docker-php-extension-installer for pre-compiled extensions
+# (no gcc/g++/make needed – much smaller disk footprint)
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
         zip \
         unzip \
-        oniguruma-dev \
-        freetype-dev \
-        $PHPIZE_DEPS
-
-# Configure and install PHP extensions
-RUN docker-php-ext-configure gd \
-        --with-freetype \
-        --with-jpeg \
-        --with-webp \
-    && docker-php-ext-install \
+    && rm -rf /var/lib/apt/lists/* \
+    && install-php-extensions \
         pdo_mysql \
         mbstring \
         exif \

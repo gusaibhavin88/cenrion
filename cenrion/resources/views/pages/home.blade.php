@@ -1,8 +1,8 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Glass Box Engineering')
 
-@section('meta_description', 'Cenrion delivers glass box engineering — AI speed with engineering accountability across managed IT services, staff augmentation, and product engineering.')
+@section('meta_description', 'Cenrion delivers glass box engineering â€” AI speed with engineering accountability across managed IT services, staff augmentation, and product engineering.')
 
 @push('styles')
 <style>
@@ -10,7 +10,7 @@
         min-height: auto;
     }
 
-    /* Glass box — the hero object. A see-through engineering volume,
+    /* Glass box â€” the hero object. A see-through engineering volume,
        not a particle field or a gradient blob. */
     .glassbox {
         position: relative;
@@ -53,21 +53,21 @@
         font-weight: 700;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #0B1D2E;
+        color: #062538;
         pointer-events: none;
     }
     .glassbox-kicker i {
         width: 7px;
         height: 7px;
         border-radius: 50%;
-        background: #00AEEF;
-        box-shadow: 0 0 0 0 rgba(0,174,239,0.55);
+        background: #06B6D4;
+        box-shadow: 0 0 0 0 rgba(6,182,212,0.55);
         animation: glassbox-ping 2.4s ease-out infinite;
     }
     @keyframes glassbox-ping {
-        0% { box-shadow: 0 0 0 0 rgba(0,174,239,0.45); }
-        70% { box-shadow: 0 0 0 8px rgba(0,174,239,0); }
-        100% { box-shadow: 0 0 0 0 rgba(0,174,239,0); }
+        0% { box-shadow: 0 0 0 0 rgba(6,182,212,0.45); }
+        70% { box-shadow: 0 0 0 8px rgba(6,182,212,0); }
+        100% { box-shadow: 0 0 0 0 rgba(6,182,212,0); }
     }
     .glassbox-legend {
         display: flex;
@@ -82,25 +82,25 @@
         gap: 8px;
         padding: 7px 12px;
         border-radius: 999px;
-        border: 1px solid rgba(11,29,46,0.08);
+        border: 1px solid rgba(6,37,56,0.08);
         background: rgba(255,255,255,0.55);
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 0.04em;
-        color: rgba(11,29,46,0.55);
+        color: rgba(6,37,56,0.55);
         transition: border-color 0.35s ease, color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
     }
     .glassbox-legend li span {
         font-variant-numeric: tabular-nums;
         font-size: 10px;
         letter-spacing: 0.08em;
-        color: #00AEEF;
+        color: #06B6D4;
     }
     .glassbox-legend li.is-lit {
-        color: #0B1D2E;
-        border-color: rgba(0,174,239,0.45);
-        background: rgba(0,174,239,0.10);
-        box-shadow: 0 8px 22px rgba(0,174,239,0.12);
+        color: #062538;
+        border-color: rgba(6,182,212,0.45);
+        background: rgba(6,182,212,0.10);
+        box-shadow: 0 8px 22px rgba(6,182,212,0.12);
     }
     @media (min-width: 1024px) {
         .hero-layout {
@@ -127,16 +127,16 @@
         color: rgba(224, 247, 255, 0.72);
         white-space: nowrap;
     }
-    .services-ticker-set span { color: #00AEEF; }
+    .services-ticker-set span { color: #06B6D4; }
 
     .hero-chip-light {
         display: inline-flex; align-items: center; gap: 6px;
         padding: 8px 16px;
-        background: rgba(11,29,46,0.04);
-        border: 1px solid rgba(11,29,46,0.08);
+        background: rgba(6,37,56,0.04);
+        border: 1px solid rgba(6,37,56,0.08);
         border-radius: 999px;
         font-size: 13px; font-weight: 500;
-        color: #0B1D2E;
+        color: #062538;
         white-space: nowrap;
     }
 
@@ -161,14 +161,14 @@
         .insight-card::after, .labs-mini-card::after { display: none; }
     }
 
-    /* ── Scroll indicator bounce ── */
+    /* â”€â”€ Scroll indicator bounce â”€â”€ */
     @keyframes bounce-slow {
         0%, 100% { transform: translateY(0); }
         50%       { transform: translateY(8px); }
     }
     .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
 
-    /* ── Marquee ── */
+    /* â”€â”€ Marquee â”€â”€ */
     @keyframes marquee {
         0%   { transform: translateX(0); }
         100% { transform: translateX(-50%); }
@@ -192,19 +192,19 @@
     }
     .marquee-wrapper::before {
         left: 0;
-        background: linear-gradient(to right, #0B1D2E, transparent);
+        background: linear-gradient(to right, #062538, transparent);
     }
     .marquee-wrapper::after {
         right: 0;
-        background: linear-gradient(to left, #0B1D2E, transparent);
+        background: linear-gradient(to left, #062538, transparent);
     }
     .process-on-navy h3 { color: #FFFFFF !important; }
     .process-on-navy p { color: #94A3B8 !important; }
     .process-on-navy .process-connector {
-        background: linear-gradient(to right, rgba(0,174,239,0.55), rgba(0,174,239,0.12));
+        background: linear-gradient(to right, rgba(6,182,212,0.55), rgba(6,182,212,0.12));
     }
 
-    /* ── Tech badge dark variant ── */
+    /* â”€â”€ Tech badge dark variant â”€â”€ */
     .tech-badge-dark {
         display: inline-flex; align-items: center; gap: 6px;
         padding: 8px 18px;
@@ -212,25 +212,25 @@
         border: 1px solid rgba(255,255,255,0.12);
         border-radius: 999px;
         font-size: 13px; font-weight: 500;
-        color: #E0F7FF;
+        color: #ECFEFF;
         white-space: nowrap;
         transition: background 0.2s, border-color 0.2s;
         cursor: default;
     }
     .tech-badge-dark:hover {
-        background: rgba(0,174,239,0.15);
-        border-color: rgba(0,174,239,0.4);
+        background: rgba(6,182,212,0.15);
+        border-color: rgba(6,182,212,0.4);
     }
 
-    /* ── Process connector line ── */
+    /* â”€â”€ Process connector line â”€â”€ */
     .process-connector {
         flex: 1;
         height: 2px;
-        background: linear-gradient(to right, rgba(0,174,239,0.4), rgba(0,174,239,0.1));
+        background: linear-gradient(to right, rgba(6,182,212,0.4), rgba(6,182,212,0.1));
         margin-top: 28px; /* aligns with icon center */
     }
 
-    /* ── Insight card ── */
+    /* â”€â”€ Insight card â”€â”€ */
     .insight-card {
         background: rgba(255,255,255,0.94);
         border: 1px solid rgba(226,234,244,0.9);
@@ -244,7 +244,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(0,174,239,0.06), transparent 50%);
+        background: linear-gradient(135deg, rgba(6,182,212,0.06), transparent 50%);
         opacity: 0;
         transition: opacity 0.28s ease;
     }
@@ -252,12 +252,12 @@
         opacity: 1;
     }
     .insight-card:hover {
-        border-color: rgba(0,174,239,0.3);
-        box-shadow: 0 18px 48px rgba(0,174,239,0.12), 0 10px 28px rgba(11,29,46,0.08);
+        border-color: rgba(6,182,212,0.3);
+        box-shadow: 0 18px 48px rgba(6,182,212,0.12), 0 10px 28px rgba(6,37,56,0.08);
         transform: translateY(-4px);
     }
 
-    /* ── Labs mini card ── */
+    /* â”€â”€ Labs mini card â”€â”€ */
     .labs-mini-card {
         background: rgba(17,34,55,0.78);
         border: 1px solid rgba(26,51,82,0.9);
@@ -271,7 +271,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(0,174,239,0.08), transparent 45%);
+        background: linear-gradient(135deg, rgba(6,182,212,0.08), transparent 45%);
         opacity: 0;
         transition: opacity 0.28s ease;
     }
@@ -279,35 +279,35 @@
         opacity: 1;
     }
     .labs-mini-card:hover {
-        border-color: rgba(0,174,239,0.4);
-        box-shadow: 0 16px 42px rgba(0,174,239,0.14), 0 10px 28px rgba(11,29,46,0.18);
+        border-color: rgba(6,182,212,0.4);
+        box-shadow: 0 16px 42px rgba(6,182,212,0.14), 0 10px 28px rgba(6,37,56,0.18);
         transform: translateY(-3px);
     }
 
-    /* ── CTA banner noise pattern ── */
+    /* â”€â”€ CTA banner noise pattern â”€â”€ */
     .cta-banner {
-        background: linear-gradient(135deg, #0B1D2E 0%, #112237 50%, #0B1D2E 100%);
+        background: linear-gradient(135deg, #062538 0%, #0A2D44 50%, #062538 100%);
         position: relative;
         overflow: hidden;
     }
     .cta-banner::before {
         content: '';
         position: absolute; inset: 0;
-        background-image: radial-gradient(rgba(0,174,239,0.06) 1px, transparent 1px);
+        background-image: radial-gradient(rgba(6,182,212,0.06) 1px, transparent 1px);
         background-size: 28px 28px;
         pointer-events: none;
     }
     .cta-orb-left {
         position: absolute; left: -120px; top: -80px;
         width: 400px; height: 400px;
-        background: radial-gradient(circle, rgba(0,174,239,0.15), transparent 70%);
+        background: radial-gradient(circle, rgba(6,182,212,0.15), transparent 70%);
         border-radius: 9999px;
         pointer-events: none;
     }
     .cta-orb-right {
         position: absolute; right: -100px; bottom: -100px;
         width: 350px; height: 350px;
-        background: radial-gradient(circle, rgba(77,216,245,0.1), transparent 70%);
+        background: radial-gradient(circle, rgba(103,232,249,0.1), transparent 70%);
         border-radius: 9999px;
         pointer-events: none;
     }
@@ -316,9 +316,9 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 1: HERO (light fold)
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="home-hero relative overflow-hidden">
     <div class="home-hero-glow" aria-hidden="true"></div>
     <div class="home-hero-pattern" aria-hidden="true"></div>
@@ -328,16 +328,16 @@
             <div class="hero-intro text-center lg:text-left">
                 <div data-animate data-delay="0">
                     <span class="section-tag inline-flex items-center gap-2 mb-5">
-                        <span class="inline-block w-5 h-px" style="background:#00AEEF;"></span>
-                        AI Speed · Engineering Accountability
-                        <span class="inline-block w-5 h-px" style="background:#00AEEF;"></span>
+                        <span class="inline-block w-5 h-px" style="background:#06B6D4;"></span>
+                        AI Speed Â· Engineering Accountability
+                        <span class="inline-block w-5 h-px" style="background:#06B6D4;"></span>
                     </span>
                 </div>
 
                 <h1 class="js-split font-extrabold tracking-tight mb-1 lg:mb-0 leading-[1.05]"
-                    style="font-size:clamp(2.6rem,5.4vw,4.5rem); color:#0B1D2E;">
+                    style="font-size:clamp(2.6rem,5.4vw,4.5rem); color:#062538;">
                     Glass box<br>
-                    <span class="draw-line" style="color:#00AEEF;">engineering.</span>
+                    <span class="draw-line" style="color:#06B6D4;">engineering.</span>
                 </h1>
             </div>
 
@@ -384,7 +384,7 @@
         </div>
 
         <div class="mt-6 lg:mt-2 flex flex-col items-center gap-2 animate-bounce-slow"
-             style="color:rgba(11,29,46,0.35);">
+             style="color:rgba(6,37,56,0.35);">
             <span class="text-xs font-medium tracking-widest uppercase" style="font-size:10px;letter-spacing:0.15em;">Scroll</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
@@ -394,18 +394,18 @@
     </div>
 </section>
 
-{{-- Thin navy services band — separation under light hero --}}
+{{-- Thin navy services band â€” separation under light hero --}}
 <section class="services-band py-4 overflow-hidden" aria-label="Services">
     <div class="marquee-wrapper">
         <div class="marquee-track" style="animation-duration:28s;">
             @for ($copy = 0; $copy < 2; $copy++)
                 <span class="services-ticker-set">
-                    Managed IT Services <span>·</span>
-                    Staff Augmentation <span>·</span>
-                    Product Engineering <span>·</span>
-                    AI &amp; Automation <span>·</span>
-                    Cloud &amp; DevOps <span>·</span>
-                    Quality Engineering <span>·</span>
+                    Managed IT Services <span>Â·</span>
+                    Staff Augmentation <span>Â·</span>
+                    Product Engineering <span>Â·</span>
+                    AI &amp; Automation <span>Â·</span>
+                    Cloud &amp; DevOps <span>Â·</span>
+                    Quality Engineering <span>Â·</span>
                 </span>
             @endfor
         </div>
@@ -413,14 +413,14 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      WHY NOW
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="text-center mb-14">
             <span class="section-tag block mb-3" data-animate>Why Now</span>
-            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;" data-animate data-delay="80">
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;" data-animate data-delay="80">
                 It is about time.
             </h2>
             <p class="mx-auto text-lg" style="max-width:560px;color:#5A7184;" data-animate data-delay="160">
@@ -437,7 +437,7 @@
             ] as $i => $item)
             <div class="p-7 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="{{ $i * 80 }}">
                 <span class="section-tag block mb-3">{{ $item[0] }}</span>
-                <h3 class="text-xl font-bold mb-2" style="color:#0B1D2E;">{{ $item[1] }}</h3>
+                <h3 class="text-xl font-bold mb-2" style="color:#062538;">{{ $item[1] }}</h3>
                 <p class="text-sm leading-relaxed" style="color:#5A7184;">{{ $item[2] }}</p>
             </div>
             @endforeach
@@ -446,14 +446,14 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
-     BLACK BOX → GLASS BOX
-══════════════════════════════════════════════════════════ --}}
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BLACK BOX â†’ GLASS BOX
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24" style="background:#F5F8FC;">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="text-center mb-14">
             <span class="section-tag block mb-3" data-animate>The Black Box Problem</span>
-            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;" data-animate data-delay="80">
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;" data-animate data-delay="80">
                 The gap between speed and scale
             </h2>
             <p class="mx-auto text-lg" style="max-width:580px;color:#5A7184;" data-animate data-delay="160">
@@ -465,23 +465,23 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
             <div class="p-7 rounded-2xl bg-white border" style="border-color:#E2EAF4;" data-animate>
-                <h3 class="font-bold mb-4" style="color:#0B1D2E;">What AI accelerated</h3>
+                <h3 class="font-bold mb-4" style="color:#062538;">What AI accelerated</h3>
                 <ul class="space-y-2 text-sm" style="color:#5A7184;">
                     @foreach(['Code generation','Prototypes and proofs of concept','Feature delivery','Release frequency'] as $line)
-                    <li class="flex gap-2"><span style="color:#00AEEF;">›</span>{{ $line }}</li>
+                    <li class="flex gap-2"><span style="color:#06B6D4;">â€º</span>{{ $line }}</li>
                     @endforeach
                 </ul>
             </div>
-            <div class="p-7 rounded-2xl text-center flex flex-col justify-center" style="background:#0B1D2E;" data-animate data-delay="80">
+            <div class="p-7 rounded-2xl text-center flex flex-col justify-center" style="background:#062538;" data-animate data-delay="80">
                 <span class="section-tag block mb-3">Cenrion</span>
                 <h3 class="text-2xl font-extrabold text-white mb-3">Bridges the gap</h3>
                 <p class="text-sm" style="color:#94A3B8;">16+ years of global delivery leadership, applied to software that is built to scale.</p>
             </div>
             <div class="p-7 rounded-2xl bg-white border" style="border-color:#E2EAF4;" data-animate data-delay="160">
-                <h3 class="font-bold mb-4" style="color:#0B1D2E;">What got left behind</h3>
+                <h3 class="font-bold mb-4" style="color:#062538;">What got left behind</h3>
                 <ul class="space-y-2 text-sm" style="color:#5A7184;">
                     @foreach(['Visibility into how it was built','Architecture that scales','Quality checks and sign-off','Performance under real load'] as $line)
-                    <li class="flex gap-2"><span style="color:#00AEEF;">›</span>{{ $line }}</li>
+                    <li class="flex gap-2"><span style="color:#06B6D4;">â€º</span>{{ $line }}</li>
                     @endforeach
                 </ul>
             </div>
@@ -490,30 +490,30 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-8 rounded-2xl border" style="border-color:#E2EAF4;background:#fff;" data-animate>
                 <span class="section-tag block mb-3">Black box</span>
-                <h3 class="text-xl font-bold mb-3" style="color:#0B1D2E;">Hope it works</h3>
+                <h3 class="text-xl font-bold mb-3" style="color:#062538;">Hope it works</h3>
                 <p class="text-sm leading-relaxed" style="color:#5A7184;">
                     You receive finished software but cannot see how it was built or tested. Problems show up after launch.
                 </p>
             </div>
-            <div class="p-8 rounded-2xl border" style="border-color:rgba(0,174,239,0.35);background:#fff;" data-animate data-delay="80">
+            <div class="p-8 rounded-2xl border" style="border-color:rgba(6,182,212,0.35);background:#fff;" data-animate data-delay="80">
                 <span class="section-tag block mb-3">Glass box</span>
-                <h3 class="text-xl font-bold mb-3" style="color:#0B1D2E;">See every step and check</h3>
+                <h3 class="text-xl font-bold mb-3" style="color:#062538;">See every step and check</h3>
                 <p class="text-sm leading-relaxed" style="color:#5A7184;">
                     You see the plan, the tests and the results. Every step is checked and signed off. Problems are caught before launch.
                 </p>
             </div>
         </div>
 
-        <p class="mt-10 text-center text-lg font-semibold" style="color:#0B1D2E;" data-animate>
-            Every Cenrion release is engineered to scale — architecture decisions, code reviews, automated tests and performance benchmarks travel with it.
+        <p class="mt-10 text-center text-lg font-semibold" style="color:#062538;" data-animate>
+            Every Cenrion release is engineered to scale â€” architecture decisions, code reviews, automated tests and performance benchmarks travel with it.
         </p>
     </div>
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 2: CAPABILITIES OVERVIEW
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
 
@@ -521,12 +521,12 @@
         <div class="text-center mb-16">
             <span class="section-tag block mb-3" data-animate>What We Build</span>
             <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
-                style="color:#0B1D2E;" data-animate data-delay="80">
+                style="color:#062538;" data-animate data-delay="80">
                 Six capabilities, one standard
             </h2>
             <p class="mx-auto text-lg" style="max-width:520px;color:#5A7184;"
                data-animate data-delay="160">
-                Architecture, reviews, tests and benchmarks travel with every release —
+                Architecture, reviews, tests and benchmarks travel with every release â€”
                 so you can see exactly how it was built.
             </p>
         </div>
@@ -539,20 +539,20 @@
                 <div class="mb-5">
                     {{-- Brain / circuit icon --}}
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         style="background:rgba(0,174,239,0.10);">
+                         style="background:rgba(6,182,212,0.10);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="#00AEEF" stroke-width="1.5" class="w-6 h-6">
+                             stroke="#06B6D4" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
                         </svg>
                     </div>
                 </div>
-                <h3 class="text-lg font-semibold mb-2" style="color:#0B1D2E;">AI &amp; Automation</h3>
+                <h3 class="text-lg font-semibold mb-2" style="color:#062538;">AI &amp; Automation</h3>
                 <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
                     Generative AI, agentic workflows &amp; custom LLMs tailored to your domain and business processes.
                 </p>
                 <a href="{{ route('capabilities') }}" class="inline-flex items-center gap-1.5 text-sm font-semibold"
-                   style="color:#00AEEF;">
+                   style="color:#06B6D4;">
                     Learn more
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 transition-transform group-hover:translate-x-1">
                         <path fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h8.69L8.22 4.03a.75.75 0 011.06-1.06l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06l3.22-3.22H2.75A.75.75 0 012 8z" clip-rule="evenodd"/>
@@ -564,20 +564,20 @@
             <div class="card p-8 group" data-animate style="transition-delay:80ms">
                 <div class="mb-5">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         style="background:rgba(0,174,239,0.10);">
+                         style="background:rgba(6,182,212,0.10);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="#00AEEF" stroke-width="1.5" class="w-6 h-6">
+                             stroke="#06B6D4" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
                         </svg>
                     </div>
                 </div>
-                <h3 class="text-lg font-semibold mb-2" style="color:#0B1D2E;">Software Engineering</h3>
+                <h3 class="text-lg font-semibold mb-2" style="color:#062538;">Software Engineering</h3>
                 <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                    Modern web, mobile &amp; enterprise software platforms — built to last and scale.
+                    Modern web, mobile &amp; enterprise software platforms â€” built to last and scale.
                 </p>
                 <a href="{{ route('capabilities') }}" class="inline-flex items-center gap-1.5 text-sm font-semibold"
-                   style="color:#00AEEF;">
+                   style="color:#06B6D4;">
                     Learn more
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 transition-transform group-hover:translate-x-1">
                         <path fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h8.69L8.22 4.03a.75.75 0 011.06-1.06l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06l3.22-3.22H2.75A.75.75 0 012 8z" clip-rule="evenodd"/>
@@ -589,20 +589,20 @@
             <div class="card p-8 group" data-animate style="transition-delay:160ms">
                 <div class="mb-5">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         style="background:rgba(0,174,239,0.10);">
+                         style="background:rgba(6,182,212,0.10);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="#00AEEF" stroke-width="1.5" class="w-6 h-6">
+                             stroke="#06B6D4" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/>
                         </svg>
                     </div>
                 </div>
-                <h3 class="text-lg font-semibold mb-2" style="color:#0B1D2E;">Cloud &amp; DevOps</h3>
+                <h3 class="text-lg font-semibold mb-2" style="color:#062538;">Cloud &amp; DevOps</h3>
                 <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
                     Cloud-native builds, IaC, CI/CD &amp; cost optimization across AWS, GCP, and Azure.
                 </p>
                 <a href="{{ route('capabilities') }}" class="inline-flex items-center gap-1.5 text-sm font-semibold"
-                   style="color:#00AEEF;">
+                   style="color:#06B6D4;">
                     Learn more
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 transition-transform group-hover:translate-x-1">
                         <path fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h8.69L8.22 4.03a.75.75 0 011.06-1.06l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06l3.22-3.22H2.75A.75.75 0 012 8z" clip-rule="evenodd"/>
@@ -614,20 +614,20 @@
             <div class="card p-8 group" data-animate style="transition-delay:240ms">
                 <div class="mb-5">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         style="background:rgba(0,174,239,0.10);">
+                         style="background:rgba(6,182,212,0.10);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="#00AEEF" stroke-width="1.5" class="w-6 h-6">
+                             stroke="#06B6D4" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                 </div>
-                <h3 class="text-lg font-semibold mb-2" style="color:#0B1D2E;">Quality Engineering</h3>
+                <h3 class="text-lg font-semibold mb-2" style="color:#062538;">Quality Engineering</h3>
                 <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                    Automated testing, API performance &amp; stress testing — quality baked into every build.
+                    Automated testing, API performance &amp; stress testing â€” quality baked into every build.
                 </p>
                 <a href="{{ route('capabilities') }}" class="inline-flex items-center gap-1.5 text-sm font-semibold"
-                   style="color:#00AEEF;">
+                   style="color:#06B6D4;">
                     Learn more
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 transition-transform group-hover:translate-x-1">
                         <path fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h8.69L8.22 4.03a.75.75 0 011.06-1.06l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06l3.22-3.22H2.75A.75.75 0 012 8z" clip-rule="evenodd"/>
@@ -639,20 +639,20 @@
             <div class="card p-8 group" data-animate style="transition-delay:320ms">
                 <div class="mb-5">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         style="background:rgba(0,174,239,0.10);">
+                         style="background:rgba(6,182,212,0.10);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="#00AEEF" stroke-width="1.5" class="w-6 h-6">
+                             stroke="#06B6D4" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
                         </svg>
                     </div>
                 </div>
-                <h3 class="text-lg font-semibold mb-2" style="color:#0B1D2E;">Data &amp; Analytics</h3>
+                <h3 class="text-lg font-semibold mb-2" style="color:#062538;">Data &amp; Analytics</h3>
                 <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
                     Pipelines, real-time analytics &amp; data platforms that turn raw data into business intelligence.
                 </p>
                 <a href="{{ route('capabilities') }}" class="inline-flex items-center gap-1.5 text-sm font-semibold"
-                   style="color:#00AEEF;">
+                   style="color:#06B6D4;">
                     Learn more
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 transition-transform group-hover:translate-x-1">
                         <path fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h8.69L8.22 4.03a.75.75 0 011.06-1.06l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06l3.22-3.22H2.75A.75.75 0 012 8z" clip-rule="evenodd"/>
@@ -664,20 +664,20 @@
             <div class="card p-8 group" data-animate style="transition-delay:400ms">
                 <div class="mb-5">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         style="background:rgba(0,174,239,0.10);">
+                         style="background:rgba(6,182,212,0.10);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                             stroke="#00AEEF" stroke-width="1.5" class="w-6 h-6">
+                             stroke="#06B6D4" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
                         </svg>
                     </div>
                 </div>
-                <h3 class="text-lg font-semibold mb-2" style="color:#0B1D2E;">Tech Consulting</h3>
+                <h3 class="text-lg font-semibold mb-2" style="color:#062538;">Tech Consulting</h3>
                 <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                    Architecture modernization &amp; AI adoption strategy — from roadmap to execution.
+                    Architecture modernization &amp; AI adoption strategy â€” from roadmap to execution.
                 </p>
                 <a href="{{ route('capabilities') }}" class="inline-flex items-center gap-1.5 text-sm font-semibold"
-                   style="color:#00AEEF;">
+                   style="color:#06B6D4;">
                     Learn more
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 transition-transform group-hover:translate-x-1">
                         <path fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h8.69L8.22 4.03a.75.75 0 011.06-1.06l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06l3.22-3.22H2.75A.75.75 0 012 8z" clip-rule="evenodd"/>
@@ -691,7 +691,7 @@
         <div class="text-center mt-12" data-animate>
             <a href="{{ route('capabilities') }}"
                class="inline-flex items-center gap-2 font-semibold text-sm"
-               style="color:#00AEEF;">
+               style="color:#06B6D4;">
                 View all capabilities
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                     <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
@@ -703,10 +703,10 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 3: TECHNOLOGY ECOSYSTEM BAR
-══════════════════════════════════════════════════════════ --}}
-<section class="py-20 overflow-hidden" style="background:#0B1D2E;">
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+<section class="py-20 overflow-hidden" style="background:#062538;">
     <div class="max-w-6xl mx-auto px-6 lg:px-8 mb-12 text-center">
         <span class="section-tag block mb-3" data-animate>Our Stack</span>
         <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-3 text-white"
@@ -743,7 +743,7 @@
             <div class="mx-3">
                 <span class="tech-badge-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         stroke="#00AEEF" stroke-width="1.5" class="w-4 h-4 flex-shrink-0">
+                         stroke="#06B6D4" stroke-width="1.5" class="w-4 h-4 flex-shrink-0">
                         <path stroke-linecap="round" stroke-linejoin="round" d="{{ $tech[1] }}"/>
                     </svg>
                     {{ $tech[0] }}
@@ -756,7 +756,7 @@
             <div class="mx-3">
                 <span class="tech-badge-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         stroke="#00AEEF" stroke-width="1.5" class="w-4 h-4 flex-shrink-0">
+                         stroke="#06B6D4" stroke-width="1.5" class="w-4 h-4 flex-shrink-0">
                         <path stroke-linecap="round" stroke-linejoin="round" d="{{ $tech[1] }}"/>
                     </svg>
                     {{ $tech[0] }}
@@ -769,9 +769,9 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 4: DELIVERY PROCESS (navy contrast fold)
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="fold-navy process-on-navy py-24">
     <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
 
@@ -790,23 +790,23 @@
 
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
             @foreach([
-                ['01', 'Discover', 'Outcomes and success criteria · Architecture and risk map', 'G1'],
-                ['02', 'Design', 'UX and system design · Architecture built to scale', 'G2'],
-                ['03', 'Build', 'Agile engineering sprints · Clean, reviewed code', 'G3'],
-                ['04', 'Release', 'CI/CD and cloud deployment · Release readiness sign-off', 'G4'],
-                ['05', 'Scale', 'Performance and load tuning · Monitoring and growth', 'Scale'],
+                ['01', 'Discover', 'Outcomes and success criteria Â· Architecture and risk map', 'G1'],
+                ['02', 'Design', 'UX and system design Â· Architecture built to scale', 'G2'],
+                ['03', 'Build', 'Agile engineering sprints Â· Clean, reviewed code', 'G3'],
+                ['04', 'Release', 'CI/CD and cloud deployment Â· Release readiness sign-off', 'G4'],
+                ['05', 'Scale', 'Performance and load tuning Â· Monitoring and growth', 'Scale'],
             ] as $i => $step)
             <div class="rounded-2xl p-5 text-center" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);" data-animate data-delay="{{ $i * 70 }}">
                 <span class="section-tag block mb-2">{{ $step[0] }}</span>
                 <h3 class="text-lg font-bold text-white mb-2">{{ $step[1] }}</h3>
                 <p class="text-xs leading-relaxed mb-3" style="color:#94A3B8;">{{ $step[2] }}</p>
-                <span class="inline-flex px-2.5 py-1 rounded-full text-[11px] font-bold" style="background:rgba(0,174,239,0.15);color:#4DD8F5;">{{ $step[3] }}</span>
+                <span class="inline-flex px-2.5 py-1 rounded-full text-[11px] font-bold" style="background:rgba(6,182,212,0.15);color:#67E8F9;">{{ $step[3] }}</span>
             </div>
             @endforeach
         </div>
 
         <p class="text-center text-sm mb-12" style="color:#94A3B8;" data-animate>
-            <span style="color:#00AEEF;font-weight:700;">QA layer</span> —
+            <span style="color:#06B6D4;font-weight:700;">QA layer</span> â€”
             Automated testing and code review run through every phase, from the first sprint to scale.
         </p>
 
@@ -818,7 +818,7 @@
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                     <thead>
-                        <tr style="color:#4DD8F5;border-bottom:1px solid rgba(255,255,255,0.08);">
+                        <tr style="color:#67E8F9;border-bottom:1px solid rgba(255,255,255,0.08);">
                             <th class="px-6 py-3 font-semibold">Gate</th>
                             <th class="px-6 py-3 font-semibold">Checkpoint</th>
                             <th class="px-6 py-3 font-semibold">What you receive</th>
@@ -846,9 +846,9 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 5: CENRION LABS TEASER
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row items-start gap-16">
@@ -857,17 +857,17 @@
             <div class="flex-1 lg:max-w-lg" data-animate>
                 <span class="section-tag block mb-4">Cenrion Labs</span>
                 <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight"
-                    style="color:#0B1D2E;">
+                    style="color:#062538;">
                     Proof of Engineering<br>
                     <span class="gradient-text">Capability.</span>
                 </h2>
                 <p class="text-lg leading-relaxed mb-4" style="color:#5A7184;">
                     Cenrion Labs is where theory meets production code. Each demo is a
-                    fully-functional, interactive technology showcase — built to prove our
+                    fully-functional, interactive technology showcase â€” built to prove our
                     depth across AI, analytics, and software engineering.
                 </p>
                 <p class="text-base leading-relaxed mb-10" style="color:#94A3B8;">
-                    No slide decks, no case study vagueness — just working systems you can
+                    No slide decks, no case study vagueness â€” just working systems you can
                     explore right now.
                 </p>
                 <a href="{{ route('labs') }}" class="btn-primary">
@@ -886,19 +886,19 @@
                     <div class="labs-mini-card p-6 sm:col-span-2">
                         <div class="flex items-start justify-between mb-3">
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center"
-                                 style="background:rgba(0,174,239,0.15);">
+                                 style="background:rgba(6,182,212,0.15);">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="#00AEEF" stroke-width="1.5" class="w-5 h-5">
+                                     stroke="#06B6D4" stroke-width="1.5" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
                                 </svg>
                             </div>
                             <span class="text-xs font-bold tracking-widest uppercase px-2 py-1 rounded"
-                                  style="color:#00AEEF;background:rgba(0,174,239,0.1);font-size:9px;">CONCEPT</span>
+                                  style="color:#06B6D4;background:rgba(6,182,212,0.1);font-size:9px;">CONCEPT</span>
                         </div>
                         <h4 class="font-semibold mb-1" style="color:white;">AI Document Intelligence</h4>
                         <p class="text-xs leading-relaxed" style="color:#94A3B8;">
-                            Upload any document — contracts, reports, invoices — and get instant AI-powered extraction, summarization, and Q&amp;A.
+                            Upload any document â€” contracts, reports, invoices â€” and get instant AI-powered extraction, summarization, and Q&amp;A.
                         </p>
                     </div>
 
@@ -906,15 +906,15 @@
                     <div class="labs-mini-card p-6">
                         <div class="flex items-start justify-between mb-3">
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center"
-                                 style="background:rgba(0,174,239,0.15);">
+                                 style="background:rgba(6,182,212,0.15);">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="#00AEEF" stroke-width="1.5" class="w-5 h-5">
+                                     stroke="#06B6D4" stroke-width="1.5" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
                                 </svg>
                             </div>
                             <span class="text-xs font-bold tracking-widest uppercase px-2 py-1 rounded"
-                                  style="color:#00AEEF;background:rgba(0,174,239,0.1);font-size:9px;">CONCEPT</span>
+                                  style="color:#06B6D4;background:rgba(6,182,212,0.1);font-size:9px;">CONCEPT</span>
                         </div>
                         <h4 class="font-semibold mb-1" style="color:white;">AI Support Agent</h4>
                         <p class="text-xs leading-relaxed" style="color:#94A3B8;">
@@ -926,15 +926,15 @@
                     <div class="labs-mini-card p-6">
                         <div class="flex items-start justify-between mb-3">
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center"
-                                 style="background:rgba(0,174,239,0.15);">
+                                 style="background:rgba(6,182,212,0.15);">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="#00AEEF" stroke-width="1.5" class="w-5 h-5">
+                                     stroke="#06B6D4" stroke-width="1.5" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
                                 </svg>
                             </div>
                             <span class="text-xs font-bold tracking-widest uppercase px-2 py-1 rounded"
-                                  style="color:#00AEEF;background:rgba(0,174,239,0.1);font-size:9px;">CONCEPT</span>
+                                  style="color:#06B6D4;background:rgba(6,182,212,0.1);font-size:9px;">CONCEPT</span>
                         </div>
                         <h4 class="font-semibold mb-1" style="color:white;">Analytics Dashboard</h4>
                         <p class="text-xs leading-relaxed" style="color:#94A3B8;">
@@ -950,9 +950,9 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 6: THOUGHT LEADERSHIP TEASER
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24" style="background:#F5F8FC;">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
 
@@ -961,13 +961,13 @@
             <div>
                 <span class="section-tag block mb-3" data-animate>Insights</span>
                 <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight"
-                    style="color:#0B1D2E;" data-animate style="transition-delay:80ms">
+                    style="color:#062538;" data-animate style="transition-delay:80ms">
                     Thinking Out Loud
                 </h2>
             </div>
             <a href="{{ route('insights') }}"
                class="hidden sm:inline-flex items-center gap-2 font-semibold text-sm shrink-0"
-               style="color:#00AEEF;" data-animate style="transition-delay:160ms">
+               style="color:#06B6D4;" data-animate style="transition-delay:160ms">
                 View All Insights
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                     <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.06l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
@@ -981,16 +981,16 @@
             {{-- Insight 1 --}}
             <article class="insight-card" data-animate>
                 {{-- Accent top bar --}}
-                <div class="h-1 w-full" style="background:linear-gradient(to right,#00AEEF,#4DD8F5);"></div>
+                <div class="h-1 w-full" style="background:linear-gradient(to right,#06B6D4,#67E8F9);"></div>
                 <div class="p-8">
                     <div class="flex items-center gap-3 mb-5">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide"
-                              style="background:rgba(0,174,239,0.1);color:#00AEEF;">
+                              style="background:rgba(6,182,212,0.1);color:#06B6D4;">
                             AI &amp; Applied Tech
                         </span>
                         <span class="text-xs" style="color:#94A3B8;">8 min read</span>
                     </div>
-                    <h3 class="text-xl font-bold leading-snug mb-3" style="color:#0B1D2E;">
+                    <h3 class="text-xl font-bold leading-snug mb-3" style="color:#062538;">
                         Where Generative AI Actually Creates Business Value
                     </h3>
                     <p class="text-sm leading-relaxed mb-6" style="color:#5A7184;">
@@ -1001,12 +1001,12 @@
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
-                                 style="background:#00AEEF;color:white;">C</div>
+                                 style="background:#06B6D4;color:white;">C</div>
                             <span class="text-xs font-medium" style="color:#5A7184;">Cenrion Team</span>
                         </div>
                         <a href="{{ route('insights') }}"
                            class="inline-flex items-center gap-1.5 text-sm font-semibold group"
-                           style="color:#00AEEF;">
+                           style="color:#06B6D4;">
                             Read Article
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                  class="w-4 h-4 transition-transform group-hover:translate-x-1">
@@ -1019,32 +1019,32 @@
 
             {{-- Insight 2 --}}
             <article class="insight-card" data-animate style="transition-delay:100ms">
-                <div class="h-1 w-full" style="background:linear-gradient(to right,#4DD8F5,#00AEEF);"></div>
+                <div class="h-1 w-full" style="background:linear-gradient(to right,#67E8F9,#06B6D4);"></div>
                 <div class="p-8">
                     <div class="flex items-center gap-3 mb-5">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide"
-                              style="background:rgba(0,174,239,0.1);color:#00AEEF;">
+                              style="background:rgba(6,182,212,0.1);color:#06B6D4;">
                             Engineering Strategy
                         </span>
                         <span class="text-xs" style="color:#94A3B8;">6 min read</span>
                     </div>
-                    <h3 class="text-xl font-bold leading-snug mb-3" style="color:#0B1D2E;">
+                    <h3 class="text-xl font-bold leading-snug mb-3" style="color:#062538;">
                         Monolith vs Microservices: When to Shift
                     </h3>
                     <p class="text-sm leading-relaxed mb-6" style="color:#5A7184;">
-                        Not every system needs microservices — and premature decomposition has killed
+                        Not every system needs microservices â€” and premature decomposition has killed
                         more projects than it has saved. Here's a clear framework for knowing when
                         and how to make the move.
                     </p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
-                                 style="background:#00AEEF;color:white;">C</div>
+                                 style="background:#06B6D4;color:white;">C</div>
                             <span class="text-xs font-medium" style="color:#5A7184;">Cenrion Team</span>
                         </div>
                         <a href="{{ route('insights') }}"
                            class="inline-flex items-center gap-1.5 text-sm font-semibold group"
-                           style="color:#00AEEF;">
+                           style="color:#06B6D4;">
                             Read Article
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                  class="w-4 h-4 transition-transform group-hover:translate-x-1">
@@ -1061,7 +1061,7 @@
         <div class="text-center mt-10 sm:hidden" data-animate>
             <a href="{{ route('insights') }}"
                class="inline-flex items-center gap-2 font-semibold text-sm"
-               style="color:#00AEEF;">
+               style="color:#06B6D4;">
                 View All Insights
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                     <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
@@ -1073,14 +1073,14 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      AI IN THE LOOP
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="text-center mb-14">
             <span class="section-tag block mb-3" data-animate>How We Use AI</span>
-            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;" data-animate data-delay="80">
+            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;" data-animate data-delay="80">
                 AI in the loop, engineers in charge
             </h2>
             <p class="mx-auto text-lg" style="max-width:560px;color:#5A7184;" data-animate data-delay="160">
@@ -1095,10 +1095,10 @@
                 ['Clients see', ['Architecture and design decisions','Code review and test results','Performance and scale reports']],
             ] as $i => $col)
             <div class="p-7 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate data-delay="{{ $i * 80 }}">
-                <h3 class="text-lg font-bold mb-4" style="color:#0B1D2E;">{{ $col[0] }}</h3>
+                <h3 class="text-lg font-bold mb-4" style="color:#062538;">{{ $col[0] }}</h3>
                 <ul class="space-y-2 text-sm" style="color:#5A7184;">
                     @foreach($col[1] as $line)
-                    <li class="flex gap-2"><span style="color:#00AEEF;">›</span>{{ $line }}</li>
+                    <li class="flex gap-2"><span style="color:#06B6D4;">â€º</span>{{ $line }}</li>
                     @endforeach
                 </ul>
             </div>
@@ -1108,19 +1108,19 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PRODUCT ENGINEERING REVIEW
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="py-24" style="background:#F5F8FC;">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div data-animate>
                 <span class="section-tag block mb-3">Where to Start</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#0B1D2E;">
+                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;">
                     Start with a Product Engineering review
                 </h2>
                 <p class="text-lg mb-8" style="color:#5A7184;">
-                    A fixed-scope review of your product’s architecture, code base and delivery pipeline, completed in two weeks.
+                    A fixed-scope review of your productâ€™s architecture, code base and delivery pipeline, completed in two weeks.
                     You keep the findings and the roadmap, whether or not we work together.
                 </p>
                 <a href="{{ route('contact') }}" class="btn-primary">
@@ -1139,7 +1139,7 @@
                 <div class="p-6 rounded-2xl bg-white border flex gap-5" style="border-color:#E2EAF4;" data-animate data-delay="{{ $i * 80 }}">
                     <span class="section-tag shrink-0">{{ $step[0] }}</span>
                     <div>
-                        <h3 class="font-bold mb-1" style="color:#0B1D2E;">{{ $step[1] }}</h3>
+                        <h3 class="font-bold mb-1" style="color:#062538;">{{ $step[1] }}</h3>
                         <p class="text-sm" style="color:#5A7184;">{{ $step[2] }}</p>
                     </div>
                 </div>
@@ -1150,9 +1150,9 @@
 </section>
 
 
-{{-- ══════════════════════════════════════════════════════════
+{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION 7: CTA BANNER
-══════════════════════════════════════════════════════════ --}}
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
 <section class="cta-banner py-28">
     {{-- Ambient orbs --}}
     <div class="cta-orb-left"></div>
@@ -1162,10 +1162,10 @@
 
         {{-- Decorative icon --}}
         <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-8"
-             style="background:rgba(0,174,239,0.15);border:1px solid rgba(0,174,239,0.3);"
+             style="background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.3);"
              data-animate>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="#00AEEF" stroke-width="1.5" class="w-7 h-7">
+                 stroke="#06B6D4" stroke-width="1.5" class="w-7 h-7">
                 <path stroke-linecap="round" stroke-linejoin="round"
                       d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
             </svg>
@@ -1195,7 +1195,7 @@
         </div>
 
         <p class="mt-12 text-xs tracking-widest uppercase" style="color:rgba(148,163,184,0.45);">
-            hello@cenrion.com · www.cenrion.com
+            hello@cenrion.com Â· www.cenrion.com
         </p>
 
     </div>
@@ -1211,7 +1211,7 @@
     if (!stage || !canvas) return;
 
     const ctx = canvas.getContext('2d');
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduce = false; // Force rotation regardless of system preference
     const legend = document.querySelectorAll('.glassbox-legend [data-layer]');
 
     const CORNERS = [
@@ -1323,9 +1323,9 @@
         const scale = Math.min(w, h) * 0.27 * (0.86 + ease * 0.14);
 
         const glow = ctx.createRadialGradient(cx, cy - 10, scale * 0.15, cx, cy, scale * 1.85);
-        glow.addColorStop(0, 'rgba(0,174,239,' + (0.18 * ease) + ')');
-        glow.addColorStop(0.48, 'rgba(0,174,239,' + (0.05 * ease) + ')');
-        glow.addColorStop(1, 'rgba(0,174,239,0)');
+        glow.addColorStop(0, 'rgba(6,182,212,' + (0.18 * ease) + ')');
+        glow.addColorStop(0.48, 'rgba(6,182,212,' + (0.05 * ease) + ')');
+        glow.addColorStop(1, 'rgba(6,182,212,0)');
         ctx.fillStyle = glow;
         ctx.fillRect(0, 0, w, h);
 
@@ -1341,7 +1341,7 @@
             const pc = project(c, cx, cy, scale);
             const pd = project(d, cx, cy, scale);
             const fade = 0.05 + (1 - Math.abs(i) / 3) * 0.05;
-            ctx.strokeStyle = 'rgba(11,29,46,' + (fade * ease) + ')';
+            ctx.strokeStyle = 'rgba(6,37,56,' + (fade * ease) + ')';
             ctx.beginPath();
             ctx.moveTo(pa.x, pa.y);
             ctx.lineTo(pb.x, pb.y);
@@ -1357,8 +1357,8 @@
         ctx.beginPath();
         ctx.arc(0, 0, scale * 0.92, 0, Math.PI * 2);
         const shade = ctx.createRadialGradient(0, 0, scale * 0.1, 0, 0, scale * 0.92);
-        shade.addColorStop(0, 'rgba(11,29,46,' + (0.13 * ease) + ')');
-        shade.addColorStop(1, 'rgba(11,29,46,0)');
+        shade.addColorStop(0, 'rgba(6,37,56,' + (0.13 * ease) + ')');
+        shade.addColorStop(1, 'rgba(6,37,56,0)');
         ctx.fillStyle = shade;
         ctx.fill();
         ctx.restore();
@@ -1386,7 +1386,7 @@
             const g = ctx.createLinearGradient(pts[0].x, pts[0].y, pts[2].x, pts[2].y);
             g.addColorStop(0, 'rgba(255,255,255,' + (wash * ease) + ')');
             g.addColorStop(0.55, 'rgba(224,247,255,' + ((wash * 0.7) * ease) + ')');
-            g.addColorStop(1, 'rgba(0,174,239,' + ((0.045 + facing * 0.11) * veil * ease) + ')');
+            g.addColorStop(1, 'rgba(6,182,212,' + ((0.045 + facing * 0.11) * veil * ease) + ')');
             ctx.fillStyle = g;
             ctx.fill();
         }
@@ -1417,13 +1417,13 @@
             ].map(function (v) { return project(world(v), cx, cy, scale); });
             path(quad);
             ctx.fillStyle = index === active
-                ? 'rgba(0,174,239,' + (0.16 * ease) + ')'
-                : 'rgba(11,29,46,' + (0.035 * ease) + ')';
+                ? 'rgba(6,182,212,' + (0.16 * ease) + ')'
+                : 'rgba(6,37,56,' + (0.035 * ease) + ')';
             ctx.fill();
             ctx.lineWidth = index === active ? 1.4 : 1;
             ctx.strokeStyle = index === active
-                ? 'rgba(0,174,239,' + (0.85 * ease) + ')'
-                : 'rgba(11,29,46,' + (0.28 * ease) + ')';
+                ? 'rgba(6,182,212,' + (0.85 * ease) + ')'
+                : 'rgba(6,37,56,' + (0.28 * ease) + ')';
             ctx.stroke();
 
             const midX = [
@@ -1439,12 +1439,12 @@
             ctx.lineTo(midX[1].x, midX[1].y);
             ctx.moveTo(midZ[0].x, midZ[0].y);
             ctx.lineTo(midZ[1].x, midZ[1].y);
-            ctx.strokeStyle = 'rgba(0,174,239,' + ((index === active ? 0.45 : 0.16) * ease) + ')';
+            ctx.strokeStyle = 'rgba(6,182,212,' + ((index === active ? 0.45 : 0.16) * ease) + ')';
             ctx.stroke();
         });
 
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'rgba(11,29,46,' + (0.22 * ease) + ')';
+        ctx.strokeStyle = 'rgba(6,37,56,' + (0.22 * ease) + ')';
         [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(function (xz) {
             const a = project(world([xz[0] * plateSize, PLATES[0].y, xz[1] * plateSize]), cx, cy, scale);
             const b = project(world([xz[0] * plateSize, PLATES[2].y, xz[1] * plateSize]), cx, cy, scale);
@@ -1475,10 +1475,10 @@
             [-0.98, scan,  0.98]
         ].map(function (v) { return project(world(v), cx, cy, scale); });
         path(scanQuad);
-        ctx.fillStyle = 'rgba(77,216,245,' + (0.13 * ease) + ')';
+        ctx.fillStyle = 'rgba(103,232,249,' + (0.13 * ease) + ')';
         ctx.fill();
         ctx.lineWidth = 1.5;
-        ctx.strokeStyle = 'rgba(0,174,239,' + (0.9 * ease) + ')';
+        ctx.strokeStyle = 'rgba(6,182,212,' + (0.9 * ease) + ')';
         ctx.stroke();
 
         faces.filter(function (face) { return face.depth <= 0.02; }).forEach(function (face) {
@@ -1494,10 +1494,10 @@
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
             ctx.lineWidth = 4;
-            ctx.strokeStyle = 'rgba(0,174,239,' + ((0.08 + near * 0.16) * ease) + ')';
+            ctx.strokeStyle = 'rgba(6,182,212,' + ((0.08 + near * 0.16) * ease) + ')';
             ctx.stroke();
             ctx.lineWidth = 1.35;
-            ctx.strokeStyle = 'rgba(11,29,46,' + ((0.35 + near * 0.5) * ease) + ')';
+            ctx.strokeStyle = 'rgba(6,37,56,' + ((0.35 + near * 0.5) * ease) + ')';
             ctx.stroke();
         });
 
@@ -1515,8 +1515,8 @@
                     const alpha = (1 - step / 4) * 0.95 * ease;
                     const radius = (step === 0 ? 2.4 : 1.3) * p.p;
                     const dot = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius * 3.2);
-                    dot.addColorStop(0, 'rgba(0,174,239,' + alpha + ')');
-                    dot.addColorStop(1, 'rgba(0,174,239,0)');
+                    dot.addColorStop(0, 'rgba(6,182,212,' + alpha + ')');
+                    dot.addColorStop(1, 'rgba(6,182,212,0)');
                     ctx.fillStyle = dot;
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, radius * 3.2, 0, Math.PI * 2);
@@ -1535,7 +1535,7 @@
         const pad = 22;
         minX -= pad; minY -= pad; maxX += pad; maxY += pad;
         ctx.lineWidth = 1.25;
-        ctx.strokeStyle = 'rgba(11,29,46,' + (0.35 * ease) + ')';
+        ctx.strokeStyle = 'rgba(6,37,56,' + (0.35 * ease) + ')';
         [[minX, minY, 1, 1], [maxX, minY, -1, 1], [minX, maxY, 1, -1], [maxX, maxY, -1, -1]].forEach(function (b) {
             ctx.beginPath();
             ctx.moveTo(b[0] + b[2] * 16, b[1]);
@@ -1598,3 +1598,4 @@
 })();
 </script>
 @endpush
+
