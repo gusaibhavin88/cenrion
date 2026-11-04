@@ -1307,7 +1307,7 @@
                         </div>
                         <h4 class="font-bold text-base mb-1" style="color:#67E8F9;">AI Document Intelligence</h4>
                         <p class="text-xs leading-relaxed mb-3" style="color:#E2E8F0;">
-                            Upload any document — contracts, reports, invoices — and get instant AI-powered extraction, summarization, and Q&amp;A.
+                            Upload any document &mdash; contracts, reports, invoices &mdash; and get instant AI-powered extraction, summarization, and Q&amp;A.
                         </p>
                         <div class="inline-flex items-center gap-1.5 text-xs font-bold" style="color:#67E8F9;">
                             <span>Explore Document Intelligence</span>
@@ -1667,54 +1667,60 @@
                 </a>
             </div>
             <div class="space-y-4">
-                {{-- Step 01: Map (Cyan Discovery / Blueprint) --}}
+                {{-- Step 01: Map --}}
                 <div class="p-6 rounded-2xl bg-white border flex gap-5 items-start transition-all duration-300 hover:-translate-y-1"
-                     style="border: 1.5px solid rgba(6,182,212,0.35); box-shadow: 0 6px 20px rgba(6,182,212,0.06);"
+                     style="border: 1.5px solid #E2EAF4; box-shadow: 0 4px 16px rgba(0,0,0,0.03);"
                      data-animate data-delay="0">
                     <span class="w-10 h-10 rounded-xl flex items-center justify-center text-xs font-black shrink-0"
-                          style="background: rgba(6,182,212,0.15); border: 1.5px solid rgba(6,182,212,0.4); color: #0891B2;">01</span>
+                          style="background: rgba(6,182,212,0.1); border: 1.5px solid rgba(6,182,212,0.25); color: #0891B2;">01</span>
                     <div class="flex-1">
                         <h3 class="font-bold text-lg mb-1" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">Map</h3>
                         <p class="text-sm leading-relaxed" style="color:#5A7184;">Architecture, code base and release pipeline as they run today</p>
                     </div>
                 </div>
 
-                {{-- Step 02: Measure (Indigo Diagnostics / Limits) --}}
+                {{-- Step 02: Measure --}}
                 <div class="p-6 rounded-2xl bg-white border flex gap-5 items-start transition-all duration-300 hover:-translate-y-1"
-                     style="border: 1.5px solid rgba(99,102,241,0.35); box-shadow: 0 6px 20px rgba(99,102,241,0.06);"
+                     style="border: 1.5px solid #E2EAF4; box-shadow: 0 4px 16px rgba(0,0,0,0.03);"
                      data-animate data-delay="80">
                     <span class="w-10 h-10 rounded-xl flex items-center justify-center text-xs font-black shrink-0"
-                          style="background: rgba(99,102,241,0.15); border: 1.5px solid rgba(99,102,241,0.4); color: #4F46E5;">02</span>
+                          style="background: rgba(6,182,212,0.1); border: 1.5px solid rgba(6,182,212,0.25); color: #0891B2;">02</span>
                     <div class="flex-1">
                         <h3 class="font-bold text-lg mb-1" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">Measure</h3>
                         <p class="text-sm leading-relaxed" style="color:#5A7184;">Scalability limits, technical debt and quality gaps</p>
                     </div>
                 </div>
 
-                {{-- Step 03: Recommend (Styled with Talk to Us button color: #06B6D4) --}}
-                <div class="p-6 rounded-2xl flex gap-5 items-start relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group"
-                     style="background: #06B6D4; box-shadow: 0 12px 32px rgba(6,182,212,0.32); border: 1.5px solid rgba(255,255,255,0.25);"
+                {{-- Step 03: Recommend (Featured Recommended Fit with Talk to Us Cyan #06B6D4) --}}
+                <div class="p-6 rounded-2xl border flex gap-5 items-start relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group"
+                     style="background: linear-gradient(180deg, #F0FDFA 0%, #FFFFFF 55%); border: 2px solid #06B6D4; box-shadow: 0 10px 30px rgba(6,182,212,0.18);"
                      data-animate data-delay="160">
-                    <div style="position:absolute;top:0;right:0;width:180px;height:180px;background:radial-gradient(circle,rgba(255,255,255,0.22),transparent 70%);pointer-events:none;"></div>
                     
-                    {{-- 03 Pill in crisp white --}}
+                    {{-- 03 Pill in solid #06B6D4 (Talk to Us color) --}}
                     <span class="w-10 h-10 rounded-xl flex items-center justify-center text-xs font-black shrink-0 text-white"
-                          style="background: rgba(255,255,255,0.22); border: 1.5px solid rgba(255,255,255,0.45); box-shadow: 0 2px 8px rgba(0,0,0,0.08);">03</span>
+                          style="background: #06B6D4; box-shadow: 0 4px 14px rgba(6,182,212,0.35);">03</span>
                     
                     <div class="flex-1 relative z-10">
                         <div class="flex items-center gap-3 mb-1">
-                            <h3 class="font-bold text-lg text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">Recommend</h3>
+                            <h3 class="font-bold text-lg" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">Recommend</h3>
                             <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider text-white"
-                                  style="background: rgba(6, 37, 56, 0.35); border: 1px solid rgba(255,255,255,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                                  style="background: #06B6D4; box-shadow: 0 2px 10px rgba(6,182,212,0.35);">
                                 <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
                                 </svg>
                                 Recommended Fit
                             </span>
                         </div>
-                        <p class="text-sm leading-relaxed text-white font-medium" style="color: rgba(255,255,255,0.95);">
-                            A prioritised engineering roadmap to scale with confidence
+                        <p class="text-sm leading-relaxed" style="color:#5A7184;">
+                            A prioritised engineering roadmap to <span style="color:#0891B2; font-weight:600;">scale with confidence</span>
                         </p>
+                    </div>
+
+                    {{-- Right arrow indicator --}}
+                    <div class="hidden sm:flex items-center self-center text-cyan opacity-80 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#06B6D4" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                        </svg>
                     </div>
                 </div>
             </div>
