@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Solutions')
 @section('meta_description', 'Cenrion delivers problem-centric technology solutions: AI-powered support, legacy modernization, process automation, and data intelligence.')
@@ -16,7 +16,7 @@
      CORE SERVICES FROM PDF
      ===================================================================== --}}
 <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
             <div class="p-10 rounded-2xl border" style="border-color:#E2EAF4;background:#F5F8FC;" data-animate>
                 <span class="section-tag block mb-3">Service 01</span>
@@ -67,7 +67,7 @@
      SOLUTION CARDS
      ===================================================================== --}}
 <section class="py-20" style="background-color:#F5F8FC;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
         <div class="text-center mb-16">
             <h2 class="text-3xl lg:text-4xl font-bold mb-4" style="color:#062538;">Where We Deliver Results</h2>
@@ -213,7 +213,7 @@
      ENGAGEMENT MODELS
      ===================================================================== --}}
 <section class="py-20" style="background-color:#062538;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
         <div class="text-center mb-16">
             <div class="inline-flex items-center gap-2 mb-4">
@@ -335,7 +335,7 @@
      BOTTOM CTA
      ===================================================================== --}}
 <section class="py-24" style="background-color:#F5F8FC;">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
         <div class="inline-flex items-center gap-2 mb-6">
             <div class="h-px w-8" style="background-color:#06B6D4;"></div>
             <span class="text-sm font-semibold tracking-widest uppercase" style="color:#06B6D4;">Work With Us</span>

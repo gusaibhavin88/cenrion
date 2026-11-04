@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'About')
 
@@ -15,7 +15,7 @@
      FOUNDER NOTE
      ============================================================ --}}
 <section class="bg-white py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="grid lg:grid-cols-2 gap-14 items-start">
             <div data-animate>
                 <span class="section-tag block mb-3">A Note from the Founder</span>
@@ -60,7 +60,7 @@
      FOUNDER TRACK RECORD
      ============================================================ --}}
 <section class="py-24" style="background:#F5F8FC;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="text-center mb-12" data-animate>
             <span class="section-tag block mb-3">Founder Track Record Â· 2012â€“2026</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold" style="color:#062538;">From Engineer to Global Delivery Leader</h2>
@@ -87,7 +87,7 @@
      MISSION SECTION
      ============================================================ --}}
 <section class="bg-white py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             {{-- Left: Mission Statement --}}
@@ -127,7 +127,7 @@
      ENGINEERING PHILOSOPHY SECTION
      ============================================================ --}}
 <section class="bg-white py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Section Header --}}
         <div class="text-center mb-16" data-animate="fade-up">
@@ -209,7 +209,7 @@
         </svg>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Section Header --}}
         <div class="text-center mb-16" data-animate="fade-up">
@@ -281,7 +281,7 @@
      TECHNOLOGY EXPERTISE SECTION
      ============================================================ --}}
 <section class="bg-[#F5F8FC] py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Section Header --}}
         <div class="text-center mb-16" data-animate="fade-up">

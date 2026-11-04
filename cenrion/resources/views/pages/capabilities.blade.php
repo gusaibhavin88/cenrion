@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Capabilities')
 @section('meta_description', 'Cenrion\'s full technology capabilities: AI & Generative AI, Software Engineering, Data & Analytics, Cloud & DevOps, Quality Engineering, Tech Consulting.')
@@ -16,7 +16,7 @@
      CAPABILITIES GRID
      ===================================================================== --}}
 <section class="py-20" style="background-color:#F5F8FC;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
@@ -233,7 +233,7 @@
      BOTTOM CTA
      ===================================================================== --}}
 <section class="py-24" style="background-color:#062538;">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
         <div class="inline-flex items-center gap-2 mb-6">
             <div class="h-px w-8" style="background-color:#06B6D4;"></div>
             <span class="text-sm font-semibold tracking-widest uppercase" style="color:#06B6D4;">Get Started</span>

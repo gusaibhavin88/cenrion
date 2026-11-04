@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Insights')
 
@@ -23,7 +23,7 @@
                  { id: 'engineering-strategy', label: 'Engineering Strategy' }
              ]
          }">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Filter Tabs --}}
         <div class="flex flex-wrap items-center gap-2 mb-10" data-animate="fade-up">
@@ -137,7 +137,7 @@
      NEWSLETTER SUBSCRIPTION TEASER
      ============================================================ --}}
 <section class="bg-[#0A2D44] py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="max-w-2xl mx-auto text-center" data-animate="fade-up">
 
             {{-- Icon --}}

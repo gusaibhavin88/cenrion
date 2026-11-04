@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Cenrion Labs')
 @section('meta_description', 'Cenrion Labs: working technology demonstrations of AI, data, and engineering capability. Proof through code, not slides.')
@@ -16,7 +16,7 @@
      LABS THESIS
      ===================================================================== --}}
 <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="text-center mb-10" data-animate>
             <span class="section-tag block mb-3">Our Innovation Division</span>
             <h2 class="text-3xl font-extrabold mb-3" style="color:#062538;">Where we build what comes next</h2>
@@ -44,7 +44,7 @@
      CONCEPT BANNER
      ===================================================================== --}}
 <section style="background-color:#F5F8FC; padding-top:3rem; padding-bottom:2rem;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="rounded-2xl p-8 flex flex-col sm:flex-row items-start gap-6" style="background-color:#EBF8FF; border-left: 4px solid #06B6D4; border: 1px solid #BEE3F8; border-left: 4px solid #06B6D4;">
             <div class="flex-shrink-0">
                 <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase" style="background-color:#06B6D4; color:#fff;">
@@ -63,7 +63,7 @@
      DEMO CARDS
      ===================================================================== --}}
 <section class="py-16" style="background-color:#F5F8FC;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
         <div class="space-y-10">
 
@@ -290,7 +290,7 @@
      BOTTOM CTA
      ===================================================================== --}}
 <section class="py-24" style="background-color:#062538;">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
         <div class="inline-flex items-center gap-2 mb-6">
             <div class="h-px w-8" style="background-color:#06B6D4;"></div>
             <span class="text-sm font-semibold tracking-widest uppercase" style="color:#06B6D4;">Let's Build Together</span>

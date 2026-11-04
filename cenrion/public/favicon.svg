@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .navy-part { fill: #062538; }
+    .cyan-part { fill: #06B6D4; }
+    @media (prefers-color-scheme: dark) {
+      .navy-part { fill: #FFFFFF; }
+    }
+  </style>
+  <!-- Top-left arrow -->
+  <path class="navy-part" d="M12 12 L38 12 L30 20 L44 34 L36 34 L12 12Z"/>
+  <!-- Top-right arrow -->
+  <path class="navy-part" d="M88 12 L62 12 L70 20 L56 34 L64 34 L88 12Z"/>
+  <!-- Left arrow -->
+  <path class="navy-part" d="M12 50 L28 38 L28 44 L44 44 L44 56 L28 56 L28 62 L12 50Z"/>
+  <!-- Top arrow -->
+  <path class="navy-part" d="M50 12 L38 28 L44 28 L44 44 L56 44 L56 28 L62 28 L50 12Z"/>
+
+  <!-- Bottom-left arrow -->
+  <path class="cyan-part" d="M12 88 L12 62 L20 70 L34 56 L34 64 L12 88Z"/>
+  <!-- Bottom-right arrow -->
+  <path class="cyan-part" d="M88 88 L88 62 L80 70 L66 56 L66 64 L88 88Z"/>
+  <!-- Right arrow -->
+  <path class="cyan-part" d="M88 50 L72 38 L72 44 L56 44 L56 56 L72 56 L72 62 L88 50Z"/>
+  <!-- Bottom arrow -->
+  <path class="cyan-part" d="M50 88 L38 72 L44 72 L44 56 L56 56 L56 72 L62 72 L50 88Z"/>
+</svg>

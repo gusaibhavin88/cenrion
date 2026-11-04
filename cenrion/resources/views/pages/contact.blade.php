@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Contact')
 @section('meta_description', 'Start a conversation with Cenrion. Tell us about your project and we\'ll be in touch.')
@@ -11,7 +11,7 @@
 <section class="page-hero relative overflow-hidden pb-16">
     <div class="page-hero-glow" aria-hidden="true"></div>
     <div class="page-hero-pattern" aria-hidden="true"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+    <div class="relative max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10 pt-10">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
 
             {{-- â”€â”€ LEFT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
@@ -344,7 +344,7 @@
      FAQ SECTION
      ============================================================ --}}
 <section class="bg-[#F5F8FC] py-20 border-t border-[#E2EAF4]">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Heading --}}
         <div class="text-center mb-12">

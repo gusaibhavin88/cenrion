@@ -6,10 +6,17 @@
     <meta name="description" content="@yield('meta_description', 'Cenrion — Technology & AI Solutions')">
     <title>@yield('title', 'Cenrion') | Cenrion</title>
 
-    {{-- Google Fonts: Inter --}}
+    {{-- Favicon --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}?v=4">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}?v=4">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}?v=4">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v=4">
+
+    {{-- Google Fonts: Inter + Plus Jakarta Sans --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
     {{-- Tailwind CSS CDN --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,6 +46,9 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
+                    maxWidth: {
+                        '8xl': '88rem',
+                    },
                     animation: {
                         'fade-up':    'fadeUp 0.6s ease-out forwards',
                         'fade-in':    'fadeIn 0.4s ease-out forwards',
@@ -66,6 +76,7 @@
     {{-- Global Styles --}}
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .max-w-8xl { max-width: 88rem; }
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
@@ -95,23 +106,11 @@
         }
         .page-hero-pattern,
         .home-hero-pattern {
-            position: absolute;
-            inset: 0;
-            opacity: 0.04;
-            pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M12 12h28l-9 9 13 13H32L12 12zm72 0H56l9 9-13 13h12l20-22zM12 84V56l9 9 13-13v12L12 84zm72 0V56l-9 9-13-13v12L84 84z' fill='%23062538'/%3E%3C/svg%3E");
-            background-size: 96px 96px;
+            display: none !important;
         }
         .page-hero-arrow {
-            position: absolute;
-            right: -2%;
-            bottom: -18%;
-            width: min(42vw, 320px);
-            opacity: 0.045;
-            pointer-events: none;
-            transform: rotate(-8deg);
+            display: none !important;
         }
-        .page-hero-arrow svg { width: 100%; height: auto; }
         .opacity-0 { opacity: 0; }
         .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
 
@@ -341,31 +340,41 @@
             font-size: 13px; font-weight: 500; color: #062538;
         }
 
-        /* Light navigation */
+        /* Navigation - Brand Deep Navy */
         .nav-link {
-            position: relative; color: #062538; font-weight: 500; font-size: 15px;
+            position: relative; color: #E2E8F0; font-weight: 500; font-size: 15px;
             transition: all 0.25s ease; text-decoration: none;
         }
         .nav-link:hover {
-            color: #0891B2;
-            background: rgba(6,182,212,0.08);
+            color: #67E8F9;
+            background: rgba(6,182,212,0.15);
         }
         .nav-link.active {
-            color: #0891B2;
-            background: rgba(6,182,212,0.12);
+            color: #67E8F9;
+            background: rgba(6,182,212,0.22);
             font-weight: 600;
         }
         .nav-scrolled {
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            box-shadow: 0 10px 28px rgba(6,37,56,0.08);
-            padding-top: 12px !important;
-            padding-bottom: 12px !important;
-            border-bottom: 1px solid rgba(6,37,56,0.06) !important;
-            border-radius: 18px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.4) !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            border: 1px solid rgba(6,182,212,0.3) !important;
+            border-radius: 18px !important;
+            top: 14px !important;
             left: 24px !important;
             right: 24px !important;
             width: auto !important;
+            background: #062538 !important;
+        }
+        @media (max-width: 768px) {
+            .nav-scrolled {
+                top: 10px !important;
+                left: 12px !important;
+                right: 12px !important;
+                border-radius: 14px !important;
+            }
         }
 
         /* Navy contrast folds */
@@ -375,13 +384,7 @@
             overflow: hidden;
         }
         .fold-navy::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M12 12h28l-9 9 13 13H32L12 12zm72 0H56l9 9-13 13h12l20-22zM12 84V56l9 9 13-13v12L12 84zm72 0V56l-9 9-13-13v12L84 84z' fill='%23FFFFFF'/%3E%3C/svg%3E");
-            background-size: 96px 96px;
-            opacity: 0.035;
-            pointer-events: none;
+            display: none !important;
         }
         .services-band {
             background: #062538;

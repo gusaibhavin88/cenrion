@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Careers')
 
@@ -20,7 +20,7 @@
      WHY CENRION SECTION
      ============================================================ --}}
 <section class="bg-[#F5F8FC] py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Section Header --}}
         <div class="text-center mb-16" data-animate="fade-up">
@@ -104,7 +104,7 @@
      OPEN POSITIONS SECTION
      ============================================================ --}}
 <section id="open-positions" class="bg-white py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Section Header --}}
         <div class="text-center mb-16" data-animate="fade-up">
@@ -177,7 +177,7 @@
         </svg>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
 
         {{-- Section Header --}}
         <div class="text-center mb-16" data-animate="fade-up">
@@ -234,7 +234,7 @@
      FINAL CTA SECTION
      ============================================================ --}}
 <section class="bg-[#F5F8FC] py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="relative bg-white rounded-2xl border border-[#E2EAF4] shadow-sm overflow-hidden" data-animate="fade-up">
             {{-- Accent bar --}}
             <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#06B6D4] to-[#67E8F9]"></div>

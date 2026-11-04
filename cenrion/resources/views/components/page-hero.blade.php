@@ -7,14 +7,7 @@
 
 <section {{ $attributes->merge(['class' => 'page-hero relative overflow-hidden']) }}>
     <div class="page-hero-glow" aria-hidden="true"></div>
-    <div class="page-hero-pattern" aria-hidden="true"></div>
-    <div class="page-hero-arrow" aria-hidden="true">
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 18h52L52 36l28 28H62L18 18Z" fill="#0B1D2E"/>
-        </svg>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 lg:pt-14 lg:pb-16">
+    <div class="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 lg:pt-14 lg:pb-16">
         @if (!empty($breadcrumbs))
             <nav class="mb-6" aria-label="Breadcrumb" data-animate data-delay="0">
                 <ol class="flex flex-wrap items-center gap-2 text-sm" style="color:#5A7184;">
