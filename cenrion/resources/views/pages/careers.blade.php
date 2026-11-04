@@ -56,15 +56,15 @@
                     AI in the loop, senior engineers in charge. No ticket-pushing bureaucracy, just deep engineering ownership.
                 </p>
 
-                <div class="flex flex-wrap items-center gap-4 mb-10" data-animate data-delay="160">
-                    <a href="#open-positions" class="btn-accent" style="padding: 14px 30px; font-size: 15px;">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10" data-animate data-delay="160">
+                    <a href="#open-positions" class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 14px 30px; font-size: 15px;">
                         See Open Positions
                         <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd"/>
                         </svg>
                     </a>
                     <a href="mailto:hello@cenrion.com?subject=Speculative Application"
-                       class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5"
+                       class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 w-full sm:w-auto text-center"
                        style="background: #FFFFFF; color: #062538; border: 1.5px solid #E2EAF4; box-shadow: 0 4px 14px rgba(0,0,0,0.04);">
                         <svg class="w-4 h-4 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -295,10 +295,10 @@
         </div>
 
         {{-- 4 Concrete Role Cards (2x2 Grid) --}}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-12">
 
             {{-- Role 1: Senior Full-Stack Engineer --}}
-            <div class="bg-white rounded-3xl border p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
+            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
                  style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
                  data-animate="fade-up" data-delay="0">
                 <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
@@ -314,11 +314,11 @@
                         </span>
                     </div>
 
-                    <h3 class="text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
                         Senior Full-Stack Engineer
                     </h3>
                     
-                    <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
+                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
                         Lead development of high-throughput client web applications, micro-frontends, and cloud API services. Own architecture and code rigor from sprint kickoff through production release.
                     </p>
 
@@ -332,13 +332,13 @@
                     </div>
                 </div>
 
-                <div class="pt-5 border-t flex items-center justify-between gap-4" style="border-color:#F1F5F9;">
+                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
                     <div>
                         <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
                         <span class="text-sm font-extrabold" style="color:#062538;">$90k &ndash; $140k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
                     </div>
                     <a href="mailto:hello@cenrion.com?subject=Application for Senior Full-Stack Engineer"
-                       class="btn-accent" style="padding: 10px 22px; font-size: 13px;">
+                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
                         <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -348,7 +348,7 @@
             </div>
 
             {{-- Role 2: Lead AI Systems Architect --}}
-            <div class="bg-white rounded-3xl border p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
+            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
                  style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
                  data-animate="fade-up" data-delay="80">
                 <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent 70%);pointer-events:none;"></div>
@@ -364,11 +364,11 @@
                         </span>
                     </div>
 
-                    <h3 class="text-2xl font-extrabold mb-2 group-hover:text-indigo-600 transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-indigo-600 transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
                         Lead AI Systems Architect
                     </h3>
                     
-                    <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
+                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
                         Engineer production RAG architectures, autonomous agent workflows, and deterministic LLM evaluation harnesses. Bridge the gap between AI research prototypes and enterprise reliability.
                     </p>
 
@@ -382,13 +382,13 @@
                     </div>
                 </div>
 
-                <div class="pt-5 border-t flex items-center justify-between gap-4" style="border-color:#F1F5F9;">
+                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
                     <div>
                         <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
                         <span class="text-sm font-extrabold" style="color:#062538;">$110k &ndash; $160k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
                     </div>
                     <a href="mailto:hello@cenrion.com?subject=Application for Lead AI Systems Architect"
-                       class="btn-accent" style="padding: 10px 22px; font-size: 13px;">
+                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
                         <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -398,7 +398,7 @@
             </div>
 
             {{-- Role 3: Staff SDET & Quality Engineering Lead --}}
-            <div class="bg-white rounded-3xl border p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
+            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
                  style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
                  data-animate="fade-up" data-delay="160">
                 <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(16,185,129,0.12),transparent 70%);pointer-events:none;"></div>
@@ -414,11 +414,11 @@
                         </span>
                     </div>
 
-                    <h3 class="text-2xl font-extrabold mb-2 group-hover:text-emerald-600 transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-emerald-600 transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
                         Staff SDET &amp; Quality Lead
                     </h3>
                     
-                    <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
+                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
                         Enforce Glass Box engineering gates. Build end-to-end automated test suites, load/stress benchmarks, and CI gate checks ensuring zero regressions reach client staging environments.
                     </p>
 
@@ -432,13 +432,13 @@
                     </div>
                 </div>
 
-                <div class="pt-5 border-t flex items-center justify-between gap-4" style="border-color:#F1F5F9;">
+                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
                     <div>
                         <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
                         <span class="text-sm font-extrabold" style="color:#062538;">$85k &ndash; $130k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
                     </div>
                     <a href="mailto:hello@cenrion.com?subject=Application for Staff SDET and Quality Lead"
-                       class="btn-accent" style="padding: 10px 22px; font-size: 13px;">
+                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
                         <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -448,7 +448,7 @@
             </div>
 
             {{-- Role 4: Senior Cloud Infrastructure & SRE --}}
-            <div class="bg-white rounded-3xl border p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
+            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
                  style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
                  data-animate="fade-up" data-delay="240">
                 <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
@@ -464,11 +464,11 @@
                         </span>
                     </div>
 
-                    <h3 class="text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
                         Senior Cloud &amp; DevOps Lead
                     </h3>
                     
-                    <p class="text-sm leading-relaxed mb-5" style="color:#5A7184;">
+                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
                         Architect resilient multi-cloud foundations, automated GitOps deployment pipelines, and observability frameworks with Grafana &amp; OpenTelemetry. Build platforms that heal themselves.
                     </p>
 
@@ -482,13 +482,13 @@
                     </div>
                 </div>
 
-                <div class="pt-5 border-t flex items-center justify-between gap-4" style="border-color:#F1F5F9;">
+                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
                     <div>
                         <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
                         <span class="text-sm font-extrabold" style="color:#062538;">$95k &ndash; $145k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
                     </div>
                     <a href="mailto:hello@cenrion.com?subject=Application for Senior Cloud and DevOps Lead"
-                       class="btn-accent" style="padding: 10px 22px; font-size: 13px;">
+                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
                         <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -649,13 +649,13 @@
 {{-- ============================================================
      BOTTOM CTA: Light White Background with Left & Right Accents
      ============================================================ --}}
-<section class="py-24 lg:py-28 relative overflow-hidden bg-white"
+<section class="py-14 sm:py-20 lg:py-28 relative overflow-hidden bg-white"
          style="background-image: radial-gradient(rgba(6,182,212,0.08) 1.5px, transparent 1.5px); background-size: 32px 32px;">
     
     <div style="position:absolute;left:-80px;top:20%;width:420px;height:420px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);border-radius:9999px;pointer-events:none;"></div>
     <div style="position:absolute;right:-80px;bottom:15%;width:420px;height:420px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);border-radius:9999px;pointer-events:none;"></div>
 
-    <div class="relative z-10 max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
+    <div class="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {{-- Left Design Column --}}
@@ -694,37 +694,37 @@
 
             {{-- Center Content Column --}}
             <div class="lg:col-span-6 text-center">
-                <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-6"
+                <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl mb-5 sm:mb-6"
                      style="background: rgba(6,182,212,0.12); border: 1.5px solid rgba(6,182,212,0.3); box-shadow: 0 4px 16px rgba(6,182,212,0.15);"
                      data-animate>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         stroke="#06B6D4" stroke-width="2" class="w-7 h-7">
+                         stroke="#06B6D4" stroke-width="2" class="w-6 h-6 sm:w-7 sm:h-7">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
                     </svg>
                 </div>
 
-                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-5 leading-tight"
+                <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 sm:mb-5 leading-tight"
                     style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;" data-animate data-delay="80">
                     Interested in joining<br>
                     <span class="gradient-text">our engineering cohort?</span>
                 </h2>
                 
-                <p class="text-base lg:text-lg mb-8 mx-auto leading-relaxed" style="color: #5A7184; max-width: 580px;"
+                <p class="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 mx-auto leading-relaxed px-2" style="color: #5A7184; max-width: 580px;"
                    data-animate data-delay="160">
                     Even if you don't see your exact role listed today, send us your work. We always make room for exceptional engineers.
                 </p>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4"
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4"
                      data-animate data-delay="240">
-                    <a href="mailto:hello@cenrion.com?subject=Speculative Application" class="btn-accent" style="padding: 14px 34px; font-size: 15px;">
+                    <a href="mailto:hello@cenrion.com?subject=Speculative Application" class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 14px 34px; font-size: 15px;">
                         Email Our Team
                         <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                         </svg>
                     </a>
                     <a href="{{ route('about') }}"
-                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan"
+                       class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan w-full sm:w-auto text-center"
                        style="background: #FFFFFF; color: #062538; border: 1.5px solid #E2EAF4; box-shadow: 0 4px 14px rgba(0,0,0,0.04);">
                         About Cenrion
                         <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

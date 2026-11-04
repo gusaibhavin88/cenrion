@@ -56,15 +56,15 @@
                     Cenrion exists to close the dangerous gap between rapid AI code generation and dependable enterprise engineering.
                 </p>
 
-                <div class="flex flex-wrap items-center gap-4 mb-10" data-animate data-delay="160">
-                    <a href="{{ route('contact') }}" class="btn-accent" style="padding: 14px 30px; font-size: 15px;">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10" data-animate data-delay="160">
+                    <a href="{{ route('contact') }}" class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 14px 30px; font-size: 15px;">
                         Talk to Us
                         <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                         </svg>
                     </a>
                     <a href="#founder-track"
-                       class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5"
+                       class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 w-full sm:w-auto text-center"
                        style="background: #FFFFFF; color: #062538; border: 1.5px solid #E2EAF4; box-shadow: 0 4px 14px rgba(0,0,0,0.04);">
                         Founder Track Record
                         <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -481,13 +481,13 @@
 {{-- ============================================================
      BOTTOM CTA: Light White Background with Left & Right Accents
      ============================================================ --}}
-<section class="py-24 lg:py-28 relative overflow-hidden bg-white"
+<section class="py-14 sm:py-20 lg:py-28 relative overflow-hidden bg-white"
          style="background-image: radial-gradient(rgba(6,182,212,0.08) 1.5px, transparent 1.5px); background-size: 32px 32px;">
     
     <div style="position:absolute;left:-80px;top:20%;width:420px;height:420px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);border-radius:9999px;pointer-events:none;"></div>
     <div style="position:absolute;right:-80px;bottom:15%;width:420px;height:420px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);border-radius:9999px;pointer-events:none;"></div>
 
-    <div class="relative z-10 max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
+    <div class="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {{-- Left Design Column --}}
@@ -526,37 +526,37 @@
 
             {{-- Center Content Column --}}
             <div class="lg:col-span-6 text-center">
-                <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-6"
+                <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl mb-5 sm:mb-6"
                      style="background: rgba(6,182,212,0.12); border: 1.5px solid rgba(6,182,212,0.3); box-shadow: 0 4px 16px rgba(6,182,212,0.15);"
                      data-animate>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         stroke="#06B6D4" stroke-width="2" class="w-7 h-7">
+                         stroke="#06B6D4" stroke-width="2" class="w-6 h-6 sm:w-7 sm:h-7">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
                     </svg>
                 </div>
 
-                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-5 leading-tight"
+                <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 sm:mb-5 leading-tight"
                     style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;" data-animate data-delay="80">
                     Let's discuss your<br>
                     <span class="gradient-text">engineering roadmap.</span>
                 </h2>
                 
-                <p class="text-base lg:text-lg mb-8 mx-auto leading-relaxed" style="color: #5A7184; max-width: 580px;"
+                <p class="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 mx-auto leading-relaxed px-2" style="color: #5A7184; max-width: 580px;"
                    data-animate data-delay="160">
                     Speak directly with an engineering leader. We'll explore your architectural goals, delivery timelines, and how Cenrion can accelerate your team.
                 </p>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4"
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4"
                      data-animate data-delay="240">
-                    <a href="{{ route('contact') }}" class="btn-accent" style="padding: 14px 34px; font-size: 15px;">
+                    <a href="{{ route('contact') }}" class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 14px 34px; font-size: 15px;">
                         Talk to Us
                         <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                         </svg>
                     </a>
                     <a href="{{ route('solutions') }}"
-                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan"
+                       class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan w-full sm:w-auto text-center"
                        style="background: #FFFFFF; color: #062538; border: 1.5px solid #E2EAF4; box-shadow: 0 4px 14px rgba(0,0,0,0.04);">
                         Our Solutions
                         <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

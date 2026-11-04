@@ -1183,6 +1183,14 @@
             </div>
         </div>
 
+        {{-- Mobile Swipe Indicator (Visible only on mobile/tablet) --}}
+        <div class="flex items-center justify-center gap-2 text-xs font-semibold text-cyan/80 lg:hidden -mt-6 mb-10">
+            <svg class="w-4 h-4 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+            <span>Swipe horizontally to view all 5 pipeline gates</span>
+        </div>
+
         <p class="text-center text-sm mb-12" style="color:#94A3B8;" data-animate>
             <span style="color:#06B6D4;font-weight:700;">QA layer</span> —
             Automated testing and code review run through every phase, from the first sprint to scale.
@@ -1652,14 +1660,14 @@
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div data-animate>
                 <span class="section-tag block mb-3">Where to Start</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;">
+                <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;">
                     Start with a Product Engineering review
                 </h2>
-                <p class="text-lg mb-8" style="color:#5A7184;">
+                <p class="text-base sm:text-lg mb-8 leading-relaxed" style="color:#5A7184;">
                     A fixed-scope review of your product's architecture, code base and delivery pipeline, completed in two weeks.
                     You keep the findings and the roadmap, whether or not we work together.
                 </p>
-                <a href="{{ route('contact') }}" class="btn-primary">
+                <a href="{{ route('contact') }}" class="btn-primary w-full sm:w-auto text-center justify-center">
                     Book a review
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                         <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
@@ -1760,15 +1768,15 @@
             No fluff. No long-winded proposals. Just engineering that ships fast and scales hard.
         </p>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4"
              data-animate data-delay="240">
-            <a href="{{ route('contact') }}" class="btn-white">
+            <a href="{{ route('contact') }}" class="btn-white w-full sm:w-auto text-center justify-center">
                 Talk to Us
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
                 </svg>
             </a>
-            <a href="{{ route('capabilities') }}" class="btn-outline-white">
+            <a href="{{ route('capabilities') }}" class="btn-outline-white w-full sm:w-auto text-center justify-center">
                 Explore Capabilities
             </a>
         </div>
