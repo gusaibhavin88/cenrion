@@ -87,10 +87,6 @@
                     @include('components.logo', ['variant' => 'white', 'size' => 34])
                 </div>
 
-                <p style="color: #67E8F9; font-size: 14px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.01em; font-family: 'Plus Jakarta Sans', sans-serif;">
-                    Glass box engineering.
-                </p>
-
                 <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.75; margin-bottom: 20px;">
                     AI speed with engineering accountability — managed IT services, staff augmentation, and product engineering built to scale.
                 </p>
@@ -246,16 +242,12 @@
                 <span style="color:#5A7184;font-size:12px;font-style:italic;">Built with AI speed. Engineered for scale.</span>
             </div>
 
-            {{-- Right: legal links + badge --}}
+            {{-- Right: legal links --}}
             <div class="flex items-center gap-5">
                 <a href="#" style="color: #5A7184; font-size: 13px; text-decoration: none; transition: color 0.2s ease;"
                    onmouseover="this.style.color='#06B6D4'" onmouseout="this.style.color='#5A7184'">Privacy Policy</a>
                 <a href="#" style="color: #5A7184; font-size: 13px; text-decoration: none; transition: color 0.2s ease;"
                    onmouseover="this.style.color='#06B6D4'" onmouseout="this.style.color='#5A7184'">Terms of Service</a>
-                <div style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.2);border-radius:999px;">
-                    <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#06B6D4;box-shadow:0 0 0 2px rgba(6,182,212,0.3);"></span>
-                    <span style="font-size:11px;font-weight:600;color:#06B6D4;letter-spacing:0.06em;">Glass Box</span>
-                </div>
             </div>
 
         </div>

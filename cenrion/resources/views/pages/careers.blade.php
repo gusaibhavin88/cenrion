@@ -332,11 +332,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
-                    <div>
-                        <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
-                        <span class="text-sm font-extrabold" style="color:#062538;">$90k &ndash; $140k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
-                    </div>
+                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
                     <a href="mailto:hello@cenrion.com?subject=Application for Senior Full-Stack Engineer"
                        class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
@@ -382,11 +378,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
-                    <div>
-                        <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
-                        <span class="text-sm font-extrabold" style="color:#062538;">$110k &ndash; $160k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
-                    </div>
+                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
                     <a href="mailto:hello@cenrion.com?subject=Application for Lead AI Systems Architect"
                        class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
@@ -432,11 +424,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
-                    <div>
-                        <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
-                        <span class="text-sm font-extrabold" style="color:#062538;">$85k &ndash; $130k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
-                    </div>
+                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
                     <a href="mailto:hello@cenrion.com?subject=Application for Staff SDET and Quality Lead"
                        class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
@@ -482,11 +470,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 sm:pt-5 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4" style="border-color:#F1F5F9;">
-                    <div>
-                        <span class="text-[11px] uppercase tracking-wider block font-bold" style="color:#94A3B8;">Compensation</span>
-                        <span class="text-sm font-extrabold" style="color:#062538;">$95k &ndash; $145k USD <span class="text-xs font-normal text-slate-400">/ Global Async</span></span>
-                    </div>
+                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
                     <a href="mailto:hello@cenrion.com?subject=Application for Senior Cloud and DevOps Lead"
                        class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
                         Apply Now
@@ -717,12 +701,6 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4"
                      data-animate data-delay="240">
-                    <a href="mailto:hello@cenrion.com?subject=Speculative Application" class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 14px 34px; font-size: 15px;">
-                        Email Our Team
-                        <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
                     <a href="{{ route('about') }}"
                        class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan w-full sm:w-auto text-center"
                        style="background: #FFFFFF; color: #062538; border: 1.5px solid #E2EAF4; box-shadow: 0 4px 14px rgba(0,0,0,0.04);">

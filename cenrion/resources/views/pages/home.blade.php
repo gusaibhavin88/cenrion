@@ -215,14 +215,14 @@
         .insight-card::after, .labs-mini-card::after { display: none; }
     }
 
-    /* â”€â”€ Scroll indicator bounce â”€â”€ */
+    /* -- Scroll indicator bounce -- */
     @keyframes bounce-slow {
         0%, 100% { transform: translateY(0); }
         50%       { transform: translateY(8px); }
     }
     .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
 
-    /* â”€â”€ Marquee â”€â”€ */
+    /* -- Marquee -- */
     @keyframes marquee {
         0%   { transform: translateX(0); }
         100% { transform: translateX(-50%); }
@@ -258,7 +258,7 @@
         background: linear-gradient(to right, rgba(6,182,212,0.55), rgba(6,182,212,0.12));
     }
 
-    /* â”€â”€ Tech badge dark variant â”€â”€ */
+    /* -- Tech badge dark variant -- */
     .tech-badge-dark {
         display: inline-flex; align-items: center; gap: 6px;
         padding: 8px 18px;
@@ -276,7 +276,7 @@
         border-color: rgba(6,182,212,0.4);
     }
 
-    /* â”€â”€ Process connector line â”€â”€ */
+    /* -- Process connector line -- */
     .process-connector {
         flex: 1;
         height: 2px;
@@ -284,7 +284,7 @@
         margin-top: 28px; /* aligns with icon center */
     }
 
-    /* â”€â”€ Insight card â”€â”€ */
+    /* -- Insight card -- */
     .insight-card {
         background: rgba(255,255,255,0.94);
         border: 1px solid rgba(226,234,244,0.9);
@@ -311,7 +311,7 @@
         transform: translateY(-4px);
     }
 
-    /* â”€â”€ Labs mini card â”€â”€ */
+    /* -- Labs mini card -- */
     .labs-mini-card {
         background: rgba(17,34,55,0.78);
         border: 1px solid rgba(26,51,82,0.9);
@@ -338,7 +338,7 @@
         transform: translateY(-3px);
     }
 
-    /* â”€â”€ CTA banner noise pattern â”€â”€ */
+    /* -- CTA banner noise pattern -- */
     .cta-banner {
         background: linear-gradient(135deg, #062538 0%, #0A2D44 50%, #062538 100%);
         position: relative;
@@ -365,14 +365,48 @@
         border-radius: 9999px;
         pointer-events: none;
     }
+
+    /* Waveform glow animation */
+    @keyframes pulseGlow {
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(6, 182, 212, 0.5)); opacity: 0.85; }
+        50% { filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.85)); opacity: 1; }
+    }
+    .pulse-waveform {
+        animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    /* Division Pillar Card in Cenrion Cyan & Navy */
+    .labs-pillar-card {
+        background: #FFFFFF;
+        border: 1.5px solid #E2EAF4;
+        box-shadow: 0 4px 18px rgba(6, 37, 56, 0.04);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .labs-pillar-card:hover {
+        transform: translateY(-6px);
+        border-color: #06B6D4;
+        box-shadow: 0 16px 36px rgba(6, 182, 212, 0.18), 0 4px 14px rgba(6, 37, 56, 0.06);
+    }
+    .demo-card-labs {
+        background: #FFFFFF;
+        border: 1.5px solid #E2EAF4;
+        box-shadow: 0 4px 20px rgba(6, 37, 56, 0.04);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .demo-card-labs:hover {
+        transform: translateY(-4px);
+        border-color: #06B6D4;
+        box-shadow: 0 16px 36px rgba(6, 182, 212, 0.15), 0 4px 14px rgba(6, 37, 56, 0.06);
+    }
+
 </style>
 @endpush
 
 @section('content')
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      SECTION 1: HERO (light fold)
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="home-hero relative overflow-hidden">
     <div class="home-hero-glow" aria-hidden="true"></div>
     <div class="relative z-10 max-w-8xl mx-auto px-6 sm:px-8 lg:px-10 pt-10 pb-10 lg:pt-8 lg:pb-12">
@@ -474,9 +508,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      WHY NOW
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="py-24 bg-white relative overflow-hidden">
     {{-- Ambient soft background blur --}}
     <div style="position:absolute;top:10%;left:50%;transform:translateX(-50%);width:680px;height:340px;background:radial-gradient(ellipse,rgba(6,182,212,0.06),transparent 70%);pointer-events:none;"></div>
@@ -647,9 +681,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      BLACK BOX â†’ GLASS BOX
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="py-24" style="background:#F5F8FC;">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="text-center mb-14">
@@ -687,19 +721,17 @@
             </div>
 
             {{-- Middle Box: Cenrion Bridges the gap (Signature Deep Navy Brand theme) --}}
-            <div class="p-7 rounded-2xl text-center flex flex-col justify-center relative overflow-hidden transition-all duration-300 hover:-translate-y-1" style="background:linear-gradient(135deg,#0E3550 0%,#062538 60%,#0A2D44 100%);border:1.5px solid rgba(6,182,212,0.4);box-shadow:0 16px 42px rgba(6,37,56,0.35),inset 0 1px 0 rgba(255,255,255,0.1);" data-animate data-delay="80">
+            <div class="py-14 px-10 rounded-2xl text-center flex flex-col justify-center relative overflow-hidden transition-all duration-300 hover:-translate-y-1 lg:-my-4 lg:scale-105" style="background:linear-gradient(135deg,#0E3550 0%,#062538 60%,#0A2D44 100%);border:1.5px solid rgba(6,182,212,0.4);box-shadow:0 24px 56px rgba(6,37,56,0.45),inset 0 1px 0 rgba(255,255,255,0.1);z-index:10;position:relative;" data-animate data-delay="80">
                 <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.25),transparent 70%);pointer-events:none;"></div>
                 <div class="relative z-10">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 mx-auto" style="background:rgba(6,182,212,0.18);border:1px solid rgba(6,182,212,0.4);">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#67E8F9" stroke-width="1.8" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-5 mx-auto" style="background:rgba(6,182,212,0.18);border:1px solid rgba(6,182,212,0.4);">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#67E8F9" stroke-width="1.8" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
                     </div>
-                    <span class="section-tag block mb-1 text-cyan font-bold tracking-widest text-xs uppercase">Cenrion Solution</span>
-                    <h3 class="text-2xl font-extrabold text-white mb-2" style="font-family:'Plus Jakarta Sans',sans-serif;">Bridges the gap</h3>
-                    <p class="text-sm leading-relaxed" style="color:#CBD5E1;">16+ years of global delivery leadership, applied to software that is built to scale.</p>
-                    <div class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase" style="color:#67E8F9;letter-spacing:0.12em;">
-                        <span style="display:inline-block;width:16px;height:1px;background:#06B6D4;"></span>
+                    <span class="section-tag block mb-2 text-cyan font-bold tracking-widest text-xs uppercase">Cenrion Solution</span>
+                    <h3 class="text-4xl font-extrabold text-white mb-3" style="font-family:'Plus Jakarta Sans',sans-serif;">Bridges the gap</h3>
+                    <p class="text-base leading-relaxed mb-2" style="color:#CBD5E1;">16+ years of global delivery leadership, applied to software that is built to scale.</p>
+                    <div class="mt-5 inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase" style="color:#67E8F9;letter-spacing:0.12em;">
                         AI Speed &middot; Engineering Accountability
-                        <span style="display:inline-block;width:16px;height:1px;background:#06B6D4;"></span>
                     </div>
                 </div>
             </div>
@@ -750,9 +782,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- ==========================================================
      SECTION 2: CAPABILITIES OVERVIEW
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+========================================================== --}}
 <section class="py-24 bg-white">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
@@ -941,9 +973,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      SECTION 3: TECHNOLOGY ECOSYSTEM BAR
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="py-24 relative overflow-hidden" style="background:#062538;">
     {{-- Ambient glows --}}
     <div style="position:absolute;top:20%;left:-10%;width:420px;height:420px;background:radial-gradient(circle,rgba(168,85,247,0.12),transparent 70%);pointer-events:none;border-radius:9999px;"></div>
@@ -1061,9 +1093,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      SECTION 4: DELIVERY PROCESS (navy contrast fold)
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="fold-navy process-on-navy py-24">
     <div class="relative z-10 max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
@@ -1191,10 +1223,16 @@
             <span>Swipe horizontally to view all 5 pipeline gates</span>
         </div>
 
-        <p class="text-center text-sm mb-12" style="color:#94A3B8;" data-animate>
-            <span style="color:#06B6D4;font-weight:700;">QA layer</span> —
-            Automated testing and code review run through every phase, from the first sprint to scale.
-        </p>
+        <div class="w-full mb-12" data-animate>
+            <div class="flex items-center justify-center gap-4 px-6 py-4 rounded-2xl" style="background:linear-gradient(90deg,rgba(6,182,212,0.08) 0%,rgba(6,182,212,0.15) 50%,rgba(6,182,212,0.08) 100%);border:1px solid rgba(6,182,212,0.25);">
+                <span class="inline-flex items-center gap-2 shrink-0">
+                    <span class="inline-block w-2.5 h-2.5 rounded-full" style="background:#06B6D4;box-shadow:0 0 8px #06B6D4;"></span>
+                    <span style="color:#06B6D4;font-weight:800;font-size:0.95rem;letter-spacing:0.04em;">QA layer</span>
+                </span>
+                <span class="text-sm" style="color:#94A3B8;">—</span>
+                <span class="text-sm flex-1 text-center" style="color:#CBD5E1;">Automated testing and code review run through every phase, from the first sprint to scale.</span>
+            </div>
+        </div>
 
                 <div class="rounded-2xl overflow-hidden border" style="border-color:rgba(6,182,212,0.3);box-shadow:0 12px 40px rgba(0,0,0,0.35);background:rgba(10,37,56,0.6);backdrop-filter:blur(12px);" data-animate>
             <div class="px-6 py-5 flex items-center justify-between flex-wrap gap-4" style="background:linear-gradient(90deg, rgba(6,182,212,0.15) 0%, rgba(15,23,42,0.6) 100%);border-bottom:1px solid rgba(6,182,212,0.2);">
@@ -1257,144 +1295,439 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SECTION 5: CENRION LABS TEASER
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
-<section class="py-24 bg-white">
-    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div class="flex flex-col lg:flex-row items-start gap-16">
+{{-- =====================================================================
+     SECTION 5: CENRION LABS (Signature Innovation Division & Working Demos)
+     ===================================================================== --}}
+<section class="py-20 sm:py-28 relative overflow-hidden"
+         style="background: linear-gradient(180deg, #FFFFFF 0%, #F5F8FC 60%, #EEF5FC 100%); border-top: 1px solid #E2EAF4; border-bottom: 1px solid #E2EAF4;"
+         id="cenrion-labs-section">
 
-            {{-- Left column: text --}}
-            <div class="flex-1 lg:max-w-lg" data-animate>
-                <span class="section-tag block mb-4">Cenrion Labs</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight"
-                    style="color:#062538;">
-                    Proof of Engineering<br>
-                    <span class="gradient-text">Capability.</span>
+    {{-- Subtle Ambient Glows --}}
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none opacity-20"
+         style="background: radial-gradient(circle, rgba(6,182,212,0.2) 0%, transparent 70%);"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none opacity-15"
+         style="background: radial-gradient(circle, rgba(6,182,212,0.25) 0%, transparent 70%);"></div>
+
+    <div class="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10">
+
+        {{-- ───────── PART 1: OUR INNOVATION DIVISION (CENRION LABS HERO) ───────── --}}
+        <div class="text-center max-w-4xl mx-auto mb-14 sm:mb-16" data-animate>
+            
+            {{-- Eyebrow --}}
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-5"
+                 style="background: #ECFEFF; border: 1.5px solid rgba(6, 182, 212, 0.35);">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                <span class="text-xs font-black uppercase tracking-widest" style="color: #0891B2; font-family:'Plus Jakarta Sans',sans-serif;">
+                    OUR INNOVATION DIVISION
+                </span>
+            </div>
+
+            {{-- Title with Left & Right Cyan Waveforms --}}
+            <div class="flex items-center justify-center gap-3 sm:gap-6 md:gap-8 mb-5">
+                {{-- Left Waveform --}}
+                <svg class="w-12 sm:w-24 md:w-36 lg:w-44 h-6 sm:h-8 pulse-waveform shrink-0 hidden sm:block" viewBox="0 0 160 32" fill="none">
+                    <path d="M0 16h45l8-14 10 28 9-20 7 12 8-6h73" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
+                    style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                    <span>Cenrion</span> <span style="color:#06B6D4;">Labs</span>
                 </h2>
-                <p class="text-lg leading-relaxed mb-4" style="color:#5A7184;">
-                    Cenrion Labs is where theory meets production code. Each demo is a
-                    fully-functional, interactive technology showcase — built to prove our
-                    depth across AI, analytics, and software engineering.
-                </p>
-                <p class="text-base leading-relaxed mb-10" style="color:#94A3B8;">
-                    No slide decks, no case study vagueness — just working systems you can
-                    explore right now.
-                </p>
-                <a href="{{ route('labs') }}" class="btn-primary">
-                    Explore Labs
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+
+                {{-- Right Waveform --}}
+                <svg class="w-12 sm:w-24 md:w-36 lg:w-44 h-6 sm:h-8 pulse-waveform shrink-0 hidden sm:block" viewBox="0 0 160 32" fill="none">
+                    <path d="M0 16h73l8-6 7 12 9-20 10 28 8-14h45" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            {{-- Subtitle --}}
+            <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-600 max-w-3xl mx-auto font-normal">
+                Our playground for experiments in AI, new products and startup ideas. Cenrion Labs is where we build growth accelerators, our own products, branded solutions and startup concepts.
+            </p>
+        </div>
+
+        {{-- ───────── PART 2: 4 DIVISION PILLARS (IDENTICAL TO LABS PAGE) ───────── --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-20" data-animate>
+
+            {{-- Pillar 1: Growth accelerators --}}
+            <div class="labs-pillar-card p-6 sm:p-7 rounded-2xl sm:rounded-3xl relative overflow-hidden flex flex-col justify-between group">
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #06B6D4, #67E8F9);box-shadow:0 0 10px rgba(6,182,212,0.5);"></div>
+                <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
+
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider"
+                              style="background: #ECFEFF; border: 1px solid rgba(6,182,212,0.3); color: #0891B2;">
+                            <span class="relative flex h-1.5 w-1.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-500"></span>
+                            </span>
+                            Division 01
+                        </span>
+                        <span class="text-[11px] font-mono font-bold" style="color: #0891B2;">AI Velocity</span>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
+                         style="background: rgba(6,182,212,0.1); border: 1.5px solid rgba(6,182,212,0.3);">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        Growth accelerators
+                    </h3>
+                    <p class="text-sm leading-relaxed mb-5" style="color: #5A7184;">
+                        Ready-to-deploy AI and automation kits that help businesses grow faster.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t flex items-center justify-between text-xs" style="border-color: #E2EAF4;">
+                    <span class="font-bold text-[11px]" style="color: #062538;">Turnkey Scaffolds</span>
+                    <span class="font-bold text-[11px] px-2.5 py-0.5 rounded-md" style="background: #ECFEFF; color: #0891B2; border: 1px solid rgba(6,182,212,0.25);">3x Speed</span>
+                </div>
+            </div>
+
+            {{-- Pillar 2: Products --}}
+            <div class="labs-pillar-card p-6 sm:p-7 rounded-2xl sm:rounded-3xl relative overflow-hidden flex flex-col justify-between group">
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #06B6D4, #67E8F9);box-shadow:0 0 10px rgba(6,182,212,0.5);"></div>
+                <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
+
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider"
+                              style="background: #ECFEFF; border: 1px solid rgba(6,182,212,0.3); color: #0891B2;">
+                            Division 02
+                        </span>
+                        <span class="text-[11px] font-mono font-bold" style="color: #0891B2;">In-House IP</span>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
+                         style="background: rgba(6,182,212,0.1); border: 1.5px solid rgba(6,182,212,0.3);">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.07a4.5 4.5 0 004.486-6.32l-3.27 3.27a1.5 1.5 0 01-2.122-2.122l3.27-3.27a4.5 4.5 0 00-6.32 4.486c.118.58.094 1.193-.07 1.743z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        Products
+                    </h3>
+                    <p class="text-sm leading-relaxed mb-5" style="color: #5A7184;">
+                        Software products we design, build and run ourselves.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t flex items-center justify-between text-xs" style="border-color: #E2EAF4;">
+                    <span class="font-bold text-[11px]" style="color: #062538;">Proprietary Code</span>
+                    <span class="font-bold text-[11px] px-2.5 py-0.5 rounded-md" style="background: #ECFEFF; color: #0891B2; border: 1px solid rgba(6,182,212,0.25);">Production Grade</span>
+                </div>
+            </div>
+
+            {{-- Pillar 3: Branded solutions --}}
+            <div class="labs-pillar-card p-6 sm:p-7 rounded-2xl sm:rounded-3xl relative overflow-hidden flex flex-col justify-between group">
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #06B6D4, #67E8F9);box-shadow:0 0 10px rgba(6,182,212,0.5);"></div>
+                <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
+
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider"
+                              style="background: #ECFEFF; border: 1px solid rgba(6,182,212,0.3); color: #0891B2;">
+                            Division 03
+                        </span>
+                        <span class="text-[11px] font-mono font-bold" style="color: #0891B2;">White-Label</span>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
+                         style="background: rgba(6,182,212,0.1); border: 1.5px solid rgba(6,182,212,0.3);">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        Branded solutions
+                    </h3>
+                    <p class="text-sm leading-relaxed mb-5" style="color: #5A7184;">
+                        White-label platforms partners can launch under their own brand.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t flex items-center justify-between text-xs" style="border-color: #E2EAF4;">
+                    <span class="font-bold text-[11px]" style="color: #062538;">Partner Ready</span>
+                    <span class="font-bold text-[11px] px-2.5 py-0.5 rounded-md" style="background: #ECFEFF; color: #0891B2; border: 1px solid rgba(6,182,212,0.25);">Custom Themed</span>
+                </div>
+            </div>
+
+            {{-- Pillar 4: Startup concepts --}}
+            <div class="labs-pillar-card p-6 sm:p-7 rounded-2xl sm:rounded-3xl relative overflow-hidden flex flex-col justify-between group">
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #06B6D4, #67E8F9);box-shadow:0 0 10px rgba(6,182,212,0.5);"></div>
+                <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
+
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider"
+                              style="background: #ECFEFF; border: 1px solid rgba(6,182,212,0.3); color: #0891B2;">
+                            Division 04
+                        </span>
+                        <span class="text-[11px] font-mono font-bold" style="color: #0891B2;">Incubation</span>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
+                         style="background: rgba(6,182,212,0.1); border: 1.5px solid rgba(6,182,212,0.3);">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        Startup concepts
+                    </h3>
+                    <p class="text-sm leading-relaxed mb-5" style="color: #5A7184;">
+                        Early ideas we prototype, test with real users and spin out.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t flex items-center justify-between text-xs" style="border-color: #E2EAF4;">
+                    <span class="font-bold text-[11px]" style="color: #062538;">Rapid Prototypes</span>
+                    <span class="font-bold text-[11px] px-2.5 py-0.5 rounded-md" style="background: #ECFEFF; color: #0891B2; border: 1px solid rgba(6,182,212,0.25);">2-Wk MVP</span>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- ───────── PART 3: PROOF BEFORE PROMISES (LIVE DEMOS SHOWCASE) ───────── --}}
+        <div class="text-center mb-12" data-animate>
+            <div class="inline-flex items-center gap-2 mb-3">
+                <div class="h-px w-6 sm:w-8" style="background-color:#06B6D4;"></div>
+                <span class="text-xs font-extrabold tracking-widest uppercase" style="color:#0891B2;">WORKING DEMONSTRATIONS</span>
+                <div class="h-px w-6 sm:w-8" style="background-color:#06B6D4;"></div>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                Proof before <span class="gradient-text">promises.</span>
+            </h3>
+            <p class="text-base sm:text-lg max-w-2xl mx-auto leading-relaxed text-slate-600">
+                Working systems from Cenrion Labs you can explore today, built in-house to show our depth across AI, real-time data pipelines, and software engineering.
+            </p>
+        </div>
+
+        {{-- 3 Flagship Demo Cards (Rich Cenrion Labs Aesthetic) --}}
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+
+            {{-- Demo Card 1: AI Document Intelligence --}}
+            <div class="demo-card-labs rounded-3xl p-7 flex flex-col justify-between relative overflow-hidden group" data-animate>
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #06B6D4, #38BDF8);"></div>
+
+                <div>
+                    <div class="flex items-center justify-between gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+                             style="background: #ECFEFF; border: 1.5px solid rgba(6,182,212,0.3);">
+                            <svg class="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                            </svg>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider text-cyan-700 bg-cyan-50 border border-cyan-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                            42ms P99 &bull; LIVE DEMO
+                        </span>
+                    </div>
+
+                    <h4 class="text-xl font-extrabold mb-2" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        AI Document Intelligence
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                        Enterprise semantic extraction engine with strict citation grounding, zero-hallucination guardrails, and hybrid vector search across structured contracts.
+                    </p>
+
+                    {{-- Live Micro-telemetry --}}
+                    <div class="rounded-xl p-3.5 mb-5 font-mono text-[11px]" style="background: #F8FAFC; border: 1px solid #E2EAF4;">
+                        <div class="flex items-center justify-between text-slate-500 pb-1.5 mb-1.5 border-b border-slate-200">
+                            <span class="text-cyan-600 font-bold">&bull; Live Benchmark</span>
+                            <span>Latency: 42ms</span>
+                        </div>
+                        <div class="text-slate-700 font-medium truncate">&gt; Match: &sect; 14.2 (Confidence: 99.4%)</div>
+                    </div>
+
+                    {{-- Tech Badges --}}
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        @foreach(['LangChain', 'pgvector', 'Claude 3.5', 'FastAPI'] as $tech)
+                        <span class="text-[10px] font-bold px-2.5 py-1 rounded-md text-cyan-800 bg-cyan-50 border border-cyan-200/70">
+                            {{ $tech }}
+                        </span>
+                        @endforeach
+                    </div>
+                </div>
+
+                <a href="{{ route('labs') }}"
+                   class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white transition-all duration-200 hover:bg-cyan-600"
+                   style="background: #06B6D4; box-shadow: 0 4px 14px rgba(6,182,212,0.3);">
+                    <span>Launch Live Demo</span>
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
                     </svg>
                 </a>
             </div>
 
-            {{-- Right column: mini-card grid --}}
-            <div class="flex-1 w-full" data-animate style="transition-delay:150ms">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {{-- Demo Card 2: Autonomous Support Agent --}}
+            <div class="demo-card-labs rounded-3xl p-7 flex flex-col justify-between relative overflow-hidden group" data-animate>
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #6366F1, #818CF8);"></div>
 
-                    {{-- Lab card 1: AI Document Intelligence --}}
-                    <div class="labs-mini-card p-6 sm:col-span-2 relative overflow-hidden"
-                         style="background: linear-gradient(145deg, #072B40 0%, #062538 50%, #083752 100%); border: 2px solid #06B6D4; box-shadow: 0 16px 40px rgba(6,182,212,0.25), 0 0 20px rgba(6,182,212,0.15), inset 0 1px 0 rgba(103,232,249,0.3);">
-                        <div class="flex items-start justify-between mb-3">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                                 style="background: rgba(6,182,212,0.25); border: 1.5px solid #06B6D4; box-shadow: 0 0 16px rgba(6,182,212,0.45);">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="#67E8F9" stroke-width="1.8" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
-                                </svg>
-                            </div>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase text-white"
-                                  style="background: linear-gradient(90deg, #06B6D4, #0891B2); box-shadow: 0 4px 14px rgba(6,182,212,0.45); border: 1px solid rgba(255,255,255,0.25);">
-                                <svg class="w-3 h-3 text-cyan-200" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                LIVE SHOWCASE
-                            </span>
+                <div>
+                    <div class="flex items-center justify-between gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+                             style="background: #EEF2FF; border: 1.5px solid rgba(99,102,241,0.3);">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
+                            </svg>
                         </div>
-                        <h4 class="font-bold text-base mb-1" style="color:#67E8F9;">AI Document Intelligence</h4>
-                        <p class="text-xs leading-relaxed mb-3" style="color:#E2E8F0;">
-                            Upload any document &mdash; contracts, reports, invoices &mdash; and get instant AI-powered extraction, summarization, and Q&amp;A.
-                        </p>
-                        <div class="inline-flex items-center gap-1.5 text-xs font-bold" style="color:#67E8F9;">
-                            <span>Explore Document Intelligence</span>
-                            <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
-                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider text-indigo-700 bg-indigo-50 border border-indigo-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                            AGENTIC WORKFLOW
+                        </span>
                     </div>
 
-                    {{-- Lab card 2: AI Support Agent --}}
-                    <div class="labs-mini-card p-6 relative overflow-hidden"
-                         style="background: linear-gradient(145deg, #072B40 0%, #062538 50%, #083752 100%); border: 2px solid #06B6D4; box-shadow: 0 16px 40px rgba(6,182,212,0.25), 0 0 20px rgba(6,182,212,0.15), inset 0 1px 0 rgba(103,232,249,0.3);">
-                        <div class="flex items-start justify-between mb-3">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                                 style="background: rgba(6,182,212,0.25); border: 1.5px solid #06B6D4; box-shadow: 0 0 16px rgba(6,182,212,0.45);">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="#67E8F9" stroke-width="1.8" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
-                                </svg>
-                            </div>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase text-white"
-                                  style="background: linear-gradient(90deg, #06B6D4, #0891B2); box-shadow: 0 4px 14px rgba(6,182,212,0.45); border: 1px solid rgba(255,255,255,0.25);">
-                                <svg class="w-3 h-3 text-cyan-200" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                AGENTIC WORKFLOW
-                            </span>
+                    <h4 class="text-xl font-extrabold mb-2" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        Autonomous AI Support Agent
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                        Context-aware customer operations agent that inspects database states, triggers authenticated webhook actions, and handles multi-turn escalations.
+                    </p>
+
+                    {{-- Live Micro-telemetry --}}
+                    <div class="rounded-xl p-3.5 mb-5 font-mono text-[11px]" style="background: #F8FAFC; border: 1px solid #E2EAF4;">
+                        <div class="flex items-center justify-between text-slate-500 pb-1.5 mb-1.5 border-b border-slate-200">
+                            <span class="text-indigo-600 font-bold">&bull; Agent Dispatch</span>
+                            <span>Latency: 1.1s</span>
                         </div>
-                        <h4 class="font-bold text-base mb-1" style="color:#67E8F9;">AI Support Agent</h4>
-                        <p class="text-xs leading-relaxed mb-3" style="color:#E2E8F0;">
-                            Agentic customer support powered by retrieval-augmented generation.
-                        </p>
-                        <div class="inline-flex items-center gap-1.5 text-xs font-bold" style="color:#67E8F9;">
-                            <span>Explore Agent Architecture</span>
-                            <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
-                        </div>
+                        <div class="text-slate-700 font-medium truncate">&gt; Tool: SQL Lookup &check; Resolved</div>
                     </div>
 
-                    {{-- Lab card 3: Analytics Dashboard (Recommended Fit) --}}
-                    <div class="labs-mini-card p-6 relative overflow-hidden"
-                         style="background: linear-gradient(145deg, #072B40 0%, #062538 50%, #083752 100%); border: 2px solid #06B6D4; box-shadow: 0 16px 40px rgba(6,182,212,0.25), 0 0 20px rgba(6,182,212,0.15), inset 0 1px 0 rgba(103,232,249,0.3);">
-                        {{-- Recommended badge --}}
-                        <div class="flex items-start justify-between mb-3">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                                 style="background: rgba(6,182,212,0.25); border: 1.5px solid #06B6D4; box-shadow: 0 0 16px rgba(6,182,212,0.45);">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="#67E8F9" stroke-width="1.8" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
-                                </svg>
-                            </div>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase text-white"
-                                  style="background: linear-gradient(90deg, #06B6D4, #0891B2); box-shadow: 0 4px 14px rgba(6,182,212,0.45); border: 1px solid rgba(255,255,255,0.25);">
-                                <svg class="w-3 h-3 text-cyan-200" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                RECOMMENDED FIT
-                            </span>
+                    {{-- Tech Badges --}}
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        @foreach(['LangGraph', 'Redis Memory', 'OpenAI API', 'Python'] as $tech)
+                        <span class="text-[10px] font-bold px-2.5 py-1 rounded-md text-indigo-800 bg-indigo-50 border border-indigo-200/70">
+                            {{ $tech }}
+                        </span>
+                        @endforeach
+                    </div>
+                </div>
+
+                <a href="{{ route('labs') }}"
+                   class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white transition-all duration-200 hover:bg-indigo-700"
+                   style="background: #4F46E5; box-shadow: 0 4px 14px rgba(79,70,229,0.3);">
+                    <span>Explore Agent Workflow</span>
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+
+            {{-- Demo Card 3: Real-Time Streaming Analytics --}}
+            <div class="demo-card-labs rounded-3xl p-7 flex flex-col justify-between relative overflow-hidden group" data-animate>
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, #10B981, #059669);"></div>
+
+                <div>
+                    <div class="flex items-center justify-between gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+                             style="background: #ECFDF5; border: 1.5px solid rgba(16,185,129,0.3);">
+                            <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+                            </svg>
                         </div>
-                        <h4 class="font-bold text-base mb-1" style="color:#67E8F9;">Analytics Dashboard</h4>
-                        <p class="text-xs leading-relaxed mb-3" style="color:#E2E8F0;">
-                            Real-time data visualization with streaming pipeline architecture.
-                        </p>
-                        <div class="inline-flex items-center gap-1.5 text-xs font-bold" style="color:#67E8F9;">
-                            <span>Explore Recommended Architecture</span>
-                            <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
-                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            100K MSG / SEC
+                        </span>
                     </div>
 
-                </div>{{-- /grid --}}
+                    <h4 class="text-xl font-extrabold mb-2" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                        Real-Time Streaming Analytics
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                        Distributed streaming engine processing sustained high-throughput workloads with sub-10ms analytical query response and resilient zero-drop ingestion.
+                    </p>
+
+                    {{-- Live Micro-telemetry --}}
+                    <div class="rounded-xl p-3.5 mb-5 font-mono text-[11px]" style="background: #F8FAFC; border: 1px solid #E2EAF4;">
+                        <div class="flex items-center justify-between text-slate-500 pb-1.5 mb-1.5 border-b border-slate-200">
+                            <span class="text-emerald-600 font-bold">&bull; Kafka Cluster</span>
+                            <span>Throughput: 124.5k/s</span>
+                        </div>
+                        <div class="text-slate-700 font-medium truncate">&gt; Loss rate: 0.000% (Lossless)</div>
+                    </div>
+
+                    {{-- Tech Badges --}}
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        @foreach(['Apache Kafka', 'ClickHouse', 'Go', 'Tailwind'] as $tech)
+                        <span class="text-[10px] font-bold px-2.5 py-1 rounded-md text-emerald-800 bg-emerald-50 border border-emerald-200/70">
+                            {{ $tech }}
+                        </span>
+                        @endforeach
+                    </div>
+                </div>
+
+                <a href="{{ route('labs') }}"
+                   class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white transition-all duration-200 hover:bg-emerald-700"
+                   style="background: #059669; box-shadow: 0 4px 14px rgba(5,150,105,0.3);">
+                    <span>Inspect Analytics Pipeline</span>
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                    </svg>
+                </a>
             </div>
 
         </div>
+
+        {{-- ───────── PART 4: EXECUTIVE RAPID CO-BUILD BANNER ───────── --}}
+        <div class="rounded-3xl p-8 sm:p-12 relative overflow-hidden"
+             style="background: linear-gradient(135deg, #0E3550 0%, #062538 55%, #0A2D44 100%); border: 1.5px solid rgba(6,182,212,0.4); box-shadow: 0 20px 50px rgba(6,37,56,0.3);"
+             data-animate>
+            <div class="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none opacity-20"
+                 style="background: radial-gradient(circle, #06B6D4 0%, transparent 70%); filter: blur(40px);"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none opacity-15"
+                 style="background: radial-gradient(circle, #6366F1 0%, transparent 70%); filter: blur(40px);"></div>
+
+            <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="max-w-2xl text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3.5"
+                         style="background: rgba(6,182,212,0.18); border: 1px solid rgba(6,182,212,0.4); color: #67E8F9;">
+                        <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                        </svg>
+                        RAPID CO-BUILD INITIATIVE &bull; 14-DAY POC
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3" style="font-family:'Plus Jakarta Sans',sans-serif;">
+                        Want to test a working prototype on your own data?
+                    </h3>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: #CBD5E1;">
+                        Hand us a complex problem, and our team will build a working, production-grade proof of concept in 2 weeks &mdash; proven by code, not slides.
+                    </p>
+                </div>
+
+                <div class="shrink-0 flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
+                    <a href="{{ route('labs') }}"
+                       class="btn-accent px-8 py-4 rounded-xl text-sm font-bold shadow-lg w-full sm:w-auto text-center justify-center">
+                        Explore Full Cenrion Labs
+                        <svg class="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                        </svg>
+                    </a>
+                    <a href="{{ route('contact') }}"
+                       class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan w-full sm:w-auto text-center text-white"
+                       style="background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.2);">
+                        Request a 2-Wk POC
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
-
-
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      SECTION 6: THOUGHT LEADERSHIP TEASER
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="py-24" style="background:#F5F8FC;">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
@@ -1515,9 +1848,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      AI IN THE LOOP
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="py-24 bg-white">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="text-center mb-14">
@@ -1652,9 +1985,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      PRODUCT ENGINEERING REVIEW
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="py-24" style="background:#F5F8FC;">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -1737,9 +2070,9 @@
 </section>
 
 
-{{-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{{-- =
      SECTION 7: CTA BANNER
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• --}}
+= --}}
 <section class="cta-banner py-28">
     {{-- Ambient orbs --}}
     <div class="cta-orb-left"></div>

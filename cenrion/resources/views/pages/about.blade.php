@@ -380,99 +380,398 @@
 </section>
 
 {{-- ============================================================
-     TECHNOLOGY EXPERTISE SECTION
+     TECHNOLOGY EXPERTISE SECTION (Redesigned & Modernized)
      ============================================================ --}}
-<section class="py-24" style="background:#F5F8FC;">
-    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
+<section class="py-24 sm:py-28 relative overflow-hidden" style="background: linear-gradient(180deg, #F8FAFD 0%, #EEF4FA 100%);">
+    {{-- Subtle Blueprint Grid Pattern --}}
+    <div class="absolute inset-0 pointer-events-none opacity-40"
+         style="background-image: radial-gradient(rgba(6,182,212,0.18) 1.2px, transparent 1.2px); background-size: 28px 28px;"></div>
+    
+    {{-- Ambient Glow Orbs --}}
+    <div class="absolute -top-32 left-1/4 w-96 h-96 rounded-full pointer-events-none opacity-20"
+         style="background: radial-gradient(circle, #06B6D4 0%, transparent 70%); filter: blur(50px);"></div>
+    <div class="absolute -bottom-32 right-1/4 w-96 h-96 rounded-full pointer-events-none opacity-15"
+         style="background: radial-gradient(circle, #6366F1 0%, transparent 70%); filter: blur(50px);"></div>
+
+    <div class="relative z-10 max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
         
-        <div class="text-center mb-16" data-animate>
-            <span class="section-tag block mb-3">Our Stack</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
-                Technologies We Master
+        {{-- Section Header --}}
+        <div class="text-center mb-16 sm:mb-20" data-animate>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
+                 style="background: rgba(6,182,212,0.08); border: 1.5px solid rgba(6,182,212,0.25); color: #0891B2;">
+                <span class="w-2 h-2 rounded-full animate-pulse" style="background: #06B6D4; box-shadow: 0 0 8px #06B6D4;"></span>
+                Production-Grade Stack
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
+                style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                Technologies We <span class="gradient-text">Master.</span>
             </h2>
-            <p class="text-sm mt-3 text-gray-500 max-w-lg mx-auto">Selected strictly for production performance, enterprise maintainability, and developer throughput.</p>
+            <p class="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                Selected strictly for production performance, enterprise maintainability, and developer throughput. Every framework and tool in our stack is proven under real load.
+            </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {{-- 6-Pillar Interactive Grid --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
             
-            {{-- AI & ML --}}
-            <div class="bg-white rounded-3xl p-8 border about-card-hover" style="border: 1.5px solid #E2EAF4;">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="w-10 h-10 rounded-xl bg-cyan/15 flex items-center justify-center text-cyan font-bold">AI</div>
-                    <h3 class="font-bold text-lg" style="color:#062538;">AI &amp; Machine Learning</h3>
+            {{-- 1. AI & Machine Learning --}}
+            <div class="group rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                 style="background: linear-gradient(165deg, #FFFFFF 0%, #FBFDFF 70%, #F0FDFA 100%); border: 1.5px solid rgba(6,182,212,0.28); box-shadow: 0 12px 32px rgba(6,37,56,0.04);"
+                 data-animate data-delay="0">
+                <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #06B6D4, #22D3EE);"></div>
+                <div class="absolute top-0 right-0 w-36 h-36 rounded-full pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity"
+                     style="background: radial-gradient(circle, rgba(6,182,212,0.18), transparent 70%);"></div>
+
+                <div>
+                    {{-- Card Header --}}
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 p-3 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                                 style="background: linear-gradient(135deg, rgba(6,182,212,0.18) 0%, rgba(6,182,212,0.08) 100%); border: 1.5px solid rgba(6,182,212,0.35);">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest block" style="color: #0891B2;">Intelligence</span>
+                                <h3 class="font-extrabold text-lg sm:text-xl" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">AI &amp; Machine Learning</h3>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full"
+                              style="background: rgba(6,182,212,0.1); color: #0891B2; border: 1px solid rgba(6,182,212,0.25);">6 Tools</span>
+                    </div>
+
+                    {{-- Technology Chips Grid --}}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @foreach([
+                            ['name' => 'Python', 'highlight' => true],
+                            ['name' => 'PyTorch', 'highlight' => true],
+                            ['name' => 'LangChain', 'highlight' => false],
+                            ['name' => 'OpenAI API', 'highlight' => false],
+                            ['name' => 'Claude API', 'highlight' => false],
+                            ['name' => 'Gemini API', 'highlight' => false],
+                        ] as $tech)
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 group-hover:border-cyan/40 hover:scale-105"
+                              style="background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                            <span class="w-1.5 h-1.5 rounded-full" style="background: #06B6D4;"></span>
+                            {{ $tech['name'] }}
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['Python', 'PyTorch', 'LangChain', 'OpenAI API', 'Claude API', 'Gemini API'] as $t)
-                    <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:rgba(6,182,212,0.1); color:#0891B2;">{{ $t }}</span>
-                    @endforeach
+
+                {{-- Card Technical Footer --}}
+                <div class="pt-3.5 border-t flex items-center justify-between text-[11px]" style="border-color: rgba(6,182,212,0.18);">
+                    <span class="font-medium" style="color: #64748B;">LLM Fine-tuning &amp; Autonomous Agents</span>
+                    <span class="font-bold flex items-center gap-1" style="color: #0891B2;">
+                        Production Ready
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    </span>
                 </div>
             </div>
 
-            {{-- Frontend --}}
-            <div class="bg-white rounded-3xl p-8 border about-card-hover" style="border: 1.5px solid #E2EAF4;">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 font-bold">FE</div>
-                    <h3 class="font-bold text-lg" style="color:#062538;">Frontend Engineering</h3>
+            {{-- 2. Frontend Engineering --}}
+            <div class="group rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                 style="background: linear-gradient(165deg, #FFFFFF 0%, #FBFDFF 70%, #EEF2FF 100%); border: 1.5px solid rgba(99,102,241,0.25); box-shadow: 0 12px 32px rgba(6,37,56,0.04);"
+                 data-animate data-delay="80">
+                <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #6366F1, #818CF8);"></div>
+                <div class="absolute top-0 right-0 w-36 h-36 rounded-full pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity"
+                     style="background: radial-gradient(circle, rgba(99,102,241,0.18), transparent 70%);"></div>
+
+                <div>
+                    {{-- Card Header --}}
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 p-3 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                                 style="background: linear-gradient(135deg, rgba(99,102,241,0.18) 0%, rgba(99,102,241,0.08) 100%); border: 1.5px solid rgba(99,102,241,0.35);">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#4F46E5" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest block text-indigo-600">User Experience</span>
+                                <h3 class="font-extrabold text-lg sm:text-xl" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">Frontend Engineering</h3>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full text-indigo-700"
+                              style="background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25);">5 Frameworks</span>
+                    </div>
+
+                    {{-- Technology Chips Grid --}}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @foreach([
+                            ['name' => 'React 19', 'highlight' => true],
+                            ['name' => 'Next.js', 'highlight' => true],
+                            ['name' => 'TypeScript', 'highlight' => true],
+                            ['name' => 'Tailwind CSS', 'highlight' => false],
+                            ['name' => 'Alpine.js', 'highlight' => false],
+                        ] as $tech)
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 group-hover:border-indigo-300 hover:scale-105"
+                              style="background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                            {{ $tech['name'] }}
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Alpine.js'] as $t)
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700">{{ $t }}</span>
-                    @endforeach
+
+                {{-- Card Technical Footer --}}
+                <div class="pt-3.5 border-t flex items-center justify-between text-[11px]" style="border-color: rgba(99,102,241,0.18);">
+                    <span class="font-medium" style="color: #64748B;">Core Web Vitals &amp; Sub-second FCP</span>
+                    <span class="font-bold flex items-center gap-1 text-indigo-600">
+                        Score 98+
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    </span>
                 </div>
             </div>
 
-            {{-- Backend --}}
-            <div class="bg-white rounded-3xl p-8 border about-card-hover" style="border: 1.5px solid #E2EAF4;">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold">BE</div>
-                    <h3 class="font-bold text-lg" style="color:#062538;">Backend &amp; APIs</h3>
+            {{-- 3. Backend & APIs --}}
+            <div class="group rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                 style="background: linear-gradient(165deg, #FFFFFF 0%, #FBFDFF 70%, #ECFDF5 100%); border: 1.5px solid rgba(16,185,129,0.28); box-shadow: 0 12px 32px rgba(6,37,56,0.04);"
+                 data-animate data-delay="160">
+                <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #10B981, #34D399);"></div>
+                <div class="absolute top-0 right-0 w-36 h-36 rounded-full pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity"
+                     style="background: radial-gradient(circle, rgba(16,185,129,0.18), transparent 70%);"></div>
+
+                <div>
+                    {{-- Card Header --}}
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 p-3 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                                 style="background: linear-gradient(135deg, rgba(16,185,129,0.18) 0%, rgba(16,185,129,0.08) 100%); border: 1.5px solid rgba(16,185,129,0.35);">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#059669" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.75 5.1a3 3 0 0 1 2.4-1.35h7.7a3 3 0 0 1 2.4 1.35l2.1 3.45a4.5 4.5 0 0 1 .9 2.7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest block text-emerald-600">Core Platform</span>
+                                <h3 class="font-extrabold text-lg sm:text-xl" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">Backend &amp; APIs</h3>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full text-emerald-700"
+                              style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25);">6 Engines</span>
+                    </div>
+
+                    {{-- Technology Chips Grid --}}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @foreach([
+                            ['name' => 'Laravel', 'highlight' => true],
+                            ['name' => 'Node.js', 'highlight' => true],
+                            ['name' => 'Go', 'highlight' => true],
+                            ['name' => 'Python / FastAPI', 'highlight' => false],
+                            ['name' => 'PostgreSQL', 'highlight' => false],
+                            ['name' => 'Redis', 'highlight' => false],
+                        ] as $tech)
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 group-hover:border-emerald-300 hover:scale-105"
+                              style="background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            {{ $tech['name'] }}
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['Laravel', 'Node.js', 'Go', 'Python / FastAPI', 'PostgreSQL', 'Redis'] as $t)
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700">{{ $t }}</span>
-                    @endforeach
+
+                {{-- Card Technical Footer --}}
+                <div class="pt-3.5 border-t flex items-center justify-between text-[11px]" style="border-color: rgba(16,185,129,0.18);">
+                    <span class="font-medium" style="color: #64748B;">Microservices &amp; REST / GraphQL</span>
+                    <span class="font-bold flex items-center gap-1 text-emerald-600">
+                        99.99% SLA
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    </span>
                 </div>
             </div>
 
-            {{-- Cloud --}}
-            <div class="bg-white rounded-3xl p-8 border about-card-hover" style="border: 1.5px solid #E2EAF4;">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 font-bold">OPS</div>
-                    <h3 class="font-bold text-lg" style="color:#062538;">Cloud &amp; DevOps</h3>
+            {{-- 4. Cloud & DevOps --}}
+            <div class="group rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                 style="background: linear-gradient(165deg, #FFFFFF 0%, #FBFDFF 70%, #FAF5FF 100%); border: 1.5px solid rgba(139,92,246,0.25); box-shadow: 0 12px 32px rgba(6,37,56,0.04);"
+                 data-animate data-delay="0">
+                <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #8B5CF6, #A78BFA);"></div>
+                <div class="absolute top-0 right-0 w-36 h-36 rounded-full pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity"
+                     style="background: radial-gradient(circle, rgba(139,92,246,0.18), transparent 70%);"></div>
+
+                <div>
+                    {{-- Card Header --}}
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 p-3 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                                 style="background: linear-gradient(135deg, rgba(139,92,246,0.18) 0%, rgba(139,92,246,0.08) 100%); border: 1.5px solid rgba(139,92,246,0.35);">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#7C3AED" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest block text-purple-600">Infrastructure</span>
+                                <h3 class="font-extrabold text-lg sm:text-xl" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">Cloud &amp; DevOps</h3>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full text-purple-700"
+                              style="background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.25);">6 Platforms</span>
+                    </div>
+
+                    {{-- Technology Chips Grid --}}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @foreach([
+                            ['name' => 'AWS', 'highlight' => true],
+                            ['name' => 'GCP', 'highlight' => true],
+                            ['name' => 'Docker', 'highlight' => true],
+                            ['name' => 'Kubernetes', 'highlight' => false],
+                            ['name' => 'Terraform', 'highlight' => false],
+                            ['name' => 'CI/CD Pipelines', 'highlight' => false],
+                        ] as $tech)
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 group-hover:border-purple-300 hover:scale-105"
+                              style="background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            {{ $tech['name'] }}
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['AWS', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD Pipelines'] as $t)
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-50 text-purple-700">{{ $t }}</span>
-                    @endforeach
+
+                {{-- Card Technical Footer --}}
+                <div class="pt-3.5 border-t flex items-center justify-between text-[11px]" style="border-color: rgba(139,92,246,0.18);">
+                    <span class="font-medium" style="color: #64748B;">Terraform IaC &amp; Automated GitOps</span>
+                    <span class="font-bold flex items-center gap-1 text-purple-600">
+                        Zero Downtime
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    </span>
                 </div>
             </div>
 
-            {{-- Quality --}}
-            <div class="bg-white rounded-3xl p-8 border about-card-hover" style="border: 1.5px solid #E2EAF4;">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 font-bold">QE</div>
-                    <h3 class="font-bold text-lg" style="color:#062538;">Quality Engineering</h3>
+            {{-- 5. Quality Engineering --}}
+            <div class="group rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                 style="background: linear-gradient(165deg, #FFFFFF 0%, #FBFDFF 70%, #FFFBEB 100%); border: 1.5px solid rgba(245,158,11,0.28); box-shadow: 0 12px 32px rgba(6,37,56,0.04);"
+                 data-animate data-delay="80">
+                <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #F59E0B, #FBBF24);"></div>
+                <div class="absolute top-0 right-0 w-36 h-36 rounded-full pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity"
+                     style="background: radial-gradient(circle, rgba(245,158,11,0.18), transparent 70%);"></div>
+
+                <div>
+                    {{-- Card Header --}}
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 p-3 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                                 style="background: linear-gradient(135deg, rgba(245,158,11,0.18) 0%, rgba(245,158,11,0.08) 100%); border: 1.5px solid rgba(245,158,11,0.35);">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#D97706" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest block text-amber-600">Verification</span>
+                                <h3 class="font-extrabold text-lg sm:text-xl" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">Quality Engineering</h3>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full text-amber-700"
+                              style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25);">5 Frameworks</span>
+                    </div>
+
+                    {{-- Technology Chips Grid --}}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @foreach([
+                            ['name' => 'Playwright', 'highlight' => true],
+                            ['name' => 'Selenium', 'highlight' => true],
+                            ['name' => 'Cypress', 'highlight' => false],
+                            ['name' => 'Appium', 'highlight' => false],
+                            ['name' => 'Performance / k6', 'highlight' => true],
+                        ] as $tech)
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 group-hover:border-amber-300 hover:scale-105"
+                              style="background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            {{ $tech['name'] }}
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['Playwright', 'Selenium', 'Cypress', 'Appium', 'Performance / k6'] as $t)
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700">{{ $t }}</span>
-                    @endforeach
+
+                {{-- Card Technical Footer --}}
+                <div class="pt-3.5 border-t flex items-center justify-between text-[11px]" style="border-color: rgba(245,158,11,0.18);">
+                    <span class="font-medium" style="color: #64748B;">Stress Testing &amp; Regression Harnesses</span>
+                    <span class="font-bold flex items-center gap-1 text-amber-600">
+                        Gate Certified
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    </span>
                 </div>
             </div>
 
-            {{-- Data --}}
-            <div class="bg-white rounded-3xl p-8 border about-card-hover" style="border: 1.5px solid #E2EAF4;">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 font-bold">DATA</div>
-                    <h3 class="font-bold text-lg" style="color:#062538;">Data &amp; Pipelines</h3>
+            {{-- 6. Data & Pipelines --}}
+            <div class="group rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                 style="background: linear-gradient(165deg, #FFFFFF 0%, #FBFDFF 70%, #F0F9FF 100%); border: 1.5px solid rgba(2,132,199,0.28); box-shadow: 0 12px 32px rgba(6,37,56,0.04);"
+                 data-animate data-delay="160">
+                <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #0284C7, #38BDF8);"></div>
+                <div class="absolute top-0 right-0 w-36 h-36 rounded-full pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity"
+                     style="background: radial-gradient(circle, rgba(2,132,199,0.18), transparent 70%);"></div>
+
+                <div>
+                    {{-- Card Header --}}
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 p-3 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                                 style="background: linear-gradient(135deg, rgba(2,132,199,0.18) 0%, rgba(2,132,199,0.08) 100%); border: 1.5px solid rgba(2,132,199,0.35);">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0284C7" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest block text-sky-600">Data Architecture</span>
+                                <h3 class="font-extrabold text-lg sm:text-xl" style="color: #062538; font-family:'Plus Jakarta Sans',sans-serif;">Data &amp; Pipelines</h3>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full text-sky-700"
+                              style="background: rgba(2,132,199,0.1); border: 1px solid rgba(2,132,199,0.25);">5 Platforms</span>
+                    </div>
+
+                    {{-- Technology Chips Grid --}}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @foreach([
+                            ['name' => 'Snowflake', 'highlight' => true],
+                            ['name' => 'BigQuery', 'highlight' => true],
+                            ['name' => 'Apache Kafka', 'highlight' => true],
+                            ['name' => 'dbt', 'highlight' => false],
+                            ['name' => 'Airflow', 'highlight' => false],
+                        ] as $tech)
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 group-hover:border-sky-300 hover:scale-105"
+                              style="background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                            <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                            {{ $tech['name'] }}
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['Snowflake', 'BigQuery', 'Apache Kafka', 'dbt', 'Airflow'] as $t)
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700">{{ $t }}</span>
-                    @endforeach
+
+                {{-- Card Technical Footer --}}
+                <div class="pt-3.5 border-t flex items-center justify-between text-[11px]" style="border-color: rgba(2,132,199,0.18);">
+                    <span class="font-medium" style="color: #64748B;">ETL / ELT Pipelines &amp; Streaming Pub/Sub</span>
+                    <span class="font-bold flex items-center gap-1 text-sky-600">
+                        Petabyte Scale
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    </span>
                 </div>
             </div>
 
+        </div>
+
+        {{-- Bottom Assurance Bar --}}
+        <div class="mt-14 p-6 sm:p-7 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left"
+             style="background: #FFFFFF; border: 1.5px solid #E2EAF4; box-shadow: 0 10px 25px rgba(6,37,56,0.03);"
+             data-animate>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 hidden sm:flex"
+                     style="background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.25);">
+                    <svg class="w-5 h-5 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm sm:text-base" style="color: #062538;">Have a custom architecture or proprietary stack?</h4>
+                    <p class="text-xs sm:text-sm text-slate-500">We integrate with your existing cloud environment, security standards, and CI/CD pipelines.</p>
+                </div>
+            </div>
+            <a href="{{ route('contact') }}"
+               class="btn-accent px-6 py-3 text-xs sm:text-sm font-bold shrink-0 whitespace-nowrap shadow-sm hover:shadow-md transition-all">
+                Discuss Your Architecture
+                <svg class="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                </svg>
+            </a>
         </div>
 
     </div>

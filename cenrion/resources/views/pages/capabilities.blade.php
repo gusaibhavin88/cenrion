@@ -8,7 +8,7 @@
 <x-page-hero
     eyebrow="What We Build"
     title="Six capabilities,<br><span style='color:#06B6D4;'>one engineering standard.</span>"
-    subtitle="AI and automation, software engineering, data, cloud, quality engineering and tech consulting â€” each release engineered to scale."
+    subtitle="AI and automation, software engineering, data, cloud, quality engineering and tech consulting  -  each release engineered to scale."
     :breadcrumbs="['Capabilities']"
 />
 
@@ -21,7 +21,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
             {{-- --------------------------------------------------------
-                 PILLAR 1 â€” AI & Generative AI
+                 PILLAR 1  -  AI & Generative AI
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 {{-- Icon --}}
@@ -32,7 +32,7 @@
                 </div>
 
                 <h2 class="text-2xl font-bold mb-3" style="color:#062538;">AI &amp; Generative AI</h2>
-                <p class="mb-8" style="color:#5A7184;">We design and deploy intelligent systems that put the power of modern AI to work â€” from document understanding to autonomous agents operating at scale.</p>
+                <p class="mb-8" style="color:#5A7184;">We design and deploy intelligent systems that put the power of modern AI to work  -  from document understanding to autonomous agents operating at scale.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([
@@ -56,7 +56,7 @@
             </div>
 
             {{-- --------------------------------------------------------
-                 PILLAR 2 â€” Software Engineering
+                 PILLAR 2  -  Software Engineering
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl mb-6" style="background-color:#EBF8FF;">
@@ -66,7 +66,7 @@
                 </div>
 
                 <h2 class="text-2xl font-bold mb-3" style="color:#062538;">Software Engineering</h2>
-                <p class="mb-8" style="color:#5A7184;">We architect and build robust, scalable software products â€” from consumer-facing applications to mission-critical enterprise platforms.</p>
+                <p class="mb-8" style="color:#5A7184;">We architect and build robust, scalable software products  -  from consumer-facing applications to mission-critical enterprise platforms.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([
@@ -90,7 +90,7 @@
             </div>
 
             {{-- --------------------------------------------------------
-                 PILLAR 3 â€” Data & Analytics
+                 PILLAR 3  -  Data & Analytics
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl mb-6" style="background-color:#EBF8FF;">
@@ -100,7 +100,7 @@
                 </div>
 
                 <h2 class="text-2xl font-bold mb-3" style="color:#062538;">Data &amp; Analytics</h2>
-                <p class="mb-8" style="color:#5A7184;">We transform raw data into strategic assets â€” building pipelines, dashboards, and models that power faster, smarter decision-making across the organisation.</p>
+                <p class="mb-8" style="color:#5A7184;">We transform raw data into strategic assets  -  building pipelines, dashboards, and models that power faster, smarter decision-making across the organisation.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([
@@ -124,7 +124,7 @@
             </div>
 
             {{-- --------------------------------------------------------
-                 PILLAR 4 â€” Cloud & DevOps
+                 PILLAR 4  -  Cloud & DevOps
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl mb-6" style="background-color:#EBF8FF;">
@@ -134,7 +134,7 @@
                 </div>
 
                 <h2 class="text-2xl font-bold mb-3" style="color:#062538;">Cloud &amp; DevOps</h2>
-                <p class="mb-8" style="color:#5A7184;">We migrate, modernise, and optimise cloud infrastructure â€” building reliable, secure, and cost-efficient environments with engineering-led DevOps practices.</p>
+                <p class="mb-8" style="color:#5A7184;">We migrate, modernise, and optimise cloud infrastructure  -  building reliable, secure, and cost-efficient environments with engineering-led DevOps practices.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([
@@ -158,7 +158,7 @@
             </div>
 
             {{-- --------------------------------------------------------
-                 PILLAR 5 â€” Quality Engineering
+                 PILLAR 5  -  Quality Engineering
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl mb-6" style="background-color:#EBF8FF;">
@@ -168,7 +168,7 @@
                 </div>
 
                 <h2 class="text-2xl font-bold mb-3" style="color:#062538;">Quality Engineering</h2>
-                <p class="mb-8" style="color:#5A7184;">We embed quality throughout the delivery lifecycle â€” not as a gate at the end, but as a continuous discipline that keeps systems reliable and release cycles fast.</p>
+                <p class="mb-8" style="color:#5A7184;">We embed quality throughout the delivery lifecycle  -  not as a gate at the end, but as a continuous discipline that keeps systems reliable and release cycles fast.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([
@@ -192,7 +192,7 @@
             </div>
 
             {{-- --------------------------------------------------------
-                 PILLAR 6 â€” Tech Consulting
+                 PILLAR 6  -  Tech Consulting
                  -------------------------------------------------------- --}}
             <div class="bg-white rounded-2xl border p-10 shadow-sm hover:shadow-md transition-shadow duration-300" style="border-color:#E2EAF4;">
                 <div class="flex items-center justify-center w-16 h-16 rounded-2xl mb-6" style="background-color:#EBF8FF;">
@@ -202,7 +202,7 @@
                 </div>
 
                 <h2 class="text-2xl font-bold mb-3" style="color:#062538;">Tech Consulting</h2>
-                <p class="mb-8" style="color:#5A7184;">Architecture modernisation and AI adoption strategy â€” guidance that keeps delivery accountable as speed increases.</p>
+                <p class="mb-8" style="color:#5A7184;">Architecture modernisation and AI adoption strategy  -  guidance that keeps delivery accountable as speed increases.</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     @foreach([

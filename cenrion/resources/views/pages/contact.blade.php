@@ -14,7 +14,7 @@
     <div class="relative max-w-8xl mx-auto px-4 sm:px-6 sm:px-8 lg:px-10 pt-10">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
 
-            {{-- â”€â”€ LEFT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
+            {{-- -- LEFT COLUMN ------------------------------------ --}}
             <div class="lg:col-span-2 lg:pt-4">
 
                 <span class="section-tag" data-animate data-delay="0">Get In Touch</span>
@@ -24,7 +24,7 @@
                 </h1>
 
                 <p class="mt-5 text-lg leading-relaxed" style="color:#5A7184;" data-animate data-delay="160">
-                    No fluff. No long-winded proposals. Tell us about your project â€” we respond within one business day.
+                    No fluff. No long-winded proposals. Tell us about your project  -  we respond within one business day.
                 </p>
 
                 {{-- Contact Details --}}
@@ -78,9 +78,9 @@
                 </ul>
 
             </div>
-            {{-- â”€â”€ END LEFT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
+            {{-- -- END LEFT COLUMN ------------------------------- --}}
 
-            {{-- â”€â”€ RIGHT COLUMN â€” FORM CARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
+            {{-- -- RIGHT COLUMN  -  FORM CARD ---------------------- --}}
             <div class="lg:col-span-3">
 
                 {{-- Success Banner --}}
@@ -227,7 +227,7 @@
 
                         </div>
 
-                        {{-- Project Category â€” Pill Checkboxes --}}
+                        {{-- Project Category  -  Pill Checkboxes --}}
                         <div>
                             <label class="block text-sm font-semibold text-[#0D1B2A] mb-2">
                                 Project Category <span class="text-[#EF4444]">*</span>
@@ -332,7 +332,7 @@
                 {{-- End Form Card --}}
 
             </div>
-            {{-- â”€â”€ END RIGHT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ --}}
+            {{-- -- END RIGHT COLUMN ------------------------------ --}}
 
         </div>
     </div>
@@ -362,7 +362,7 @@
                 ],
                 [
                     'q' => 'How quickly can Cenrion start on a project?',
-                    'a' => 'Depending on scope and resource availability, we typically begin onboarding within 2â€“4 weeks of agreement.',
+                    'a' => 'Depending on scope and resource availability, we typically begin onboarding within 2 - 4 weeks of agreement.',
                 ],
                 [
                     'q' => 'Do you work with early-stage startups?',
