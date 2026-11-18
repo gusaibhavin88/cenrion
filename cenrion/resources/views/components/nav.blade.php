@@ -28,12 +28,12 @@
             <div class="hidden md:flex items-center gap-1 lg:gap-2">
                 {{-- Capabilities --}}
                 <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-                    <button class="nav-link px-4 py-2.5 rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('capabilities') ? 'active' : '' }}">
+                    <a href="{{ route('capabilities') }}" class="nav-link px-4 py-2.5 rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('capabilities') ? 'active' : '' }}">
                         Capabilities
                         <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" class="transition-transform duration-200" :class="{ 'rotate-180': dropdownOpen }">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                         </svg>
-                    </button>
+                    </a>
                     <div x-show="dropdownOpen"
                          x-transition:enter="transition ease-out duration-200"
                          x-transition:enter-start="opacity-0 translate-y-2"
@@ -78,12 +78,12 @@
 
                 {{-- Solutions --}}
                 <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-                    <button class="nav-link px-4 py-2.5 rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('solutions') ? 'active' : '' }}">
+                    <a href="{{ route('solutions') }}" class="nav-link px-4 py-2.5 rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('solutions') ? 'active' : '' }}">
                         Solutions
                         <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" class="transition-transform duration-200" :class="{ 'rotate-180': dropdownOpen }">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                         </svg>
-                    </button>
+                    </a>
                     <div x-show="dropdownOpen"
                          x-transition:enter="transition ease-out duration-200"
                          x-transition:enter-start="opacity-0 translate-y-2"

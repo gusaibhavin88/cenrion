@@ -460,10 +460,10 @@
                 </div>
 
                 <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3" data-animate data-delay="300">
-                    <span class="hero-chip-light">Managed IT Services</span>
-                    <span class="hero-chip-light">Staff Augmentation</span>
-                    <span class="hero-chip-light">Product Engineering</span>
-                    <span class="hero-chip-light">Quality Engineering</span>
+                    <a href="{{ route('solutions') }}" class="hero-chip-light hover:text-cyan hover:border-cyan transition-colors">Managed IT Services</a>
+                    <a href="{{ route('solutions') }}" class="hero-chip-light hover:text-cyan hover:border-cyan transition-colors">Staff Augmentation</a>
+                    <a href="{{ route('solutions') }}" class="hero-chip-light hover:text-cyan hover:border-cyan transition-colors">Product Engineering</a>
+                    <a href="{{ route('capabilities') }}" class="hero-chip-light hover:text-cyan hover:border-cyan transition-colors">Quality Engineering</a>
                 </div>
             </div>
         </div>
@@ -486,22 +486,22 @@
         <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 lg:gap-4">
             @php
             $bandServices = [
-                ['name' => 'Managed IT Services', 'icon' => 'M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z'],
-                ['name' => 'Staff Augmentation', 'icon' => 'M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z'],
-                ['name' => 'Product Engineering', 'icon' => 'M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z'],
-                ['name' => 'AI & Automation', 'icon' => 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z'],
-                ['name' => 'Cloud & DevOps', 'icon' => 'M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z'],
-                ['name' => 'Quality Engineering', 'icon' => 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z']
+                ['name' => 'Managed IT Services', 'url' => route('solutions'), 'icon' => 'M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z'],
+                ['name' => 'Staff Augmentation', 'url' => route('solutions'), 'icon' => 'M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z'],
+                ['name' => 'Product Engineering', 'url' => route('solutions'), 'icon' => 'M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z'],
+                ['name' => 'AI & Automation', 'url' => route('capabilities'), 'icon' => 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z'],
+                ['name' => 'Cloud & DevOps', 'url' => route('capabilities'), 'icon' => 'M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z'],
+                ['name' => 'Quality Engineering', 'url' => route('capabilities'), 'icon' => 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z'],
             ];
             @endphp
             @foreach($bandServices as $svc)
-                <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 hover:scale-105 cursor-default"
+                <a href="{{ $svc['url'] }}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 hover:scale-105 cursor-pointer hover:border-cyan hover:bg-white/10"
                      style="background: rgba(255,255,255,0.05); border: 1px solid rgba(6,182,212,0.25); color: #ECFEFF; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">
                     <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#06B6D4" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="{{ $svc['icon'] }}"/>
                     </svg>
                     <span>{{ $svc['name'] }}</span>
-                </div>
+                </a>
             @endforeach
         </div>
     </div>

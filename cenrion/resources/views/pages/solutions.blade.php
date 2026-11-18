@@ -351,7 +351,7 @@
 {{-- =====================================================================
      HIGH-IMPACT SOLUTION AREAS (The 4 Solutions with Brand Colors)
      ===================================================================== --}}
-<section class="py-24" style="background-color:#F5F8FC;">
+<!-- <section class="py-24" style="background-color:#F5F8FC;">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
 
         <div class="text-center mb-16">
@@ -533,7 +533,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
 {{-- =====================================================================
      ENGAGEMENT MODELS: Deep Navy High-Tech Pipeline
