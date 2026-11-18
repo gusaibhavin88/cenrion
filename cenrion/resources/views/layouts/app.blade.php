@@ -241,6 +241,7 @@
             background: #06B6D4; color: #FFFFFF; padding: 12px 28px; border-radius: 8px;
             font-weight: 600; font-size: 15px; transition: all 0.2s ease;
             display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+            white-space: nowrap !important; flex-shrink: 0;
         }
         .btn-accent:hover {
             background: #0891B2; transform: translateY(-1px);
@@ -344,6 +345,7 @@
         .nav-link {
             position: relative; color: #E2E8F0; font-weight: 500; font-size: 15px;
             transition: all 0.25s ease; text-decoration: none;
+            white-space: nowrap !important; flex-shrink: 0;
         }
         .nav-link:hover {
             color: #67E8F9;

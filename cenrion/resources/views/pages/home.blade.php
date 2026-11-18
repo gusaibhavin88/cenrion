@@ -605,156 +605,108 @@
         ];
         @endphp
 
-        {{-- 4 Cards Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            @foreach($whyNowItems as $i => $item)
-            <div class="p-6 sm:p-7 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between"
-                 style="background: {{ $item['cardBg'] }}; border: 1px solid {{ $item['borderColor'] }}; box-shadow: 0 10px 25px rgba(6,37,56,0.05);"
-                 onmouseover="this.style.boxShadow='{{ $item['hoverShadow'] }}'"
-                 onmouseout="this.style.boxShadow='0 10px 25px rgba(6,37,56,0.05)'"
-                 data-animate data-delay="{{ $i * 80 }}">
-                {{-- Top colored accent strip --}}
-                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:{{ $item['topGradient'] }};"></div>
-
-                <div>
-                    {{-- Header Row: Icon + Badge + Number --}}
-                    <div class="flex items-center justify-between gap-3 mb-5">
-                        <div class="flex items-center gap-3">
-                            <div class="w-11 h-11 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105"
-                                 style="background:{{ $item['iconBg'] }}; border:1px solid {{ $item['iconBorder'] }};">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="{{ $item['accent'] }}" stroke-width="1.75" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="{{ $item['icon'] }}"/>
-                                </svg>
-                            </div>
-                            <span class="text-[10px] font-extrabold tracking-widest px-2.5 py-1 rounded-full uppercase"
-                                  style="background:{{ $item['badgeBg'] }}; color:{{ $item['badgeColor'] }}; border:1px solid {{ $item['badgeBorder'] }};">
-                                {{ $item['badge'] }}
-                            </span>
-                        </div>
-                        <span class="text-sm font-extrabold font-mono px-2 py-0.5 rounded"
-                              style="background:rgba(6,37,56,0.05); color:#062538;">
-                            {{ $item['num'] }}
-                        </span>
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-3" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
-                        {{ $item['title'] }}
-                    </h3>
-                    <p class="text-sm leading-relaxed" style="color:#5A7184;">
-                        {{ $item['desc'] }}
-                    </p>
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        {{-- Bottom Takeaway Banner --}}
-        <div class="mt-8 p-6 sm:p-7 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden"
-             style="background: linear-gradient(135deg, #062538 0%, #0A2D44 60%, #0E3550 100%); border-color: rgba(6,182,212,0.3); box-shadow: 0 16px 36px rgba(6,37,56,0.22);"
-             data-animate data-delay="360">
-            <div style="position:absolute;top:0;right:0;width:300px;height:100%;background:radial-gradient(ellipse at 100% 50%, rgba(6,182,212,0.18), transparent 70%);pointer-events:none;"></div>
+        {{-- 3 Comparison Cards: Speed vs Vulnerabilities with Cenrion Centerpiece --}}
+        <div class="max-w-5xl mx-auto mb-14 px-2 sm:px-4">
+            <style>
+                .gap-bridge-grid {
+                    display: grid !important;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr) !important;
+                    align-items: stretch !important;
+                }
+                @media (min-width: 640px) {
+                    .gap-bridge-grid {
+                        grid-template-columns: minmax(0, 1fr) minmax(0, 1.38fr) minmax(0, 1fr) !important;
+                    }
+                }
+                @media (min-width: 768px) {
+                    .gap-bridge-grid {
+                        grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) !important;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .gap-bridge-grid {
+                        grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr) !important;
+                    }
+                }
+            </style>
             
-            <div class="relative z-10 flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
-                     style="background: rgba(6,182,212,0.18); border: 1px solid rgba(6,182,212,0.4); box-shadow: 0 0 20px rgba(6,182,212,0.25);">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#06B6D4" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="text-base sm:text-lg font-bold text-white mb-1" style="font-family:'Plus Jakarta Sans',sans-serif;">The Glass Box Solution</h4>
-                    <p class="text-xs sm:text-sm leading-relaxed" style="color: #94A3B8;">We pair raw AI generation speed with strict architectural gates, transparent peer review, and scale testing.</p>
-                </div>
-            </div>
-
-            <div class="relative z-10 shrink-0">
-                <a href="{{ route('capabilities') }}" class="btn-accent text-sm whitespace-nowrap" style="padding: 11px 22px;">
-                    Explore Capabilities
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-{{-- =
-     BLACK BOX â†’ GLASS BOX
-= --}}
-<section class="py-24" style="background:#F5F8FC;">
-    <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div class="text-center mb-14">
-            <span class="section-tag block mb-3" data-animate>The Black Box Problem</span>
-            <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4" style="color:#062538;" data-animate data-delay="80">
-                The gap between speed and scale
-            </h2>
-            <p class="mx-auto text-lg" style="max-width:640px;color:#5A7184;" data-animate data-delay="160">
-                AI tools now write a large share of new code, so features arrive faster than ever.
-                Architecture, visibility and the checks that prove code works have not kept pace.
-                Cenrion closes that gap on every project.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
-            {{-- Left Box: What AI accelerated (Cyan / Tech acceleration theme) --}}
-            <div class="p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-1" style="background:linear-gradient(180deg,#FFFFFF 0%,#F0FDFA 100%);border:1.5px solid rgba(6,182,212,0.35);box-shadow:0 12px 30px rgba(6,182,212,0.1);" data-animate>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3);">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <div class="w-full overflow-x-auto no-scrollbar pb-2">
+                <div class="grid gap-2 sm:gap-3 md:gap-4 lg:gap-5 items-stretch gap-bridge-grid min-w-[340px]">
+                    {{-- Left Box: What AI accelerated (Cyan / Tech acceleration theme - compact) --}}
+                    <div class="min-w-0 p-2 sm:p-3.5 md:p-4 lg:p-5 rounded-xl sm:rounded-2xl border transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                         style="background:linear-gradient(180deg,#FFFFFF 0%,#F0FDFA 100%);border:1.5px solid rgba(6,182,212,0.3);box-shadow:0 4px 14px rgba(6,182,212,0.06);" data-animate>
+                        <div>
+                            <div class="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-2.5">
+                                <div class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md sm:rounded-lg flex items-center justify-center shrink-0" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3);">
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <span class="text-[7.5px] sm:text-[9.5px] md:text-[10px] font-bold tracking-wider uppercase block truncate" style="color:#0891B2;">Acceleration</span>
+                                    <h3 class="font-bold text-[10.5px] sm:text-xs md:text-sm lg:text-[15px] text-navy leading-tight truncate">What AI accelerated</h3>
+                                </div>
+                            </div>
+                            <ul class="space-y-1 sm:space-y-1.5 md:space-y-2 text-[8.5px] sm:text-[11px] md:text-xs lg:text-[12.5px]" style="color:#475569;">
+                                @foreach([
+                                    'Code generation',
+                                    'Rapid prototypes',
+                                    'Feature delivery',
+                                    'Release velocity'
+                                ] as $line)
+                                <li class="flex items-center gap-1 sm:gap-1.5">
+                                    <span class="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full flex items-center justify-center text-[7.5px] sm:text-[9px] font-bold shrink-0" style="background:rgba(6,182,212,0.15);color:#0891B2;">&#10003;</span>
+                                    <span class="leading-tight truncate">{{ $line }}</span>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-xs font-bold tracking-wider uppercase" style="color:#0891B2;">Acceleration</span>
-                        <h3 class="font-bold text-lg" style="color:#062538;">What AI accelerated</h3>
-                    </div>
-                </div>
-                <ul class="space-y-2.5 text-sm" style="color:#475569;">
-                    @foreach(['Code generation','Prototypes and proofs of concept','Feature delivery','Release frequency'] as $line)
-                    <li class="flex items-center gap-2.5">
-                        <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background:rgba(6,182,212,0.15);color:#0891B2;">&#10003;</span>
-                        <span>{{ $line }}</span>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
 
-            {{-- Middle Box: Cenrion Bridges the gap (Signature Deep Navy Brand theme) --}}
-            <div class="py-14 px-10 rounded-2xl text-center flex flex-col justify-center relative overflow-hidden transition-all duration-300 hover:-translate-y-1 lg:-my-4 lg:scale-105" style="background:linear-gradient(135deg,#0E3550 0%,#062538 60%,#0A2D44 100%);border:1.5px solid rgba(6,182,212,0.4);box-shadow:0 24px 56px rgba(6,37,56,0.45),inset 0 1px 0 rgba(255,255,255,0.1);z-index:10;position:relative;" data-animate data-delay="80">
-                <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.25),transparent 70%);pointer-events:none;"></div>
-                <div class="relative z-10">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-5 mx-auto" style="background:rgba(6,182,212,0.18);border:1px solid rgba(6,182,212,0.4);">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#67E8F9" stroke-width="1.8" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+                    {{-- Middle Box: Cenrion Bridges the gap (Centerpiece - Prominently Bigger across Mobile, Tablet and Desktop) --}}
+                    <div class="min-w-0 py-3.5 px-2.5 sm:py-6 sm:px-4 md:py-8 md:px-5 lg:py-10 lg:px-7 rounded-xl sm:rounded-2xl text-center flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-1 scale-[1.02] sm:scale-[1.04] md:scale-[1.05] lg:scale-[1.08] z-10"
+                         style="background:linear-gradient(135deg,#0E3550 0%,#062538 60%,#0A2D44 100%);border:2px solid rgba(6,182,212,0.55);box-shadow:0 12px 35px rgba(6,37,56,0.45),0 0 20px rgba(6,182,212,0.18),inset 0 1px 0 rgba(255,255,255,0.15);position:relative;" data-animate data-delay="80">
+                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.35),transparent 70%);pointer-events:none;"></div>
+                        <div class="relative z-10">
+                            <div class="inline-flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 lg:w-13 lg:h-13 rounded-lg sm:rounded-xl mb-1 sm:mb-2 mx-auto" style="background:rgba(6,182,212,0.22);border:1.5px solid rgba(6,182,212,0.5);box-shadow:0 0 12px rgba(6,182,212,0.25);">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#67E8F9" stroke-width="2" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+                            </div>
+                            <span class="block mb-0.5 sm:mb-1 text-cyan font-bold tracking-widest text-[7.5px] sm:text-[9.5px] md:text-[11px] lg:text-xs uppercase" style="letter-spacing:0.1em;">Cenrion Solution</span>
+                            <h3 class="text-xs sm:text-base md:text-2xl lg:text-[28px] font-extrabold text-white mb-1 sm:mb-1.5 leading-tight" style="font-family:'Plus Jakarta Sans',sans-serif;">Bridges the gap</h3>
+                            <p class="text-[8px] sm:text-[10.5px] md:text-xs lg:text-[13px] leading-tight sm:leading-relaxed mb-1.5 sm:mb-2 text-slate-200 max-w-xs mx-auto">16+ years of global delivery leadership, applied to software that scales.</p>
+                            <div class="inline-flex items-center gap-1 py-0.5 px-1.5 sm:py-1 sm:px-2.5 rounded-full text-[6.5px] sm:text-[8px] md:text-[10px] font-bold tracking-wider uppercase text-cyan" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3);letter-spacing:0.06em;">
+                                AI Speed &middot; Accountability
+                            </div>
+                        </div>
                     </div>
-                    <span class="section-tag block mb-2 text-cyan font-bold tracking-widest text-xs uppercase">Cenrion Solution</span>
-                    <h3 class="text-4xl font-extrabold text-white mb-3" style="font-family:'Plus Jakarta Sans',sans-serif;">Bridges the gap</h3>
-                    <p class="text-base leading-relaxed mb-2" style="color:#CBD5E1;">16+ years of global delivery leadership, applied to software that is built to scale.</p>
-                    <div class="mt-5 inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase" style="color:#67E8F9;letter-spacing:0.12em;">
-                        AI Speed &middot; Engineering Accountability
+
+                    {{-- Right Box: What got left behind (Coral / Caution theme - compact) --}}
+                    <div class="min-w-0 p-2 sm:p-3.5 md:p-4 lg:p-5 rounded-xl sm:rounded-2xl border transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                         style="background:linear-gradient(180deg,#FFFFFF 0%,#FFFBEB 100%);border:1.5px solid rgba(245,158,11,0.3);box-shadow:0 4px 14px rgba(245,158,11,0.06);" data-animate data-delay="160">
+                        <div>
+                            <div class="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-2.5">
+                                <div class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md sm:rounded-lg flex items-center justify-center shrink-0" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);">
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="#D97706" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <span class="text-[7.5px] sm:text-[9.5px] md:text-[10px] font-bold tracking-wider uppercase block truncate" style="color:#D97706;">Vulnerabilities</span>
+                                    <h3 class="font-bold text-[10.5px] sm:text-xs md:text-sm lg:text-[15px] text-navy leading-tight truncate">What got left behind</h3>
+                                </div>
+                            </div>
+                            <ul class="space-y-1 sm:space-y-1.5 md:space-y-2 text-[8.5px] sm:text-[11px] md:text-xs lg:text-[12.5px]" style="color:#475569;">
+                                @foreach([
+                                    'Code visibility',
+                                    'Architecture scale',
+                                    'Quality sign-off',
+                                    'Real load stability'
+                                ] as $line)
+                                <li class="flex items-center gap-1 sm:gap-1.5">
+                                    <span class="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full flex items-center justify-center text-[7.5px] sm:text-[9px] font-bold shrink-0" style="background:rgba(245,158,11,0.15);color:#D97706;">!</span>
+                                    <span class="leading-tight truncate">{{ $line }}</span>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            {{-- Right Box: What got left behind (Coral / Caution theme) --}}
-            <div class="p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-1" style="background:linear-gradient(180deg,#FFFFFF 0%,#FFFBEB 100%);border:1.5px solid rgba(245,158,11,0.35);box-shadow:0 12px 30px rgba(245,158,11,0.1);" data-animate data-delay="160">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#D97706" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                    </div>
-                    <div>
-                        <span class="text-xs font-bold tracking-wider uppercase" style="color:#D97706;">Vulnerabilities</span>
-                        <h3 class="font-bold text-lg" style="color:#062538;">What got left behind</h3>
-                    </div>
-                </div>
-                <ul class="space-y-2.5 text-sm" style="color:#475569;">
-                    @foreach(['Visibility into how it was built','Architecture that scales','Quality checks and sign-off','Performance under real load'] as $line)
-                    <li class="flex items-center gap-2.5">
-                        <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background:rgba(245,158,11,0.15);color:#D97706;">!</span>
-                        <span>{{ $line }}</span>
-                    </li>
-                    @endforeach
-                </ul>
             </div>
         </div>
 

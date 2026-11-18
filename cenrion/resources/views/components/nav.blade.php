@@ -20,17 +20,17 @@
         boxShadow: scrolled ? '0 16px 40px rgba(0, 0, 0, 0.45)' : '0 4px 24px rgba(6, 37, 56, 0.35)'
     }"
 >
-    <div class="max-w-8xl mx-auto px-6 sm:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between">
 
             @include('components.logo', ['variant' => 'white', 'size' => 32])
 
-            <div class="hidden md:flex items-center gap-1 lg:gap-2">
+            <div class="hidden md:flex items-center gap-1 lg:gap-1.5 xl:gap-2">
                 {{-- Capabilities --}}
                 <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-                    <a href="{{ route('capabilities') }}" class="nav-link px-4 py-2.5 rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('capabilities') ? 'active' : '' }}">
-                        Capabilities
-                        <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" class="transition-transform duration-200" :class="{ 'rotate-180': dropdownOpen }">
+                    <a href="{{ route('capabilities') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('capabilities') ? 'active' : '' }}">
+                        <span>Capabilities</span>
+                        <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" class="transition-transform duration-200 shrink-0" :class="{ 'rotate-180': dropdownOpen }">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                         </svg>
                     </a>
@@ -78,9 +78,9 @@
 
                 {{-- Solutions --}}
                 <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-                    <a href="{{ route('solutions') }}" class="nav-link px-4 py-2.5 rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('solutions') ? 'active' : '' }}">
-                        Solutions
-                        <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" class="transition-transform duration-200" :class="{ 'rotate-180': dropdownOpen }">
+                    <a href="{{ route('solutions') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('solutions') ? 'active' : '' }}">
+                        <span>Solutions</span>
+                        <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" class="transition-transform duration-200 shrink-0" :class="{ 'rotate-180': dropdownOpen }">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                         </svg>
                     </a>
@@ -114,20 +114,20 @@
                     </div>
                 </div>
 
-                <a href="{{ route('about') }}" class="nav-link px-4 py-2.5 rounded-lg {{ request()->routeIs('about') ? 'active' : '' }}">About</a>
+                <a href="{{ route('about') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg {{ request()->routeIs('about') ? 'active' : '' }}">About</a>
                 <a href="{{ route('labs') }}"
-                   class="btn-accent"
-                   style="padding: 10px 18px; font-size: 14px;">
+                   class="btn-accent whitespace-nowrap shrink-0 px-3 py-2 lg:px-3.5 lg:py-2.5 xl:px-4 text-xs lg:text-[13.5px] xl:text-sm font-semibold"
+                   style="white-space: nowrap !important;">
                     Cenrion Labs
                 </a>
-                <a href="{{ route('insights') }}" class="nav-link px-4 py-2.5 rounded-lg {{ request()->routeIs('insights*') ? 'active' : '' }}">Insights</a>
-                <a href="{{ route('careers') }}" class="nav-link px-4 py-2.5 rounded-lg {{ request()->routeIs('careers') ? 'active' : '' }}">Careers</a>
+                <a href="{{ route('insights') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg {{ request()->routeIs('insights*') ? 'active' : '' }}">Insights</a>
+                <a href="{{ route('careers') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg {{ request()->routeIs('careers') ? 'active' : '' }}">Careers</a>
             </div>
 
-            <div class="hidden md:flex items-center ml-2">
-                <a href="{{ route('contact') }}" class="btn-accent" style="padding: 10px 22px; font-size: 14px;">
-                    Talk to Us
-                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <div class="hidden md:flex items-center ml-1 lg:ml-2 shrink-0">
+                <a href="{{ route('contact') }}" class="btn-accent whitespace-nowrap shrink-0 px-3 py-2 lg:px-3.5 lg:py-2.5 xl:px-5 text-xs lg:text-[13.5px] xl:text-sm font-semibold" style="white-space: nowrap !important;">
+                    <span class="whitespace-nowrap">Talk to Us</span>
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="shrink-0">
                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                     </svg>
                 </a>
