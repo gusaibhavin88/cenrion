@@ -28,7 +28,7 @@ RUN apk add --no-cache \
         $PHPIZE_DEPS \
         oniguruma-dev \
         libzip-dev \
-    && docker-php-ext-install mbstring zip opcache \
+    && docker-php-ext-install mbstring zip opcache pdo_mysql \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/* \
     && printf '\nclear_env = no\n' >> /usr/local/etc/php-fpm.d/www.conf

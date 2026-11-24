@@ -88,7 +88,7 @@
                 </div>
 
                 <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.75; margin-bottom: 20px;">
-                    AI speed with engineering accountability — managed IT services, staff augmentation, and product engineering built to scale.
+                    AI speed with engineering accountability: managed IT services, staff augmentation, and product engineering built to scale.
                 </p>
 
                 {{-- Tech pills --}}

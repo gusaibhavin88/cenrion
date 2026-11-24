@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Cenrion Labs — Innovation Division & Working Demos')
+@section('title', 'Cenrion Labs: Innovation Division & Working Demos')
 @section('meta_description', 'Cenrion Labs: Our innovation playground for experiments in AI, products, and startup ideas. Working technology demonstrations built with glass box engineering.')
 
 @push('styles')
@@ -372,7 +372,7 @@
                                 AI Document Intelligence
                             </h3>
                             <p class="text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6" style="color:#CBD5E1;">
-                                Upload any document &mdash; contracts, reports, invoices &mdash; and get instant AI-powered extraction, automated structured summarization, and natural language Q&amp;A in seconds.
+                                Upload any document (contracts, reports, invoices) and get instant AI-powered extraction, automated structured summarization, and natural language Q&amp;A in seconds.
                             </p>
 
                             {{-- Live Interactive Mockup Terminal --}}
@@ -419,7 +419,7 @@
                                 <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
                                     <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black mb-2 text-cyan bg-cyan-50 border border-cyan-200">01</span>
                                     <h4 class="font-bold text-sm mb-1" style="color:#062538;">Upload a PDF</h4>
-                                    <p class="text-xs leading-relaxed" style="color:#5A7184;">Drop complex PDF documents &mdash; agreements, financial tables, filings &mdash; directly into the parser.</p>
+                                    <p class="text-xs leading-relaxed" style="color:#5A7184;">Drop complex PDF documents (agreements, financial tables, filings) directly into the parser.</p>
                                 </div>
                                 <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
                                     <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black mb-2 text-cyan bg-cyan-50 border border-cyan-200">02</span>
@@ -715,7 +715,7 @@
                         Have an ambitious AI or product concept?
                     </h3>
                     <p class="text-xs sm:text-sm lg:text-base leading-relaxed" style="color:#94A3B8;">
-                        We co-build with visionary founders and enterprises. Hand us a complex problem, and our team will build a working, production-grade proof of concept in 2 weeks &mdash; proven by code, not slides.
+                        We co-build with visionary founders and enterprises. Hand us a complex problem, and our team will build a working, production-grade proof of concept in 2 weeks, proven by code, not slides.
                     </p>
                 </div>
                 <div class="w-full sm:w-auto shrink-0">

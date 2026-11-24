@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@yield('meta_description', 'Cenrion — Technology & AI Solutions')">
+    <meta name="description" content="@yield('meta_description', 'Cenrion | Technology & AI Solutions')">
     <title>@yield('title', 'Cenrion') | Cenrion</title>
 
     {{-- Favicon --}}
@@ -221,7 +221,7 @@
             .card::after, .card-dark::after { display: none; }
         }
 
-        /* Buttons — navy primary for contrast on light heroes */
+        /* Buttons: navy primary for contrast on light heroes */
         .btn-primary {
             background: #062538; color: #FFFFFF; padding: 12px 28px; border-radius: 8px;
             font-weight: 600; font-size: 15px; transition: all 0.2s ease;

@@ -1,0 +1,44 @@
+{
+    "capabilities": {
+        "name": "Capabilities",
+        "description": "AI & Automation, Software Engineering, Cloud & DevOps, Data & Analytics",
+        "route": "capabilities",
+        "status": "visible"
+    },
+    "solutions": {
+        "name": "Solutions",
+        "description": "Managed IT Services, Staff Augmentation, Product Engineering, Technology Advisory",
+        "route": "solutions",
+        "status": "visible"
+    },
+    "about": {
+        "name": "About",
+        "description": "Company mission, ethos, engineering leadership and origins",
+        "route": "about",
+        "status": "visible"
+    },
+    "labs": {
+        "name": "Cenrion Labs",
+        "description": "Dedicated innovation lab, open source, research & experiment prototypes",
+        "route": "labs",
+        "status": "visible"
+    },
+    "insights": {
+        "name": "Insights (Blog)",
+        "description": "Technical depth, architectural papers, and engineering articles",
+        "route": "insights",
+        "status": "visible"
+    },
+    "careers": {
+        "name": "Careers",
+        "description": "Engineering vacancies, open positions, and culture telemetry",
+        "route": "careers",
+        "status": "visible"
+    },
+    "contact": {
+        "name": "Talk to Us (Contact CTA)",
+        "description": "Direct consultation and contact inquiry CTA button",
+        "route": "contact",
+        "status": "visible"
+    }
+}

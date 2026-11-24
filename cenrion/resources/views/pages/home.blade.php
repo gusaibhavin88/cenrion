@@ -2,7 +2,7 @@
 
 @section('title', 'Glass Box Engineering')
 
-@section('meta_description', 'Cenrion delivers glass box engineering — AI speed with engineering accountability across managed IT services, staff augmentation, and product engineering.')
+@section('meta_description', 'Cenrion delivers glass box engineering: AI speed with engineering accountability across managed IT services, staff augmentation, and product engineering.')
 
 @push('styles')
 <style>
@@ -10,7 +10,7 @@
         min-height: auto;
     }
 
-    /* Glass box — the hero object. A see-through engineering volume,
+    /* Glass box: the hero object. A see-through engineering volume,
        not a particle field or a gradient blob. */
     .glassbox {
         position: relative;
@@ -728,7 +728,7 @@
         </div>
 
         <p class="mt-10 text-center text-lg font-semibold" style="color:#062538;" data-animate>
-            Every Cenrion release is engineered to scale — architecture decisions, code reviews, automated tests and performance benchmarks travel with it.
+            Every Cenrion release is engineered to scale: architecture decisions, code reviews, automated tests and performance benchmarks travel with it.
         </p>
     </div>
 </section>
@@ -749,7 +749,7 @@
             </h2>
             <p class="mx-auto text-lg" style="max-width:640px;color:#5A7184;"
                data-animate data-delay="160">
-                Architecture, reviews, tests and benchmarks travel with every release —
+                Architecture, reviews, tests and benchmarks travel with every release:
                 so you can see exactly how it was built.
             </p>
         </div>
@@ -777,7 +777,7 @@
             [
                 'title' => 'Software Engineering',
                 'badge' => 'CORE PLATFORMS',
-                'desc' => 'Modern web, mobile & enterprise software platforms — built to last and scale.',
+                'desc' => 'Modern web, mobile & enterprise software platforms, built to last and scale.',
                 'icon' => 'M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5',
                 'topGradient' => 'linear-gradient(90deg, #062538, #1E3A8A)',
                 'bg' => 'linear-gradient(160deg, #F8FAFC 0%, #FFFFFF 65%)',
@@ -811,7 +811,7 @@
             [
                 'title' => 'Quality Engineering',
                 'badge' => 'TEST & VERIFY',
-                'desc' => 'Automated testing, API performance & stress testing — quality baked into every build.',
+                'desc' => 'Automated testing, API performance & stress testing, with quality baked into every build.',
                 'icon' => 'M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
                 'topGradient' => 'linear-gradient(90deg, #059669, #34D399)',
                 'bg' => 'linear-gradient(160deg, #F0FDF4 0%, #FFFFFF 65%)',
@@ -845,7 +845,7 @@
             [
                 'title' => 'Tech Consulting',
                 'badge' => 'ADVISORY',
-                'desc' => 'Architecture modernization & AI adoption strategy — from roadmap to execution.',
+                'desc' => 'Architecture modernization & AI adoption strategy from roadmap to execution.',
                 'icon' => 'M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
                 'topGradient' => 'linear-gradient(90deg, #D97706, #F59E0B)',
                 'bg' => 'linear-gradient(160deg, #FFFBEB 0%, #FFFFFF 65%)',
@@ -1181,7 +1181,7 @@
                     <span class="inline-block w-2.5 h-2.5 rounded-full" style="background:#06B6D4;box-shadow:0 0 8px #06B6D4;"></span>
                     <span style="color:#06B6D4;font-weight:800;font-size:0.95rem;letter-spacing:0.04em;">QA layer</span>
                 </span>
-                <span class="text-sm" style="color:#94A3B8;">—</span>
+                <span class="text-sm" style="color:#06B6D4;">&bull;</span>
                 <span class="text-sm flex-1 text-center" style="color:#CBD5E1;">Automated testing and code review run through every phase, from the first sprint to scale.</span>
             </div>
         </div>
@@ -1654,7 +1654,7 @@
                         Want to test a working prototype on your own data?
                     </h3>
                     <p class="text-sm sm:text-base leading-relaxed" style="color: #CBD5E1;">
-                        Hand us a complex problem, and our team will build a working, production-grade proof of concept in 2 weeks &mdash; proven by code, not slides.
+                        Hand us a complex problem, and our team will build a working, production-grade proof of concept in 2 weeks, proven by code, not slides.
                     </p>
                 </div>
 
@@ -1759,7 +1759,7 @@
                         Monolith vs Microservices: When to Shift
                     </h3>
                     <p class="text-sm leading-relaxed mb-6" style="color:#5A7184;">
-                        Not every system needs microservices — and premature decomposition has killed
+                        Not every system needs microservices, and premature decomposition has killed
                         more projects than it has saved. Here's a clear framework for knowing when
                         and how to make the move.
                     </p>

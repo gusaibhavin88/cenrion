@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Careers')
-@section('meta_description', 'Join Cenrion Technologies. We are building an elite engineering team — AI in the loop, senior engineers in charge.')
+@section('meta_description', 'Join Cenrion Technologies. We are building an elite engineering team: AI in the loop, senior engineers in charge.')
 
 @push('styles')
 <style>
@@ -52,7 +52,7 @@
 
                 <p class="text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl"
                    style="color:#5A7184;" data-animate data-delay="120">
-                    We're building a team that cares about craft, code quality and real-world outcomes &mdash;
+                    We're building a team that cares about craft, code quality and real-world outcomes:
                     AI in the loop, senior engineers in charge. No ticket-pushing bureaucracy, just deep engineering ownership.
                 </p>
 
@@ -239,7 +239,7 @@
                 </div>
                 <h3 class="text-xl font-bold mb-2" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">Async &amp; Remote</h3>
                 <p class="text-sm leading-relaxed" style="color:#5A7184;">
-                    We judge output, code quality, and intellectual rigor &mdash; not hours sitting in a chair. Work from where you thrive.
+                    We judge output, code quality, and intellectual rigor, not hours sitting in a chair. Work from where you thrive.
                 </p>
             </div>
 
@@ -269,7 +269,7 @@
             <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border text-xs font-bold"
                  style="border-color:#E2EAF4; color:#062538; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>4 Active Cohort Roles</span>
+                <span>{{ count($vacancies ?? []) }} Active Cohort Roles</span>
             </div>
             <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border text-xs font-bold"
                  style="border-color:#E2EAF4; color:#062538; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
@@ -294,194 +294,72 @@
             </div>
         </div>
 
-        {{-- 4 Concrete Role Cards (2x2 Grid) --}}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-12">
+        {{-- Dynamic Open Vacancy Cards (2x2 Grid) --}}
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-12 items-stretch">
+            @forelse($vacancies as $index => $vacancy)
+                <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden h-full"
+                     style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
+                     data-animate="fade-up" data-delay="{{ ($index % 4) * 80 }}">
+                    
+                    <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
 
-            {{-- Role 1: Senior Full-Stack Engineer --}}
-            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
-                 style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
-                 data-animate="fade-up" data-delay="0">
-                <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider"
+                                  style="background: rgba(6,182,212,0.12); color: #0891B2; border: 1px solid rgba(6,182,212,0.3);">
+                                {{ $vacancy['department'] ?? 'Engineering' }}
+                            </span>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md" style="background:#F1F5F9; color:#475569;">
+                                {{ $vacancy['type'] ?? 'Full-time • Remote' }}
+                            </span>
+                        </div>
 
-                <div>
-                    <div class="flex items-center justify-between gap-3 mb-4">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider"
-                              style="background: rgba(6,182,212,0.12); color: #0891B2; border: 1px solid rgba(6,182,212,0.3);">
-                            Platform Engineering
-                        </span>
-                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md" style="background:#F1F5F9; color:#475569;">
-                            Full-time &bull; Remote
-                        </span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
+                            {{ $vacancy['title'] }}
+                        </h3>
+                        
+                        <p class="text-xs sm:text-sm leading-relaxed mb-5 flex-1" style="color:#5A7184;">
+                            {{ $vacancy['description'] }}
+                        </p>
+
+                        {{-- Tech stack chips --}}
+                        @if(!empty($vacancy['tech_stack']))
+                        <div class="flex flex-wrap gap-1.5 mb-6 mt-auto">
+                            @foreach($vacancy['tech_stack'] as $tech)
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium" style="background:#F8FAFC; color:#334155; border:1px solid #E2E8F0;">
+                                {{ $tech }}
+                            </span>
+                            @endforeach
+                        </div>
+                        @endif
                     </div>
 
-                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
-                        Senior Full-Stack Engineer
-                    </h3>
-                    
-                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                        Lead development of high-throughput client web applications, micro-frontends, and cloud API services. Own architecture and code rigor from sprint kickoff through production release.
-                    </p>
-
-                    {{-- Tech stack chips --}}
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        @foreach(['React 19', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'AWS Serverless'] as $tech)
-                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium" style="background:#F8FAFC; color:#334155; border:1px solid #E2E8F0;">
-                            {{ $tech }}
-                        </span>
-                        @endforeach
+                    <div class="pt-4 sm:pt-5 border-t flex items-center justify-end mt-auto" style="border-color:#F1F5F9;">
+                        <a href="{{ $vacancy['apply_url'] ?? 'mailto:hello@cenrion.com?subject=Application for ' . urlencode($vacancy['title']) }}"
+                           class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
+                            Apply Now
+                            <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-
-                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
-                    <a href="mailto:hello@cenrion.com?subject=Application for Senior Full-Stack Engineer"
-                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
-                        Apply Now
-                        <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-                        </svg>
+            @empty
+                <div class="col-span-full py-16 px-8 text-center bg-white rounded-3xl border border-[#E2EAF4] shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center mx-auto mb-4 text-cyan-600">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#062538] mb-2 font-heading">No Open Positions at This Moment</h3>
+                    <p class="text-sm text-[#5A7184] max-w-md mx-auto mb-6 leading-relaxed">
+                        We are continually building relationships with exceptional engineers. Send speculative applications anytime.
+                    </p>
+                    <a href="mailto:hello@cenrion.com?subject=Speculative Application" class="btn-accent inline-flex items-center gap-2">
+                        <span>Send Speculative CV</span>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                 </div>
-            </div>
-
-            {{-- Role 2: Lead AI Systems Architect --}}
-            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
-                 style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
-                 data-animate="fade-up" data-delay="80">
-                <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent 70%);pointer-events:none;"></div>
-
-                <div>
-                    <div class="flex items-center justify-between gap-3 mb-4">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider"
-                              style="background: rgba(99,102,241,0.12); color: #4F46E5; border: 1px solid rgba(99,102,241,0.3);">
-                            AI &amp; Emerging Tech
-                        </span>
-                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md" style="background:#F1F5F9; color:#475569;">
-                            Full-time &bull; Remote
-                        </span>
-                    </div>
-
-                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-indigo-600 transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
-                        Lead AI Systems Architect
-                    </h3>
-                    
-                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                        Engineer production RAG architectures, autonomous agent workflows, and deterministic LLM evaluation harnesses. Bridge the gap between AI research prototypes and enterprise reliability.
-                    </p>
-
-                    {{-- Tech stack chips --}}
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        @foreach(['Python', 'LangChain', 'LlamaIndex', 'Vector DBs', 'FastAPI', 'LLM Evals'] as $tech)
-                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium" style="background:#F8FAFC; color:#334155; border:1px solid #E2E8F0;">
-                            {{ $tech }}
-                        </span>
-                        @endforeach
-                    </div>
-                </div>
-
-                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
-                    <a href="mailto:hello@cenrion.com?subject=Application for Lead AI Systems Architect"
-                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
-                        Apply Now
-                        <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            {{-- Role 3: Staff SDET & Quality Engineering Lead --}}
-            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
-                 style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
-                 data-animate="fade-up" data-delay="160">
-                <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(16,185,129,0.12),transparent 70%);pointer-events:none;"></div>
-
-                <div>
-                    <div class="flex items-center justify-between gap-3 mb-4">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider"
-                              style="background: rgba(16,185,129,0.12); color: #059669; border: 1px solid rgba(16,185,129,0.3);">
-                            Quality Engineering
-                        </span>
-                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md" style="background:#F1F5F9; color:#475569;">
-                            Full-time &bull; Remote
-                        </span>
-                    </div>
-
-                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-emerald-600 transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
-                        Staff SDET &amp; Quality Lead
-                    </h3>
-                    
-                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                        Enforce Glass Box engineering gates. Build end-to-end automated test suites, load/stress benchmarks, and CI gate checks ensuring zero regressions reach client staging environments.
-                    </p>
-
-                    {{-- Tech stack chips --}}
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        @foreach(['Playwright', 'Selenium', 'k6 Load Testing', 'TypeScript', 'GitHub Actions', 'Docker'] as $tech)
-                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium" style="background:#F8FAFC; color:#334155; border:1px solid #E2E8F0;">
-                            {{ $tech }}
-                        </span>
-                        @endforeach
-                    </div>
-                </div>
-
-                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
-                    <a href="mailto:hello@cenrion.com?subject=Application for Staff SDET and Quality Lead"
-                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
-                        Apply Now
-                        <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            {{-- Role 4: Senior Cloud Infrastructure & SRE --}}
-            <div class="bg-white rounded-2xl sm:rounded-3xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden"
-                 style="border: 1.5px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.04);"
-                 data-animate="fade-up" data-delay="240">
-                <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(6,182,212,0.12),transparent 70%);pointer-events:none;"></div>
-
-                <div>
-                    <div class="flex items-center justify-between gap-3 mb-4">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider"
-                              style="background: rgba(6,182,212,0.12); color: #0891B2; border: 1px solid rgba(6,182,212,0.3);">
-                            Cloud Ops &amp; Reliability
-                        </span>
-                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md" style="background:#F1F5F9; color:#475569;">
-                            Full-time &bull; Remote
-                        </span>
-                    </div>
-
-                    <h3 class="text-xl sm:text-2xl font-extrabold mb-2 group-hover:text-cyan transition-colors" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">
-                        Senior Cloud &amp; DevOps Lead
-                    </h3>
-                    
-                    <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color:#5A7184;">
-                        Architect resilient multi-cloud foundations, automated GitOps deployment pipelines, and observability frameworks with Grafana &amp; OpenTelemetry. Build platforms that heal themselves.
-                    </p>
-
-                    {{-- Tech stack chips --}}
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        @foreach(['Kubernetes', 'Terraform', 'AWS & GCP', 'Prometheus', 'Helm', 'ArgoCD'] as $tech)
-                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium" style="background:#F8FAFC; color:#334155; border:1px solid #E2E8F0;">
-                            {{ $tech }}
-                        </span>
-                        @endforeach
-                    </div>
-                </div>
-
-                <div class="pt-4 sm:pt-5 border-t flex items-center justify-end" style="border-color:#F1F5F9;">
-                    <a href="mailto:hello@cenrion.com?subject=Application for Senior Cloud and DevOps Lead"
-                       class="btn-accent w-full sm:w-auto text-center justify-center" style="padding: 10px 22px; font-size: 13px;">
-                        Apply Now
-                        <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-</div>
+            @endforelse
+        </div>
 
     </div>
 </section>
@@ -516,7 +394,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2" style="font-family:'Plus Jakarta Sans',sans-serif;">Craftsmanship</h3>
                 <p class="text-xs leading-relaxed text-gray-400">
-                    We write code we are genuinely proud of. Clean, modular, verified. Not because of arbitrary metrics &mdash; because we care about the work itself.
+                    We write code we are genuinely proud of. Clean, modular, verified. Not because of arbitrary metrics, but because we care about the work itself.
                 </p>
             </div>
 

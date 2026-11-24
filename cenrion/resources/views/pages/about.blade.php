@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'About')
-@section('meta_description', 'About Cenrion Technologies — 16+ years of global software delivery. AI speed with engineering accountability.')
+@section('meta_description', 'About Cenrion Technologies: 16+ years of global software delivery. AI speed with engineering accountability.')
 
 @push('styles')
 <style>
@@ -214,7 +214,7 @@
 </section>
 
 {{-- ============================================================
-     FOUNDER CAREER TIMELINE (2012–2026 Pipeline)
+     FOUNDER CAREER TIMELINE (2012-2026 Pipeline)
      ============================================================ --}}
 <section id="founder-track" class="py-24" style="background:#F5F8FC;">
     <div class="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -264,7 +264,7 @@
                 <div>
                     <span class="section-tag block mb-4 text-cyan-300">Our Mission</span>
                     <blockquote class="text-2xl lg:text-3xl font-extrabold text-white leading-snug mb-6" style="font-family:'Plus Jakarta Sans',sans-serif;">
-                        &ldquo;To be the engineering partner that makes technology work for business &mdash; with intelligence, precision, and radical transparency.&rdquo;
+                        &ldquo;To be the engineering partner that makes technology work for business with intelligence, precision, and radical transparency.&rdquo;
                     </blockquote>
                 </div>
                 <div class="flex items-center gap-3 pt-6 border-t border-white/10">

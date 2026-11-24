@@ -70,5 +70,9 @@ server {
 }
 EOF
 
+if [ "${DB_CONNECTION:-}" = "mysql" ]; then
+    php artisan db:init || true
+fi
+
 php-fpm -D
 exec nginx -g 'daemon off;'

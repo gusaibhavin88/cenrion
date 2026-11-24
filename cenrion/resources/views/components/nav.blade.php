@@ -27,6 +27,7 @@
 
             <div class="hidden md:flex items-center gap-1 lg:gap-1.5 xl:gap-2">
                 {{-- Capabilities --}}
+                @if(($navbarSettings['capabilities']['status'] ?? 'visible') === 'visible')
                 <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
                     <a href="{{ route('capabilities') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('capabilities') ? 'active' : '' }}">
                         <span>Capabilities</span>
@@ -75,8 +76,10 @@
                         </div>
                     </div>
                 </div>
+                @endif
 
                 {{-- Solutions --}}
+                @if(($navbarSettings['solutions']['status'] ?? 'visible') === 'visible')
                 <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
                     <a href="{{ route('solutions') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg flex items-center gap-1 cursor-pointer {{ request()->routeIs('solutions') ? 'active' : '' }}">
                         <span>Solutions</span>
@@ -113,17 +116,30 @@
                         </div>
                     </div>
                 </div>
+                @endif
 
+                @if(($navbarSettings['about']['status'] ?? 'visible') === 'visible')
                 <a href="{{ route('about') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg {{ request()->routeIs('about') ? 'active' : '' }}">About</a>
+                @endif
+
+                @if(($navbarSettings['labs']['status'] ?? 'visible') === 'visible')
                 <a href="{{ route('labs') }}"
                    class="btn-accent whitespace-nowrap shrink-0 px-3 py-2 lg:px-3.5 lg:py-2.5 xl:px-4 text-xs lg:text-[13.5px] xl:text-sm font-semibold"
                    style="white-space: nowrap !important;">
                     Cenrion Labs
                 </a>
+                @endif
+
+                @if(($navbarSettings['insights']['status'] ?? 'visible') === 'visible')
                 <a href="{{ route('insights') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg {{ request()->routeIs('insights*') ? 'active' : '' }}">Insights</a>
+                @endif
+
+                @if(($navbarSettings['careers']['status'] ?? 'visible') === 'visible')
                 <a href="{{ route('careers') }}" class="nav-link whitespace-nowrap px-2.5 lg:px-3 xl:px-4 py-2 lg:py-2.5 text-xs lg:text-[13.5px] xl:text-sm rounded-lg {{ request()->routeIs('careers') ? 'active' : '' }}">Careers</a>
+                @endif
             </div>
 
+            @if(($navbarSettings['contact']['status'] ?? 'visible') === 'visible')
             <div class="hidden md:flex items-center ml-1 lg:ml-2 shrink-0">
                 <a href="{{ route('contact') }}" class="btn-accent whitespace-nowrap shrink-0 px-3 py-2 lg:px-3.5 lg:py-2.5 xl:px-5 text-xs lg:text-[13.5px] xl:text-sm font-semibold" style="white-space: nowrap !important;">
                     <span class="whitespace-nowrap">Talk to Us</span>
@@ -132,6 +148,7 @@
                     </svg>
                 </a>
             </div>
+            @endif
 
             <button
                 type="button"
@@ -151,6 +168,7 @@
         </div>
     </div>
 
+    {{-- Mobile Menu Dropdown --}}
     <div
         x-show="open"
         x-cloak
@@ -165,15 +183,37 @@
         @click.away="open = false"
     >
         <div class="max-w-8xl mx-auto px-6 sm:px-8 py-4 flex flex-col gap-1">
+            @if(($navbarSettings['capabilities']['status'] ?? 'visible') === 'visible')
             <a href="{{ route('capabilities') }}" class="flex items-center px-4 py-3 rounded-lg font-medium text-base transition-colors {{ request()->routeIs('capabilities') ? 'bg-cyan/20 text-cyan' : 'text-gray-200 hover:bg-white/10' }}" @click="open = false">Capabilities</a>
+            @endif
+
+            @if(($navbarSettings['solutions']['status'] ?? 'visible') === 'visible')
             <a href="{{ route('solutions') }}" class="flex items-center px-4 py-3 rounded-lg font-medium text-base transition-colors {{ request()->routeIs('solutions') ? 'bg-cyan/20 text-cyan' : 'text-gray-200 hover:bg-white/10' }}" @click="open = false">Solutions</a>
+            @endif
+
+            @if(($navbarSettings['about']['status'] ?? 'visible') === 'visible')
             <a href="{{ route('about') }}" class="flex items-center px-4 py-3 rounded-lg font-medium text-base transition-colors {{ request()->routeIs('about') ? 'bg-cyan/20 text-cyan' : 'text-gray-200 hover:bg-white/10' }}" @click="open = false">About</a>
+            @endif
+
+            @if(($navbarSettings['insights']['status'] ?? 'visible') === 'visible')
             <a href="{{ route('insights') }}" class="flex items-center px-4 py-3 rounded-lg font-medium text-base transition-colors {{ request()->routeIs('insights*') ? 'bg-cyan/20 text-cyan' : 'text-gray-200 hover:bg-white/10' }}" @click="open = false">Insights</a>
+            @endif
+
+            @if(($navbarSettings['careers']['status'] ?? 'visible') === 'visible')
             <a href="{{ route('careers') }}" class="flex items-center px-4 py-3 rounded-lg font-medium text-base transition-colors {{ request()->routeIs('careers') ? 'bg-cyan/20 text-cyan' : 'text-gray-200 hover:bg-white/10' }}" @click="open = false">Careers</a>
+            @endif
+
+            @if((($navbarSettings['labs']['status'] ?? 'visible') === 'visible') || (($navbarSettings['contact']['status'] ?? 'visible') === 'visible'))
             <div class="pt-3 mt-2 border-t border-white/10 flex flex-col gap-2">
+                @if(($navbarSettings['labs']['status'] ?? 'visible') === 'visible')
                 <a href="{{ route('labs') }}" class="btn-primary w-full justify-center" style="background: rgba(6,182,212,0.2); border: 1px solid rgba(6,182,212,0.4); color: #67E8F9;" @click="open = false">Cenrion Labs</a>
+                @endif
+
+                @if(($navbarSettings['contact']['status'] ?? 'visible') === 'visible')
                 <a href="{{ route('contact') }}" class="btn-accent w-full justify-center" @click="open = false">Talk to Us</a>
+                @endif
             </div>
+            @endif
         </div>
     </div>
 </nav>

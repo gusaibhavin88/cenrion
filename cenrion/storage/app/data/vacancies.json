@@ -1,0 +1,58 @@
+[
+    {
+        "id": "job-3",
+        "title": "Staff SDET & Quality Lead",
+        "department": "Quality Engineering",
+        "type": "Full-time • Remote",
+        "description": "Enforce Glass Box engineering gates. Build end-to-end automated test suites, load/stress benchmarks, and CI gate checks ensuring zero regressions reach client staging environments.",
+        "tech_stack": [
+            "Playwright",
+            "Selenium",
+            "k6 Load Testing",
+            "TypeScript",
+            "GitHub Actions",
+            "Docker"
+        ],
+        "apply_url": "mailto:hello@cenrion.com?subject=Application for Staff SDET and Quality Lead",
+        "status": "active",
+        "order": 3,
+        "created_at": "2026-10-01 10:00:00",
+        "updated_at": "2026-10-01 10:00:00"
+    },
+    {
+        "id": "job-4",
+        "title": "Senior Cloud Infrastructure & SRE",
+        "department": "Cloud Ops & Reliability",
+        "type": "Full-time • Remote",
+        "description": "Architect resilient multi-region cloud infrastructures, Kubernetes clusters, and zero-downtime CI/CD deployment pipelines with comprehensive observability.",
+        "tech_stack": [
+            "Kubernetes",
+            "Terraform",
+            "AWS",
+            "Prometheus",
+            "Datadog",
+            "Go"
+        ],
+        "apply_url": "mailto:hello@cenrion.com?subject=Application for Senior Cloud Infrastructure & SRE",
+        "status": "active",
+        "order": 4,
+        "created_at": "2026-10-01 10:00:00",
+        "updated_at": "2026-10-01 10:00:00"
+    },
+    {
+        "title": "efewrewr",
+        "department": "fesf",
+        "type": "sfsfsf",
+        "description": "sgssg",
+        "tech_stack": [
+            "sfsfsdfsd"
+        ],
+        "apply_url": "dsfsf",
+        "status": "active",
+        "order": 4,
+        "custom_id": "job-6b05b9ad1e89f",
+        "id": "job-6b05b9ad1e89f",
+        "created_at": "2026-11-24 16:22:05",
+        "updated_at": "2026-11-24 16:22:05"
+    }
+]

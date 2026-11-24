@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Insights')
-@section('meta_description', 'Cenrion Insights — technical depth meets business clarity. Engineering thinking applied to real production problems.')
+@section('meta_description', 'Cenrion Insights ΓÇö technical depth meets business clarity. Engineering thinking applied to real production problems.')
 
 @push('styles')
 <style>
@@ -52,7 +52,7 @@
 
                 <p class="text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl"
                    style="color:#5A7184;" data-animate data-delay="120">
-                    Real engineering thinking applied to production challenges. Zero vendor hype, zero vague consulting slides &mdash;
+                    Real engineering thinking applied to production challenges. Zero vendor hype, zero vague consulting slides : 
                     just concrete frameworks for architecture, scalable systems, and practical generative AI ROI.
                 </p>
 
@@ -122,7 +122,7 @@
                             Where Generative AI Actually Creates Business Value
                         </h4>
                         <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                            Beyond the hype &mdash; specific, measurable engineering patterns separating real ROI from expensive experimentation.
+                            Beyond the hype :  specific, measurable engineering patterns separating real ROI from expensive experimentation.
                         </p>
                         <div class="flex items-center gap-2 text-[11px] font-mono text-cyan-200">
                             <span>Author: Cenrion Research Squad</span>
@@ -177,80 +177,81 @@
         </div>
 
         {{-- Article Cards Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             @forelse($articles as $article)
                 <article
                     x-show="activeCategory === 'all' || activeCategory === '{{ $article['category_slug'] ?? 'all' }}'"
                     x-transition:enter="transition ease-out duration-200"
                     x-transition:enter-start="opacity-0 translate-y-2"
                     x-transition:enter-end="opacity-100 translate-y-0"
-                    class="group bg-white rounded-3xl border border-[#E2EAF4] overflow-hidden insight-card-hover relative flex flex-col justify-between"
+                    class="group bg-white rounded-3xl border border-[#E2EAF4] overflow-hidden insight-card-hover relative flex flex-col h-full"
                     style="box-shadow: 0 10px 30px rgba(6,37,56,0.04);"
                     data-animate="fade-up">
 
                     {{-- Colored Accent Bar --}}
-                    <div class="h-2 w-full
+                    <div class="h-2 w-full shrink-0
                         @if(($article['category_slug'] ?? '') === 'ai-applied-tech') bg-gradient-to-r from-cyan-400 to-[#06B6D4]
                         @elseif(($article['category_slug'] ?? '') === 'engineering-strategy') bg-gradient-to-r from-indigo-500 to-[#06B6D4]
                         @else bg-gradient-to-r from-[#06B6D4] to-[#67E8F9]
                         @endif">
                     </div>
 
-                    <div class="p-8">
-                        {{-- Badge + Read Time --}}
-                        <div class="flex items-center justify-between mb-5">
-                            <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold
-                                @if(($article['category_slug'] ?? '') === 'ai-applied-tech') bg-cyan-50 text-cyan-800 border border-cyan-200
-                                @elseif(($article['category_slug'] ?? '') === 'engineering-strategy') bg-indigo-50 text-indigo-800 border border-indigo-200
-                                @else bg-[#06B6D4]/10 text-[#0891B2] border border-[#06B6D4]/20
-                                @endif">
-                                {{ $article['category'] ?? 'General' }}
-                            </span>
-                            <span class="text-xs font-semibold flex items-center gap-1.5" style="color:#94A3B8;">
-                                <svg class="w-4 h-4 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                                {{ $article['reading_time'] ?? '5' }} min read
-                            </span>
-                        </div>
-
-                        {{-- Title --}}
-                        <h3 class="text-2xl font-extrabold text-[#062538] mb-3 group-hover:text-cyan transition-colors duration-200 leading-snug"
-                            style="font-family:'Plus Jakarta Sans',sans-serif;">
-                            <a href="{{ route('insights.show', $article['slug']) }}">
-                                {{ $article['title'] }}
-                            </a>
-                        </h3>
-
-                        {{-- Excerpt --}}
-                        <p class="text-[#5A7184] text-sm leading-relaxed mb-6 line-clamp-3">
-                            {{ $article['excerpt'] ?? '' }}
-                        </p>
-
-                        {{-- Author + Date --}}
-                        <div class="flex items-center justify-between pt-5 border-t border-[#E2EAF4]">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white"
-                                     style="background: #06B6D4;">
-                                    C
-                                </div>
-                                <span class="text-[#062538] text-xs font-bold">{{ $article['author'] ?? 'Cenrion Team' }}</span>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            {{-- Badge + Read Time --}}
+                            <div class="flex items-center justify-between mb-5">
+                                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold
+                                    @if(($article['category_slug'] ?? '') === 'ai-applied-tech') bg-cyan-50 text-cyan-800 border border-cyan-200
+                                    @elseif(($article['category_slug'] ?? '') === 'engineering-strategy') bg-indigo-50 text-indigo-800 border border-indigo-200
+                                    @else bg-[#06B6D4]/10 text-[#0891B2] border border-[#06B6D4]/20
+                                    @endif">
+                                    {{ $article['category'] ?? 'General' }}
+                                </span>
+                                <span class="text-xs font-semibold flex items-center gap-1.5" style="color:#94A3B8;">
+                                    <svg class="w-4 h-4 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    {{ $article['reading_time'] ?? '5' }} min read
+                                </span>
                             </div>
-                            <span class="text-[#94A3B8] text-xs font-mono">
-                                {{ isset($article['published_at']) ? \Carbon\Carbon::parse($article['published_at'])->format('d M Y') : '' }}
-                            </span>
-                        </div>
-                    </div>
 
-                    {{-- Read article button footer --}}
-                    <div class="px-8 pb-7">
-                        <a href="{{ route('insights.show', $article['slug']) }}"
-                           class="inline-flex items-center gap-1.5 text-cyan text-sm font-bold group-hover:gap-2.5 transition-all duration-200">
-                            Read article
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
+                            {{-- Title (Consistent 2-line height so excerpts align) --}}
+                            <h3 class="text-2xl font-extrabold text-[#062538] mb-3 group-hover:text-cyan transition-colors duration-200 leading-snug line-clamp-2 min-h-[3.6rem] flex items-start"
+                                style="font-family:'Plus Jakarta Sans',sans-serif;">
+                                <a href="{{ route('insights.show', $article['slug']) }}">
+                                    {{ $article['title'] }}
+                                </a>
+                            </h3>
+
+                            {{-- Excerpt --}}
+                            <p class="text-[#5A7184] text-sm leading-relaxed mb-6 line-clamp-3">
+                                {{ $article['excerpt'] ?? '' }}
+                            </p>
+                        </div>
+
+                        {{-- Footer: Author, Date and Action locked together at the card bottom --}}
+                        <div class="pt-5 border-t border-[#E2EAF4] mt-auto">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white shrink-0"
+                                         style="background: #06B6D4;">
+                                        {{ strtoupper(substr($article['author'] ?? 'C', 0, 1)) }}
+                                    </div>
+                                    <span class="text-[#062538] text-xs font-bold truncate max-w-[150px]">{{ $article['author'] ?? 'Cenrion Team' }}</span>
+                                </div>
+                                <span class="text-[#94A3B8] text-xs font-mono shrink-0">
+                                    {{ $article['date'] ?? (isset($article['published_at']) ? \Carbon\Carbon::parse($article['published_at'])->format('d M Y') : '') }}
+                                </span>
+                            </div>
+
+                            <a href="{{ route('insights.show', $article['slug']) }}"
+                               class="inline-flex items-center gap-1.5 text-cyan text-sm font-bold group-hover:gap-2.5 transition-all duration-200">
+                                Read article
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                 </article>
@@ -291,7 +292,7 @@
             Stay Sharp with Cenrion Insights
         </h2>
         <p class="text-gray-300 mb-8 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">
-            Technical breakdowns, engineering perspectives, and real AI architecture. No spam, no marketing fluff &mdash; delivered straight to your inbox.
+            Technical breakdowns, engineering perspectives, and real AI architecture. No spam, no marketing fluff :  delivered straight to your inbox.
         </p>
 
         {{-- Newsletter Form --}}

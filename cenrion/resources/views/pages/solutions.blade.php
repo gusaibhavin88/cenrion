@@ -54,7 +54,7 @@
                    style="color:#5A7184;" data-animate data-delay="120">
                     Hand us a complete outcome or augment your team with senior engineers.
                     Managed IT Services and Staff Augmentation both operate under Cenrion's
-                    transparent Glass Box model &mdash; AI speed with human architectural accountability.
+                    transparent Glass Box model: AI speed with human architectural accountability.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10" data-animate data-delay="160">
@@ -218,7 +218,7 @@
                 <h3 class="text-2xl lg:text-3xl font-extrabold mb-3" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">Managed IT Services</h3>
                 <p class="text-base leading-relaxed mb-6" style="color:#5A7184;">
                     We own delivery end to end under agreed service levels, covering architecture,
-                    engineering, cloud operations and 24/7 support &mdash; one accountable partner for the outcome.
+                    engineering, cloud operations and 24/7 support: one accountable partner for the outcome.
                 </p>
 
                 <ul class="space-y-3 mb-8">
@@ -265,7 +265,7 @@
                 <h3 class="text-2xl lg:text-3xl font-extrabold mb-3" style="color:#062538; font-family:'Plus Jakarta Sans',sans-serif;">Staff Augmentation</h3>
                 <p class="text-base leading-relaxed mb-6" style="color:#5A7184;">
                     Vetted engineers and technology specialists who join your team, follow your process,
-                    and report into your leads &mdash; Glass Box discipline embedded directly in your delivery.
+                    and report into your leads, with Glass Box discipline embedded directly in your delivery.
                 </p>
 
                 <ul class="space-y-3 mb-8">
@@ -431,7 +431,7 @@
 
                 <div class="mb-4 p-4 rounded-xl" style="background-color:#F5F8FC; border-left: 3px solid #94A3B8;">
                     <p class="text-xs font-bold uppercase tracking-wider mb-1" style="color:#64748B;">The Challenge</p>
-                    <p class="text-sm leading-relaxed" style="color:#5A7184;">Ageing monolithic systems block business growth &mdash; expensive to maintain, fragile under load, and incompatible with modern integrations.</p>
+                    <p class="text-sm leading-relaxed" style="color:#5A7184;">Ageing monolithic systems block business growth: expensive to maintain, fragile under load, and incompatible with modern integrations.</p>
                 </div>
 
                 <div class="mb-6 p-4 rounded-xl" style="background-color:#F5F3FF; border-left: 3px solid #6366F1;">
@@ -477,7 +477,7 @@
 
                 <div class="mb-6 p-4 rounded-xl" style="background-color:#ECFDF5; border-left: 3px solid #10B981;">
                     <p class="text-xs font-bold uppercase tracking-wider mb-1" style="color:#059669;">The Solution</p>
-                    <p class="text-sm leading-relaxed" style="color:#062538; font-weight: 500;">Combining intelligent document extraction, automated validation loops, and direct API integrations &mdash; eliminating 80%+ manual overhead.</p>
+                    <p class="text-sm leading-relaxed" style="color:#062538; font-weight: 500;">Combining intelligent document extraction, automated validation loops, and direct API integrations, eliminating 80%+ manual overhead.</p>
                 </div>
 
                 <div class="flex flex-wrap gap-2 pt-4 border-t" style="border-color:#E2EAF4;">
@@ -513,7 +513,7 @@
 
                 <div class="mb-4 p-4 rounded-xl" style="background-color:#F5F8FC; border-left: 3px solid #94A3B8;">
                     <p class="text-xs font-bold uppercase tracking-wider mb-1" style="color:#64748B;">The Challenge</p>
-                    <p class="text-sm leading-relaxed" style="color:#5A7184;">Data sits locked in disparate silos with zero unified truth &mdash; leaving leadership guessing rather than acting on real-time operational telemetry.</p>
+                    <p class="text-sm leading-relaxed" style="color:#5A7184;">Data sits locked in disparate silos with zero unified truth, leaving leadership guessing rather than acting on real-time operational telemetry.</p>
                 </div>
 
                 <div class="mb-6 p-4 rounded-xl" style="background-color:#F0F9FF; border-left: 3px solid #0284C7;">
@@ -548,7 +548,7 @@
                 Engagement Models
             </h2>
             <p class="text-lg max-w-2xl mx-auto" style="color:#94A3B8;" data-animate data-delay="160">
-                We adapt directly to your organization &mdash; from fixed-scope outcome delivery to fully embedded engineering squads.
+                We adapt directly to your organization, from fixed-scope outcome delivery to fully embedded engineering squads.
             </p>
         </div>
 
